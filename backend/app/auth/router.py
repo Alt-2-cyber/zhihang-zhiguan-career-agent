@@ -9,7 +9,6 @@ from app.auth.service import authenticate_user
 from app.core.database import get_db
 from app.core.errors import AppError
 
-
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 
@@ -31,4 +30,3 @@ def login(payload: LoginRequest, db: Session = Depends(get_db)) -> TokenResponse
 @router.get("/me", response_model=UserRead)
 def read_current_user(current_user: User = Depends(get_current_user)) -> User:
     return current_user
-

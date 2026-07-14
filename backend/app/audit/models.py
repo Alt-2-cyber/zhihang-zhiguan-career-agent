@@ -12,4 +12,3 @@ class AuditLog(EntityMixin, Base):
     resource_type: Mapped[str | None] = mapped_column(String(80), nullable=True)
     resource_id: Mapped[str | None] = mapped_column(String(36), nullable=True)
     details: Mapped[str | None] = mapped_column(Text, nullable=True)
-

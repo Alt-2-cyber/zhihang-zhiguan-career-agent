@@ -32,4 +32,3 @@ def test_risk_rule_returns_explainable_fact(
     assert finding.fact_value > 0
     assert finding.triggered_at.tzinfo == timezone.utc
     assert datetime.now(timezone.utc) >= finding.triggered_at
-

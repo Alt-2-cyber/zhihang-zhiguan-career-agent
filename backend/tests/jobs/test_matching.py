@@ -1,5 +1,3 @@
-import json
-
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
@@ -46,4 +44,3 @@ def test_job_match_persists_evidence_for_all_dimensions(
     assert response.status_code == 201
     assert len(response.json()["dimensions"]) == 5
     assert all(item["evidence"] for item in response.json()["dimensions"])
-

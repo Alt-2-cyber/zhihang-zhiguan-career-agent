@@ -55,4 +55,3 @@ def test_counselor_dashboard_contains_only_authorized_class(
     assert response.json()["student_count"] == 1
     assert response.json()["risk_count"] == 1
     assert response.json()["risks"][0]["student_id"] == student_a.id
-

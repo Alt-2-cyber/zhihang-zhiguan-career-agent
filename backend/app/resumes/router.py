@@ -2,19 +2,19 @@ from pathlib import Path
 
 from fastapi import APIRouter, Depends, File, UploadFile, status
 from pydantic import BaseModel
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.agents.service import build_agent_gateway
 from app.auth.models import User, UserRole
 from app.auth.security import require_roles
 from app.core.config import get_settings
 from app.core.database import get_db
-from app.agents.service import build_agent_gateway
 from app.core.errors import AppError
 from app.jobs.models import Job
 from app.resumes.models import ResumeFile, ResumeOptimizationDraft, ResumeVersion
 from app.resumes.parser import parse_resume
 from app.resumes.storage import save_upload, validate_upload
-
 
 router = APIRouter(prefix="/resumes", tags=["resumes"])
 
@@ -37,6 +37,20 @@ class ResumeOptimizationRead(BaseModel):
     provider: str
     status: str
     suggestions: list[dict[str, object]]
+
+
+@router.get("", response_model=list[ResumeFileRead])
+def list_resumes(
+    current_user: User = Depends(require_roles(UserRole.student)),
+    db: Session = Depends(get_db),
+) -> list[ResumeFile]:
+    return list(
+        db.scalars(
+            select(ResumeFile)
+            .where(ResumeFile.student_id == current_user.id)
+            .order_by(ResumeFile.created_at.desc())
+        ).all()
+    )
 
 
 @router.post("", response_model=ResumeFileRead, status_code=status.HTTP_201_CREATED)

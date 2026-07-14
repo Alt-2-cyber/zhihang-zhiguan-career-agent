@@ -79,4 +79,3 @@ def serialize_plan(db: Session, plan: CareerPlanRecord) -> dict[str, object]:
             for task in tasks
         ],
     }
-

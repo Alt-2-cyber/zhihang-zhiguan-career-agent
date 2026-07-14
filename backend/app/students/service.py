@@ -30,9 +30,7 @@ def create_profile_analysis(
     return draft
 
 
-def confirm_profile_analysis(
-    db: Session, *, student: User, draft_id: str
-) -> StudentProfile:
+def confirm_profile_analysis(db: Session, *, student: User, draft_id: str) -> StudentProfile:
     draft = db.get(ProfileAnalysisDraft, draft_id)
     if draft is None or draft.student_id != student.id:
         raise AppError(404, "profile_analysis_not_found", "画像分析草稿不存在")
@@ -40,9 +38,7 @@ def confirm_profile_analysis(
         raise AppError(409, "profile_analysis_already_confirmed", "画像分析已经确认")
 
     payload = json.loads(draft.payload_json)
-    profile = db.scalar(
-        select(StudentProfile).where(StudentProfile.student_id == student.id)
-    )
+    profile = db.scalar(select(StudentProfile).where(StudentProfile.student_id == student.id))
     if profile is None:
         profile = StudentProfile(student_id=student.id, version=1)
         db.add(profile)
@@ -60,17 +56,13 @@ def confirm_profile_analysis(
 
 
 def get_student_profile(db: Session, student_id: str) -> StudentProfile:
-    profile = db.scalar(
-        select(StudentProfile).where(StudentProfile.student_id == student_id)
-    )
+    profile = db.scalar(select(StudentProfile).where(StudentProfile.student_id == student_id))
     if profile is None:
         raise AppError(404, "profile_not_found", "学生尚未确认就业画像")
     return profile
 
 
-def assert_counselor_can_access_student(
-    db: Session, counselor: User, student_id: str
-) -> User:
+def assert_counselor_can_access_student(db: Session, counselor: User, student_id: str) -> User:
     student = db.get(User, student_id)
     if student is None or student.role != UserRole.student:
         raise AppError(404, "student_not_found", "学生不存在")
@@ -92,4 +84,3 @@ def serialize_profile(profile: StudentProfile) -> dict[str, object]:
         "status": profile.status,
         "version": profile.version,
     }
-

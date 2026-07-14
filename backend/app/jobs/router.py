@@ -6,15 +6,32 @@ from sqlalchemy.orm import Session
 
 from app.agents.service import build_agent_gateway
 from app.auth.models import User, UserRole
-from app.auth.security import require_roles
+from app.auth.security import get_current_user, require_roles
 from app.core.config import get_settings
 from app.core.database import get_db
 from app.core.errors import AppError
 from app.jobs.models import Job, JobMatchRecord
 from app.students.service import get_student_profile
 
-
 router = APIRouter(prefix="/jobs", tags=["jobs"])
+
+
+@router.get("")
+def list_jobs(
+    _current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+) -> list[dict[str, object]]:
+    jobs = db.query(Job).order_by(Job.created_at.desc()).all()
+    return [
+        {
+            "id": item.id,
+            "title": item.title,
+            "company": item.company,
+            "location": item.location,
+            "description": item.description,
+        }
+        for item in jobs
+    ]
 
 
 class JobMatchRead(BaseModel):
@@ -64,4 +81,3 @@ def match_job(
         "gaps": json.loads(record.gaps_json),
         "actions": json.loads(record.actions_json),
     }
-

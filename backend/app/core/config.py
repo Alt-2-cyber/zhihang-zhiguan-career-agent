@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     fastgpt_app_id: str = ""
     agent_timeout_seconds: int = 30
     enable_scheduler: bool = False
+    demo_student_password: str = "Student123!"
+    demo_counselor_password: str = "Counselor123!"
 
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -39,4 +41,3 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
-

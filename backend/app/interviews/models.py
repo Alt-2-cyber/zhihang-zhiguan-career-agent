@@ -24,4 +24,3 @@ class InterviewTurn(EntityMixin, Base):
     question: Mapped[str] = mapped_column(Text)
     answer: Mapped[str] = mapped_column(Text)
     evaluation_json: Mapped[str] = mapped_column(Text)
-

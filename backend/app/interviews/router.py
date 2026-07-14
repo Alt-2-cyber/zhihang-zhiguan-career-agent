@@ -15,7 +15,6 @@ from app.interviews.models import InterviewSession, InterviewTurn
 from app.jobs.models import Job
 from app.resumes.models import ResumeFile
 
-
 router = APIRouter(prefix="/interviews", tags=["interviews"])
 
 
@@ -55,7 +54,11 @@ def start_interview(
     db.add(session)
     db.commit()
     db.refresh(session)
-    return {"id": session.id, "status": session.status, "question": question.model_dump(mode="json")}
+    return {
+        "id": session.id,
+        "status": session.status,
+        "question": question.model_dump(mode="json"),
+    }
 
 
 @router.post("/{session_id}/answers")
@@ -74,7 +77,9 @@ def answer_interview_question(
         question["question"], payload.answer, job.description
     )
     sequence = db.scalar(
-        select(func.count()).select_from(InterviewTurn).where(InterviewTurn.session_id == session.id)
+        select(func.count())
+        .select_from(InterviewTurn)
+        .where(InterviewTurn.session_id == session.id)
     )
     db.add(
         InterviewTurn(
@@ -95,4 +100,3 @@ def answer_interview_question(
     follow_up = payload_data.pop("follow_up")
     payload_data.pop("provider", None)
     return {"evaluation": payload_data, "follow_up": follow_up, "status": session.status}
-

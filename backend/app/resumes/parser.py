@@ -13,4 +13,3 @@ def parse_resume(path: Path) -> str:
         document = Document(path)
         return "\n".join(paragraph.text for paragraph in document.paragraphs).strip()
     raise ValueError("Unsupported resume format")
-

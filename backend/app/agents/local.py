@@ -26,9 +26,7 @@ class LocalAgentGateway:
     def __init__(self, today: date | None = None) -> None:
         self.today = today or date.today()
 
-    def analyze_profile(
-        self, resume_text: str, preferences: dict[str, str]
-    ) -> ProfileAnalysis:
+    def analyze_profile(self, resume_text: str, preferences: dict[str, str]) -> ProfileAnalysis:
         skill = "Python / SQL" if "Python" in resume_text or "SQL" in resume_text else "项目实践"
         quote = self._quote(resume_text)
         constraints = [f"目标{key}：{value}" for key, value in sorted(preferences.items())]
@@ -46,9 +44,7 @@ class LocalAgentGateway:
             constraints=constraints,
         )
 
-    def build_plan(
-        self, profile_summary: str, target_role: str | None = None
-    ) -> CareerPlan:
+    def build_plan(self, profile_summary: str, target_role: str | None = None) -> CareerPlan:
         role = target_role or "数据分析师"
         tasks = [
             PlanTask(
@@ -100,8 +96,12 @@ class LocalAgentGateway:
                 score=score,
                 evidence=[
                     Evidence(
-                        source="resume" if dimension in {MatchDimension.skills, MatchDimension.experience} else "job",
-                        quote=profile_quote if dimension in {MatchDimension.skills, MatchDimension.experience} else job_quote,
+                        source="resume"
+                        if dimension in {MatchDimension.skills, MatchDimension.experience}
+                        else "job",
+                        quote=profile_quote
+                        if dimension in {MatchDimension.skills, MatchDimension.experience}
+                        else job_quote,
                     )
                 ],
             )
@@ -117,9 +117,7 @@ class LocalAgentGateway:
             actions=["针对岗位关键词调整项目描述", "投递前核对硬性条件"],
         )
 
-    def optimize_resume(
-        self, resume_text: str, job_description: str
-    ) -> ResumeOptimization:
+    def optimize_resume(self, resume_text: str, job_description: str) -> ResumeOptimization:
         original = self._quote(resume_text)
         return ResumeOptimization(
             provider=self.provider,
@@ -132,9 +130,7 @@ class LocalAgentGateway:
             ],
         )
 
-    def start_interview(
-        self, resume_text: str, job_description: str
-    ) -> InterviewQuestion:
+    def start_interview(self, resume_text: str, job_description: str) -> InterviewQuestion:
         return InterviewQuestion(
             question_id="q1",
             question="请用 STAR 结构说明你在数据分析项目中解决的核心问题。",
@@ -164,7 +160,9 @@ class LocalAgentGateway:
         return WeeklyReview(
             provider=self.provider,
             metrics=metrics,
-            insights=[f"本周完成 {metrics.applications} 次投递，获得 {metrics.interviews} 次面试。"],
+            insights=[
+                f"本周完成 {metrics.applications} 次投递，获得 {metrics.interviews} 次面试。"
+            ],
             actions=["复核低匹配岗位", "补充简历量化证据", "完成一次模拟面试"],
         )
 
@@ -172,4 +170,3 @@ class LocalAgentGateway:
     def _quote(text: str, length: int = 120) -> str:
         cleaned = " ".join(text.split())
         return cleaned[:length] or "用户尚未提供有效文本"
-

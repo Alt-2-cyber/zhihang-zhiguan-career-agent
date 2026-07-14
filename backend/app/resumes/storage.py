@@ -3,7 +3,6 @@ from uuid import uuid4
 
 from app.core.errors import AppError
 
-
 ALLOWED_UPLOADS = {
     ".pdf": {"application/pdf"},
     ".docx": {
@@ -13,9 +12,7 @@ ALLOWED_UPLOADS = {
 }
 
 
-def validate_upload(
-    filename: str, media_type: str, content: bytes, *, max_bytes: int
-) -> str:
+def validate_upload(filename: str, media_type: str, content: bytes, *, max_bytes: int) -> str:
     extension = Path(filename).suffix.lower()
     if extension not in ALLOWED_UPLOADS or media_type not in ALLOWED_UPLOADS[extension]:
         raise AppError(415, "unsupported_resume", "仅支持 PDF 或 DOCX 简历")
@@ -33,4 +30,3 @@ def save_upload(content: bytes, extension: str, upload_dir: Path) -> tuple[str, 
         raise AppError(400, "invalid_upload_path", "文件保存路径无效")
     target.write_bytes(content)
     return stored_name, target
-

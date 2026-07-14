@@ -6,6 +6,26 @@ import pytest
 from app.agents.fastgpt import AgentOutputError, FastGPTAgentGateway
 
 
+def test_fastgpt_gateway_implements_complete_agent_protocol() -> None:
+    gateway = FastGPTAgentGateway(
+        base_url="https://fastgpt.example/api",
+        api_key="secret",
+        app_id="career-agent",
+        client=httpx.Client(transport=httpx.MockTransport(lambda _request: httpx.Response(500))),
+    )
+
+    for method_name in (
+        "analyze_profile",
+        "build_plan",
+        "match_job",
+        "optimize_resume",
+        "start_interview",
+        "evaluate_answer",
+        "build_weekly_review",
+    ):
+        assert callable(getattr(gateway, method_name, None)), method_name
+
+
 def test_fastgpt_adapter_validates_profile_response() -> None:
     profile = {
         "provider": "sf-fastgpt",
@@ -58,4 +78,3 @@ def test_fastgpt_adapter_rejects_non_json_output() -> None:
 
     with pytest.raises(AgentOutputError, match="结构化输出"):
         gateway.analyze_profile("resume", {})
-

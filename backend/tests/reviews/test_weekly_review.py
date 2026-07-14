@@ -67,4 +67,3 @@ def test_weekly_review_calculates_pipeline_and_limits_actions(
     assert response.json()["metrics"]["interviews"] == 1
     assert len(response.json()["actions"]) <= 3
     assert response.json()["status"] == "pending_confirmation"
-

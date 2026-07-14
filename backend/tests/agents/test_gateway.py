@@ -27,4 +27,3 @@ def test_local_job_match_returns_five_dimensions() -> None:
 
     assert len(result.dimensions) == 5
     assert result.recommendation in {"apply", "improve_then_apply", "not_recommended"}
-

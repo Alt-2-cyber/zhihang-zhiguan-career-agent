@@ -39,4 +39,3 @@ def upsert_risk_findings(
         records.append(record)
     db.commit()
     return records
-

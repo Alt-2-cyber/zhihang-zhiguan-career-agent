@@ -24,4 +24,3 @@ class JobMatchRecord(EntityMixin, Base):
     dimensions_json: Mapped[str] = mapped_column(Text)
     gaps_json: Mapped[str] = mapped_column(Text)
     actions_json: Mapped[str] = mapped_column(Text)
-

@@ -14,7 +14,6 @@ from app.core.config import get_settings
 from app.core.database import get_db
 from app.reviews.models import WeeklyReviewRecord
 
-
 router = APIRouter(prefix="/reviews", tags=["reviews"])
 
 
@@ -61,4 +60,3 @@ def create_weekly_review(
         "actions": json.loads(record.actions_json),
         "status": record.status,
     }
-

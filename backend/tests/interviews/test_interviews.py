@@ -60,4 +60,3 @@ def test_interview_question_and_evaluation_use_only_allowed_scores(
     }
     assert not ({"appearance", "gender", "accent"} & set(evaluation))
     assert answered.json()["follow_up"]["question_id"] == "q2"
-

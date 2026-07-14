@@ -1,2 +1,1 @@
 """Counselor intervention workflow."""
-

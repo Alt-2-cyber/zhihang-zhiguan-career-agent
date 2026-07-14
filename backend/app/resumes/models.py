@@ -7,9 +7,7 @@ from app.core.models import Base, EntityMixin
 class ResumeFile(EntityMixin, Base):
     __tablename__ = "resume_files"
 
-    student_id: Mapped[str] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), index=True
-    )
+    student_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     original_name: Mapped[str] = mapped_column(String(255))
     stored_name: Mapped[str] = mapped_column(String(255), unique=True)
     media_type: Mapped[str] = mapped_column(String(120))

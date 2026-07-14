@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, status
 from pydantic import BaseModel
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.applications.models import Application, ApplicationEvent
@@ -8,7 +9,6 @@ from app.auth.security import require_roles
 from app.core.database import get_db
 from app.core.errors import AppError
 from app.jobs.models import Job
-
 
 router = APIRouter(prefix="/applications", tags=["applications"])
 
@@ -38,6 +38,19 @@ def serialize(application: Application) -> dict[str, object]:
         "resume_version_id": application.resume_version_id,
         "stage": application.stage,
     }
+
+
+@router.get("")
+def list_applications(
+    current_user: User = Depends(require_roles(UserRole.student)),
+    db: Session = Depends(get_db),
+) -> list[dict[str, object]]:
+    applications = db.scalars(
+        select(Application)
+        .where(Application.student_id == current_user.id)
+        .order_by(Application.updated_at.desc())
+    ).all()
+    return [serialize(item) for item in applications]
 
 
 @router.post("", status_code=status.HTTP_201_CREATED)
@@ -94,4 +107,3 @@ def update_application_stage(
     db.commit()
     db.refresh(application)
     return serialize(application)
-

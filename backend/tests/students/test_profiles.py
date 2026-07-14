@@ -31,9 +31,10 @@ def test_ai_profile_does_not_become_official_until_student_confirms(
     )
 
     assert draft.status_code == 201
-    assert db_session.scalar(
-        select(StudentProfile).where(StudentProfile.student_id == student.id)
-    ) is None
+    assert (
+        db_session.scalar(select(StudentProfile).where(StudentProfile.student_id == student.id))
+        is None
+    )
 
     confirmed = client.post(
         f"/api/students/me/profile-analyses/{draft.json()['id']}/confirm",
@@ -86,11 +87,8 @@ def test_counselor_can_read_only_students_in_same_class(
     db_session.commit()
     headers = login_headers(client, counselor.username, "Counselor123!")
 
-    allowed = client.get(
-        f"/api/students/{same_class_student.id}/profile", headers=headers
-    )
+    allowed = client.get(f"/api/students/{same_class_student.id}/profile", headers=headers)
     denied = client.get(f"/api/students/{other_student.id}/profile", headers=headers)
 
     assert allowed.status_code == 200
     assert denied.status_code == 403
-

@@ -62,4 +62,3 @@ def test_intervention_requires_same_class_and_completes_with_feedback(
     assert submitted.json()["status"] == "submitted"
     assert resolved.json()["status"] == "resolved"
     assert resolved.json()["feedback"].startswith("已完成")
-

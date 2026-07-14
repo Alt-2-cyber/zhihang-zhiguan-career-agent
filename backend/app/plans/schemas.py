@@ -24,4 +24,3 @@ class CareerPlanRead(BaseModel):
     rationale: str
     status: str
     tasks: list[PlanTaskRead]
-

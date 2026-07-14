@@ -28,4 +28,3 @@ class PlanTaskRecord(EntityMixin, Base):
     acceptance_criteria: Mapped[str] = mapped_column(String(300))
     status: Mapped[str] = mapped_column(String(30), default="pending")
     completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-

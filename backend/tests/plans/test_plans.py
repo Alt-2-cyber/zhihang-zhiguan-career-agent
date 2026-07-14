@@ -83,14 +83,9 @@ def test_plan_requires_owner_confirmation(client: TestClient, db_session: Sessio
         "/api/plans/generate", headers=first_headers, json={"target_role": None}
     )
 
-    denied = client.post(
-        f"/api/plans/{generated.json()['id']}/confirm", headers=other_headers
-    )
-    confirmed = client.post(
-        f"/api/plans/{generated.json()['id']}/confirm", headers=first_headers
-    )
+    denied = client.post(f"/api/plans/{generated.json()['id']}/confirm", headers=other_headers)
+    confirmed = client.post(f"/api/plans/{generated.json()['id']}/confirm", headers=first_headers)
 
     assert denied.status_code == 404
     assert confirmed.status_code == 200
     assert confirmed.json()["status"] == "active"
-

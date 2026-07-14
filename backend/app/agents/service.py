@@ -17,4 +17,3 @@ def build_agent_gateway(settings: Settings) -> AgentGateway:
             timeout_seconds=settings.agent_timeout_seconds,
         )
     raise ValueError(f"Unsupported agent provider: {settings.agent_provider}")
-

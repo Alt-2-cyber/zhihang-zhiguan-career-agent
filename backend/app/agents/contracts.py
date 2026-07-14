@@ -111,4 +111,3 @@ class WeeklyReview(BaseModel):
     metrics: WeeklyMetrics
     insights: list[str]
     actions: list[str] = Field(max_length=3)
-

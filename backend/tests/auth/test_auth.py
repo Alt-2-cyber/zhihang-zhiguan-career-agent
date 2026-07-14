@@ -7,9 +7,7 @@ from app.auth.models import UserRole
 from app.auth.service import create_user
 
 
-def test_login_returns_token_and_current_user(
-    client: TestClient, db_session: Session
-) -> None:
+def test_login_returns_token_and_current_user(client: TestClient, db_session: Session) -> None:
     create_user(
         db_session,
         username="student1",
@@ -51,4 +49,3 @@ def test_login_rejects_wrong_password_and_writes_audit_log(
     audit = db_session.scalar(select(AuditLog).where(AuditLog.action == "auth.login_failed"))
     assert audit is not None
     assert "wrong-password" not in (audit.details or "")
-

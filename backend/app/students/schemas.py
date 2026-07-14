@@ -24,4 +24,3 @@ class StudentProfileRead(BaseModel):
     constraints: list[str]
     status: str
     version: int
-

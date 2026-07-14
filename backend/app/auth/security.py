@@ -13,7 +13,6 @@ from app.core.config import get_settings
 from app.core.database import get_db
 from app.core.errors import AppError
 
-
 password_hash = PasswordHash.recommended()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
@@ -38,9 +37,7 @@ def create_access_token(user: User) -> str:
     )
 
 
-def get_current_user(
-    token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)
-) -> User:
+def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> User:
     settings = get_settings()
     try:
         payload = jwt.decode(token, settings.secret_key, algorithms=["HS256"])
@@ -63,4 +60,3 @@ def require_roles(*roles: UserRole) -> Callable[..., User]:
         return current_user
 
     return dependency
-

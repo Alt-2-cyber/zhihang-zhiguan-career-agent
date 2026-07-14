@@ -1,23 +1,38 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.auth.router import router as auth_router
 from app.applications.router import router as applications_router
+from app.auth.router import router as auth_router
 from app.core.config import get_settings
 from app.core.errors import AppError, app_error_handler
+from app.core.scheduler import build_scheduler
 from app.dashboard.router import router as dashboard_router
-from app.jobs.router import router as jobs_router
-from app.interviews.router import router as interviews_router
 from app.interventions.router import router as interventions_router
+from app.interviews.router import router as interviews_router
+from app.jobs.router import router as jobs_router
 from app.plans.router import router as plans_router
 from app.resumes.router import router as resumes_router
 from app.reviews.router import router as reviews_router
 from app.students.router import router as students_router
 
 
+@asynccontextmanager
+async def lifespan(_application: FastAPI):
+    scheduler = build_scheduler(get_settings())
+    if scheduler:
+        scheduler.start()
+    try:
+        yield
+    finally:
+        if scheduler:
+            scheduler.shutdown(wait=False)
+
+
 def create_app() -> FastAPI:
     settings = get_settings()
-    application = FastAPI(title=settings.app_name)
+    application = FastAPI(title=settings.app_name, lifespan=lifespan)
     application.add_exception_handler(AppError, app_error_handler)
     application.add_middleware(
         CORSMiddleware,

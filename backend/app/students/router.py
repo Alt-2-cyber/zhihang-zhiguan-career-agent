@@ -21,7 +21,6 @@ from app.students.service import (
     serialize_profile,
 )
 
-
 router = APIRouter(prefix="/students", tags=["students"])
 
 
@@ -51,9 +50,7 @@ def analyze_my_profile(
     }
 
 
-@router.post(
-    "/me/profile-analyses/{draft_id}/confirm", response_model=StudentProfileRead
-)
+@router.post("/me/profile-analyses/{draft_id}/confirm", response_model=StudentProfileRead)
 def confirm_my_profile(
     draft_id: str,
     current_user: User = Depends(require_roles(UserRole.student)),
@@ -79,4 +76,3 @@ def read_student_profile(
 ) -> dict[str, object]:
     assert_counselor_can_access_student(db, current_user, student_id)
     return serialize_profile(get_student_profile(db, student_id))
-

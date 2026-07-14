@@ -26,4 +26,3 @@ def write_audit_log(
     db.commit()
     db.refresh(log)
     return log
-

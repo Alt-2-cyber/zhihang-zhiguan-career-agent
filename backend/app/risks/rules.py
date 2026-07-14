@@ -77,4 +77,3 @@ def evaluate_risk_facts(facts: RiskFacts) -> list[RiskFinding]:
                 )
             )
     return findings
-

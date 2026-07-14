@@ -28,9 +28,7 @@ def test_application_stage_transition_persists_history_and_rejects_regression(
     db_session.commit()
     headers = login_headers(client, student.username, "Student123!")
 
-    created = client.post(
-        "/api/applications", headers=headers, json={"job_id": job.id}
-    )
+    created = client.post("/api/applications", headers=headers, json={"job_id": job.id})
     applied = client.patch(
         f"/api/applications/{created.json()['id']}/stage",
         headers=headers,
@@ -51,4 +49,3 @@ def test_application_stage_transition_persists_history_and_rejects_regression(
         .all()
     )
     assert [event.to_stage for event in events] == ["saved", "applied"]
-

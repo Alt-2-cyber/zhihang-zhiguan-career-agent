@@ -16,4 +16,3 @@ class RiskEvent(EntityMixin, Base):
     facts_json: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(30), default="open", index=True)
     reviewed_by: Mapped[str | None] = mapped_column(ForeignKey("users.id"), nullable=True)
-

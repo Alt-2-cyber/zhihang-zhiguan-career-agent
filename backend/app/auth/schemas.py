@@ -21,4 +21,3 @@ class UserRead(BaseModel):
     class_id: str | None
 
     model_config = ConfigDict(from_attributes=True)
-

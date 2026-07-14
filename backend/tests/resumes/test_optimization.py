@@ -55,4 +55,3 @@ def test_resume_optimization_creates_version_only_after_confirmation(
     )
     assert confirmed.status_code == 200
     assert db_session.query(ResumeVersion).count() == 1
-

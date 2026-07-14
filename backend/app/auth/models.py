@@ -21,4 +21,3 @@ class User(EntityMixin, Base):
     role: Mapped[UserRole] = mapped_column(Enum(UserRole), index=True)
     class_id: Mapped[str | None] = mapped_column(String(36), nullable=True, index=True)
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
-

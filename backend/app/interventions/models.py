@@ -13,4 +13,3 @@ class Intervention(EntityMixin, Base):
     description: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(30), default="assigned", index=True)
     feedback: Mapped[str | None] = mapped_column(Text, nullable=True)
-

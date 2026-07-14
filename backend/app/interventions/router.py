@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, status
 from pydantic import BaseModel, Field
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.auth.models import User, UserRole
@@ -8,7 +9,6 @@ from app.core.database import get_db
 from app.core.errors import AppError
 from app.interventions.models import Intervention
 from app.students.service import assert_counselor_can_access_student
-
 
 router = APIRouter(prefix="/interventions", tags=["interventions"])
 
@@ -33,6 +33,24 @@ def serialize(item: Intervention) -> dict[str, object]:
         "status": item.status,
         "feedback": item.feedback,
     }
+
+
+@router.get("")
+def list_interventions(
+    current_user: User = Depends(
+        require_roles(UserRole.student, UserRole.counselor, UserRole.admin)
+    ),
+    db: Session = Depends(get_db),
+) -> list[dict[str, object]]:
+    condition = (
+        Intervention.student_id == current_user.id
+        if current_user.role == UserRole.student
+        else Intervention.counselor_id == current_user.id
+    )
+    items = db.scalars(
+        select(Intervention).where(condition).order_by(Intervention.updated_at.desc())
+    ).all()
+    return [serialize(item) for item in items]
 
 
 @router.post("", status_code=status.HTTP_201_CREATED)
@@ -90,4 +108,3 @@ def resolve_intervention(
     db.commit()
     db.refresh(item)
     return serialize(item)
-

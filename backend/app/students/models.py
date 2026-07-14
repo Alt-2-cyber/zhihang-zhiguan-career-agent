@@ -21,10 +21,7 @@ class StudentProfile(EntityMixin, Base):
 class ProfileAnalysisDraft(EntityMixin, Base):
     __tablename__ = "profile_analysis_drafts"
 
-    student_id: Mapped[str] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), index=True
-    )
+    student_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     provider: Mapped[str] = mapped_column(String(80))
     payload_json: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(30), default="pending")
-

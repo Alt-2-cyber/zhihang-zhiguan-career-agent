@@ -13,4 +13,3 @@ class WeeklyReviewRecord(EntityMixin, Base):
     insights_json: Mapped[str] = mapped_column(Text)
     actions_json: Mapped[str] = mapped_column(Text)
     status: Mapped[str] = mapped_column(String(40), default="pending_confirmation")
-

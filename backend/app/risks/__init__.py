@@ -1,2 +1,1 @@
 """Explainable employment risk rules."""
-
