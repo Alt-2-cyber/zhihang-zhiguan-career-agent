@@ -10,6 +10,14 @@ from app.core.models import Base
 from app.main import create_app
 
 
+def login_headers(client: TestClient, username: str, password: str) -> dict[str, str]:
+    response = client.post(
+        "/api/auth/login", json={"username": username, "password": password}
+    )
+    assert response.status_code == 200
+    return {"Authorization": f"Bearer {response.json()['access_token']}"}
+
+
 @pytest.fixture
 def db_session(tmp_path) -> Generator[Session, None, None]:
     database_path = tmp_path / "test.db"
@@ -34,4 +42,3 @@ def client(db_session: Session) -> Generator[TestClient, None, None]:
     application.dependency_overrides[get_db] = override_get_db
     with TestClient(application) as test_client:
         yield test_client
-
