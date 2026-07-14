@@ -21,6 +21,8 @@
 
 ## Docker 启动
 
+Windows 下可直接双击根目录的 `start-docker.bat`，脚本会检查 Docker、构建容器并在服务就绪后打开浏览器。
+
 ```powershell
 docker compose up --build -d
 ```
@@ -35,6 +37,8 @@ docker compose up --build -d
 部署到共享或公开环境前必须修改 `.env` 中的密码和 `SECRET_KEY`。
 
 ## 本地开发
+
+Windows 下可直接双击根目录的 `start-local.bat`。首次运行会自动创建 Python 环境、安装缺失的依赖、初始化数据库，然后分别打开前后端终端和浏览器。
 
 后端：
 
