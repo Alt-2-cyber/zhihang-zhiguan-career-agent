@@ -1,0 +1,65 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: career
+      POSTGRES_USER: career
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-career-local-password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U career -d career"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      APP_ENV: production
+      SECRET_KEY: ${SECRET_KEY:-local-demo-secret-change-before-deployment}
+      DATABASE_URL: postgresql+psycopg://career:${POSTGRES_PASSWORD:-career-local-password}@db:5432/career
+      CORS_ORIGINS: http://localhost:8080
+      STORAGE_BACKEND: local
+      UPLOAD_DIR: /app/uploads
+      AGENT_PROVIDER: ${AGENT_PROVIDER:-local}
+      FASTGPT_BASE_URL: ${FASTGPT_BASE_URL:-}
+      FASTGPT_API_KEY: ${FASTGPT_API_KEY:-}
+      FASTGPT_APP_ID: ${FASTGPT_APP_ID:-}
+      ENABLE_SCHEDULER: "true"
+      DEMO_STUDENT_PASSWORD: ${DEMO_STUDENT_PASSWORD:-Student123!}
+      DEMO_COUNSELOR_PASSWORD: ${DEMO_COUNSELOR_PASSWORD:-Counselor123!}
+    volumes:
+      - uploads_data:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  uploads_data:
+
