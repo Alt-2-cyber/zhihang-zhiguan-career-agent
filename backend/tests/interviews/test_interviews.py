@@ -50,7 +50,9 @@ def test_interview_question_and_evaluation_use_only_allowed_scores(
     )
 
     assert started.status_code == 201
+    assert started.json()["question_index"] == 1
     assert answered.status_code == 200
+    assert answered.json()["question_index"] == 2
     evaluation = answered.json()["evaluation"]
     assert set(evaluation) >= {
         "content_completeness",
@@ -59,4 +61,6 @@ def test_interview_question_and_evaluation_use_only_allowed_scores(
         "evidence_quality",
     }
     assert not ({"appearance", "gender", "accent"} & set(evaluation))
-    assert answered.json()["follow_up"]["question_id"] == "q2"
+    follow_up = answered.json()["follow_up"]
+    assert follow_up["question_id"]
+    assert follow_up["question"]

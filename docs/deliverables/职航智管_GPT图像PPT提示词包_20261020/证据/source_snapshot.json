@@ -1,0 +1,42 @@
+{
+  "captured_at_utc": "2026-10-20T03:06:34.450280+00:00",
+  "note": "当前工作区部分相关源码的哈希，未包含密钥或源码内容；不是全仓库不可变快照。",
+  "files": [
+    {
+      "path": "backend/app/core/config.py",
+      "sha256": "25e90ddb331c647072c1b49fe79cbe96f801f5e04315acc0814a5f7fdff34ac4"
+    },
+    {
+      "path": "backend/app/ai/service.py",
+      "sha256": "d9dcddc7c4c4ceafd81992cd13db1f322d603514586ba217f17f6418f9a55f29"
+    },
+    {
+      "path": "backend/app/tools/business.py",
+      "sha256": "39c5012e7311be236562a387114f68443c1c5e84e1c6f191c42cf45a49cffe2b"
+    },
+    {
+      "path": "backend/app/agents/local.py",
+      "sha256": "59e692c095f7bd13e7c8cc400f03847652f69eaa9b5e4c16dc3f8692e4ec4bd1"
+    },
+    {
+      "path": "backend/app/agents/conversation_contracts.py",
+      "sha256": "33788b8d4d3788461ab8391b6ba5e33826eec86d6e3a90e56df9e640f5b102b9"
+    },
+    {
+      "path": "backend/app/interviews/router.py",
+      "sha256": "a3bc6b64a7590c8514622449ca03d7c14e5bb99b7b9180507404f572a2eae3b8"
+    },
+    {
+      "path": "backend/app/risks/rules.py",
+      "sha256": "29e9fdc9765953f56672214eaed71a049f6d64f03e8eb00fd4eb2ae021beeb9e"
+    },
+    {
+      "path": "frontend/src/features/student/JobsPage.tsx",
+      "sha256": "baabd70728cbf9e55d8acdad2c977565c04ba34785b644184080c4a2def847cb"
+    },
+    {
+      "path": "frontend/src/features/chat/ChatPage.tsx",
+      "sha256": "1dc6450097a1616b3fbc48b7ae06474abf73fd330caf8370837bd6b3a1068452"
+    }
+  ]
+}

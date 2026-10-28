@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import { apiFetch } from '../../app/api'
 import { Notice, PageHeader, Panel, inputClass, primaryButton } from '../../components/Ui'
+import { AskAgentButton } from '../chat/AskAgentButton'
 
 type Evidence = { source: string; quote: string }
 type Strength = { name: string; level: string; evidence: Evidence[] }
@@ -25,7 +26,7 @@ export function ProfilePage({ token }: { token: string }) {
 
   const profile = useQuery({
     queryKey: ['profile'],
-    queryFn: () => apiFetch<Analysis & { status: string }>('/students/me/profile', {}, token),
+    queryFn: () => apiFetch<Analysis & { id: string; status: string }>('/students/me/profile', {}, token),
     retry: false,
   })
 
@@ -61,6 +62,7 @@ export function ProfilePage({ token }: { token: string }) {
       <PageHeader
         title="就业画像"
         description="从简历与就业偏好中提取能力证据。AI 生成内容只有在你确认后才会写入正式档案。"
+        action={profile.data?.id ? <AskAgentButton role="student" context={{ type: 'profile', id: profile.data.id }} /> : undefined}
       />
 
       {confirmed ? <div className="mb-5"><Notice tone="success">画像已确认</Notice></div> : null}

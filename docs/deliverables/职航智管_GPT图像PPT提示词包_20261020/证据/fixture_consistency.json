@@ -1,0 +1,235 @@
+{
+  "note": "All data is synthetic. Risk-bearing student histories were aligned to fixture labels; no real user record or application source changed. Stage totals and task completed/pending totals preserved.",
+  "cases": [
+    {
+      "student": "学生A",
+      "days_without_application": 14,
+      "overdue_tasks": 0,
+      "calculated_rules": [
+        "no_recent_application"
+      ],
+      "stored_rules": [
+        "no_recent_application"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生02",
+      "days_without_application": 14,
+      "overdue_tasks": 0,
+      "calculated_rules": [
+        "no_recent_application"
+      ],
+      "stored_rules": [
+        "no_recent_application"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生03",
+      "days_without_application": 14,
+      "overdue_tasks": 0,
+      "calculated_rules": [
+        "no_recent_application"
+      ],
+      "stored_rules": [
+        "no_recent_application"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生04",
+      "days_without_application": 14,
+      "overdue_tasks": 0,
+      "calculated_rules": [
+        "no_recent_application"
+      ],
+      "stored_rules": [
+        "no_recent_application"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生05",
+      "days_without_application": 14,
+      "overdue_tasks": 0,
+      "calculated_rules": [
+        "no_recent_application"
+      ],
+      "stored_rules": [
+        "no_recent_application"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生06",
+      "days_without_application": 4,
+      "overdue_tasks": 3,
+      "calculated_rules": [
+        "tasks_overdue"
+      ],
+      "stored_rules": [
+        "tasks_overdue"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生07",
+      "days_without_application": 4,
+      "overdue_tasks": 3,
+      "calculated_rules": [
+        "tasks_overdue"
+      ],
+      "stored_rules": [
+        "tasks_overdue"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生08",
+      "days_without_application": 4,
+      "overdue_tasks": 3,
+      "calculated_rules": [
+        "tasks_overdue"
+      ],
+      "stored_rules": [
+        "tasks_overdue"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生09",
+      "days_without_application": 4,
+      "overdue_tasks": 3,
+      "calculated_rules": [
+        "tasks_overdue"
+      ],
+      "stored_rules": [
+        "tasks_overdue"
+      ],
+      "pass": true
+    },
+    {
+      "student": "学生10",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生11",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生12",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生13",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生14",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生15",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生16",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生17",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生18",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生19",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生20",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生21",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生22",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生23",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    },
+    {
+      "student": "学生24",
+      "days_without_application": 4,
+      "overdue_tasks": 0,
+      "calculated_rules": [],
+      "stored_rules": [],
+      "pass": true
+    }
+  ],
+  "passed": 24,
+  "total": 24
+}

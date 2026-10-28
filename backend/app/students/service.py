@@ -25,9 +25,19 @@ def create_profile_analysis(
         status="pending",
     )
     db.add(draft)
-    db.commit()
-    db.refresh(draft)
+    db.flush()
     return draft
+
+
+def serialize_profile_analysis_draft(
+    draft: ProfileAnalysisDraft,
+) -> dict[str, object]:
+    return {
+        "id": draft.id,
+        "provider": draft.provider,
+        "status": draft.status,
+        "analysis": json.loads(draft.payload_json),
+    }
 
 
 def confirm_profile_analysis(db: Session, *, student: User, draft_id: str) -> StudentProfile:

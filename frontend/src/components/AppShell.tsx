@@ -1,117 +1,239 @@
 import {
+  Activity,
+  BookOpenCheck,
   BriefcaseBusiness,
+  Building2,
   ClipboardCheck,
   FileText,
   Gauge,
   LogOut,
   Menu,
   MessageSquareText,
-  SearchCheck,
   RefreshCw,
+  ScrollText,
+  SearchCheck,
+  ShieldCheck,
+  Sparkles,
   Users,
   X,
 } from 'lucide-react'
+import { useQuery } from '@tanstack/react-query'
 import { useState, type ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
 
+import { apiFetch } from '../app/api'
 import { useSession } from '../app/session'
+import type { AiCapabilities } from '../features/chat/types'
+import { ServerDemoBanner } from './ServerDemoBanner'
 
-const studentNav = [
-  { to: '/student', label: '工作台', icon: Gauge, end: true },
-  { to: '/student/profile', label: '就业画像', icon: Users },
-  { to: '/student/plan', label: '求职计划', icon: ClipboardCheck },
-  { to: '/student/jobs', label: '岗位匹配', icon: SearchCheck },
-  { to: '/student/resume', label: '简历优化', icon: FileText },
-  { to: '/student/interview', label: '模拟面试', icon: MessageSquareText },
-  { to: '/student/applications', label: '投递管理', icon: BriefcaseBusiness },
-  { to: '/student/review', label: '每周复盘', icon: RefreshCw },
+type NavigationItem = {
+  to: string
+  label: string
+  icon: typeof Gauge
+  end?: boolean
+}
+type NavigationSection = {
+  label: string
+  items: NavigationItem[]
+}
+
+const studentNav: NavigationSection[] = [
+  {
+    label: '总览',
+    items: [
+      { to: '/student', label: '工作台', icon: Gauge, end: true },
+      { to: '/student/assistant', label: '就业助手', icon: MessageSquareText },
+    ],
+  },
+  {
+    label: '规划与成长',
+    items: [
+      { to: '/student/profile', label: '就业画像', icon: Users },
+      { to: '/student/plan', label: '求职计划', icon: ClipboardCheck },
+      { to: '/student/learning', label: '学习成长', icon: BookOpenCheck },
+      { to: '/student/training', label: '训练中心', icon: Sparkles },
+    ],
+  },
+  {
+    label: '入职后成长',
+    items: [
+      { to: '/student/workplace', label: '职场训练', icon: Building2 },
+    ],
+  },
+  {
+    label: '求职行动',
+    items: [
+      { to: '/student/jobs', label: '岗位匹配', icon: SearchCheck },
+      { to: '/student/intelligence', label: '岗位情报', icon: Building2 },
+      { to: '/student/resume', label: '简历优化', icon: FileText },
+      { to: '/student/interview', label: '模拟面试', icon: MessageSquareText },
+      { to: '/student/applications', label: '投递管理', icon: BriefcaseBusiness },
+      { to: '/student/employment', label: '入职跟踪', icon: ShieldCheck },
+      { to: '/student/review', label: '每周复盘', icon: RefreshCw },
+    ],
+  },
 ]
 
-const counselorNav = [
-  { to: '/counselor', label: '班级概览', icon: Gauge, end: true },
-  { to: '/counselor/students', label: '学生进展', icon: Users },
-  { to: '/counselor/interventions', label: '帮扶任务', icon: ClipboardCheck },
+const counselorNav: NavigationSection[] = [
+  {
+    label: '总览',
+    items: [
+      { to: '/counselor', label: '班级概览', icon: Gauge, end: true },
+      { to: '/counselor/assistant', label: '就业助手', icon: MessageSquareText },
+    ],
+  },
+  {
+    label: '学生服务',
+    items: [
+      { to: '/counselor/students', label: '学生进展', icon: Users },
+      { to: '/counselor/interventions', label: '帮扶任务', icon: ClipboardCheck },
+      { to: '/counselor/quality', label: '就业质量', icon: ShieldCheck },
+    ],
+  },
+  {
+    label: '系统治理',
+    items: [
+      { to: '/counselor/agent-usage', label: 'Agent 运行统计', icon: Activity },
+      { to: '/counselor/audit', label: '审计日志', icon: ScrollText },
+    ],
+  },
 ]
 
-export function AppShell({ children }: { children: ReactNode }) {
-  const { user, logout } = useSession()
-  const [menuOpen, setMenuOpen] = useState(false)
-  const items = user?.role === 'student' ? studentNav : counselorNav
-
-  const navigation = (
+function Navigation({
+  sections,
+  role,
+  displayName,
+  onNavigate,
+  onLogout,
+}: {
+  sections: NavigationSection[]
+  role: string | undefined
+  displayName: string | undefined
+  onNavigate: () => void
+  onLogout: () => void
+}) {
+  let index = 0
+  return (
     <>
-      <div className="flex h-16 items-center gap-3 border-b border-slate-800 px-5">
-        <span className="grid size-9 place-items-center rounded-md bg-teal-600 text-white">
-          <BriefcaseBusiness aria-hidden="true" size={19} />
+      <div className="app-brand">
+        <span className="app-brand-mark" aria-hidden="true">
+          <BriefcaseBusiness size={19} strokeWidth={2.1} />
         </span>
         <div>
-          <p className="text-sm font-semibold text-white">职航智管</p>
-          <p className="text-[11px] text-slate-400">就业事务智能体</p>
+          <p className="app-brand-name">职航智管</p>
+          <p className="app-brand-subtitle">就业事务智能工作台</p>
         </div>
       </div>
-      <nav className="flex-1 space-y-1 px-3 py-5" aria-label="主导航">
-        {items.map(({ to, label, icon: Icon, end }) => (
-          <NavLink
-            key={to}
-            to={to}
-            end={end}
-            onClick={() => setMenuOpen(false)}
-            className={({ isActive }) =>
-              `flex h-10 items-center gap-3 rounded-md px-3 text-sm transition ${
-                isActive
-                  ? 'bg-teal-600 text-white'
-                  : 'text-slate-300 hover:bg-slate-800 hover:text-white'
-              }`
-            }
-          >
-            <Icon aria-hidden="true" size={18} />
-            {label}
-          </NavLink>
+
+      <div className="app-nav-caption">
+        <span>WORKSPACE</span>
+        <span className="app-nav-caption-line" aria-hidden="true" />
+      </div>
+      <nav className="app-nav" aria-label="主导航">
+        {sections.map((section) => (
+          <div className="app-nav-section" key={section.label}>
+            <p className="app-nav-section-label">{section.label}</p>
+            {section.items.map(({ to, label, icon: Icon, end }) => {
+              index += 1
+              return (
+                <NavLink
+                  key={to}
+                  to={to}
+                  end={end}
+                  onClick={onNavigate}
+                  className={({ isActive }) => `app-nav-link${isActive ? ' is-active' : ''}`}
+                >
+                  <span className="app-nav-index">{String(index).padStart(2, '0')}</span>
+                  <Icon aria-hidden="true" size={17} strokeWidth={1.8} />
+                  <span>{label}</span>
+                </NavLink>
+              )
+            })}
+          </div>
         ))}
       </nav>
-      <div className="border-t border-slate-800 p-3">
-        <div className="mb-2 px-3 py-2">
-          <p className="truncate text-sm font-medium text-white">{user?.display_name}</p>
-          <p className="mt-0.5 text-xs text-slate-400">{user?.role === 'student' ? '毕业生' : '就业辅导员'}</p>
+
+      <div className="app-sidebar-footer">
+        <div className="app-workspace-note">
+          <span className="app-workspace-dot" aria-hidden="true" />
+          <span>{role === 'student' ? '学生工作区' : '辅导员工作区'}</span>
         </div>
-        <button
-          type="button"
-          onClick={logout}
-          className="flex h-10 w-full items-center gap-3 rounded-md px-3 text-sm text-slate-300 hover:bg-slate-800 hover:text-white"
-        >
-          <LogOut aria-hidden="true" size={18} />
-          退出登录
-        </button>
+        <div className="app-user-card">
+          <span className="app-user-avatar" aria-hidden="true">
+            {(displayName ?? '职').slice(0, 1)}
+          </span>
+          <div className="app-user-copy">
+            <strong>{displayName ?? '当前用户'}</strong>
+            <span>{role === 'student' ? '毕业生' : '就业辅导员'}</span>
+          </div>
+          <button type="button" className="app-logout" onClick={onLogout} aria-label="退出登录" title="退出登录">
+            <LogOut aria-hidden="true" size={16} />
+          </button>
+        </div>
       </div>
     </>
   )
+}
+
+export function AppShell({ children }: { children: ReactNode }) {
+  const { token, user, logout } = useSession()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const capabilitiesQuery = useQuery({
+    queryKey: ['ai-capabilities'],
+    queryFn: () => apiFetch<AiCapabilities>('/ai/capabilities', {}, token ?? undefined),
+    enabled: Boolean(token),
+    staleTime: 30_000,
+  })
+  const deploymentMode = capabilitiesQuery.data?.deployment_mode
+  const sections = user?.role === 'student' ? studentNav : counselorNav
+  const roleLabel = user?.role === 'student' ? '学生工作台' : '辅导员工作台'
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-950">
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col bg-slate-950 lg:flex">{navigation}</aside>
+    <div className="app-shell">
+      <aside className={`app-sidebar${menuOpen ? ' is-open' : ''}`}>
+        <Navigation
+          sections={sections}
+          role={user?.role}
+          displayName={user?.display_name}
+          onNavigate={() => setMenuOpen(false)}
+          onLogout={logout}
+        />
+      </aside>
+
       {menuOpen ? (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <button className="absolute inset-0 bg-slate-950/50" aria-label="关闭导航" onClick={() => setMenuOpen(false)} />
-          <aside className="relative flex h-full w-72 flex-col bg-slate-950">
-            <button className="absolute right-3 top-4 grid size-9 place-items-center text-slate-300" aria-label="关闭导航" onClick={() => setMenuOpen(false)}>
-              <X size={20} />
-            </button>
-            {navigation}
-          </aside>
-        </div>
+        <button type="button" className="app-sidebar-scrim" aria-label="关闭导航" onClick={() => setMenuOpen(false)} />
       ) : null}
-      <div className="lg:pl-60">
-        <header className="sticky top-0 z-20 flex h-16 items-center border-b border-slate-200 bg-white/95 px-4 backdrop-blur lg:px-8">
-          <button type="button" className="grid size-10 place-items-center rounded-md text-slate-700 lg:hidden" aria-label="打开导航" onClick={() => setMenuOpen(true)}>
-            <Menu size={21} />
+
+      <div className="app-viewport">
+        <header className="app-topbar">
+          <button type="button" className="app-menu-button" aria-label="打开导航" title="打开导航" onClick={() => setMenuOpen(true)}>
+            <Menu aria-hidden="true" size={19} />
           </button>
-          <div className="ml-auto text-right">
-            <p className="text-xs text-slate-500">当前身份</p>
-            <p className="text-sm font-medium">{user?.role === 'student' ? '毕业生' : '就业辅导员'}</p>
+          <div className="app-context">
+            <span className="app-context-kicker">CAREER OS</span>
+            <span className="app-context-separator" aria-hidden="true" />
+            <span className="app-context-current">{roleLabel}</span>
+          </div>
+          <div className="app-topbar-meta">
+            <span className="app-live-label"><span aria-hidden="true" />{deploymentMode === 'server-demo' ? '服务器演示版' : '本地工作区'}</span>
+            <span className="app-topbar-user">{user?.display_name ?? '当前用户'}</span>
           </div>
         </header>
-        <main className="mx-auto max-w-[1440px] px-4 py-6 lg:px-8 lg:py-8">{children}</main>
+        <ServerDemoBanner
+          deploymentMode={deploymentMode}
+          limitations={capabilitiesQuery.data?.limitations}
+        />
+        <main className="app-content">
+          <div className="app-content-noise" aria-hidden="true" />
+          <div className="app-content-inner">{children}</div>
+        </main>
       </div>
+
+      {menuOpen ? (
+        <button type="button" className="app-mobile-close" aria-label="关闭导航" title="关闭导航" onClick={() => setMenuOpen(false)}>
+          <X aria-hidden="true" size={18} />
+        </button>
+      ) : null}
     </div>
   )
 }

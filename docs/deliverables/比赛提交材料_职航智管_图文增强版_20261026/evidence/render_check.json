@@ -1,0 +1,453 @@
+{
+  "pages": 42,
+  "chapters": 24,
+  "special_visual_spreads": 16,
+  "figures": 60,
+  "all_42_pages_include_figures": true,
+  "figure_numbers_continuous": true,
+  "docx_markdown_same_source": true,
+  "docx_paragraph_content_preserved": true,
+  "no_missing_figure_or_caption": true,
+  "no_figure_outside_margins": true,
+  "no_tracked_changes_or_floating_images": true,
+  "records": [
+    {
+      "page": 1,
+      "title": "cover",
+      "figures": [
+        1
+      ],
+      "text_characters": 396,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 2,
+      "title": "navigation",
+      "figures": [
+        2
+      ],
+      "text_characters": 469,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 3,
+      "title": "01 项目概览与评审导读",
+      "figures": [
+        3
+      ],
+      "text_characters": 891,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 4,
+      "title": "02 项目背景与需求分析",
+      "figures": [
+        4
+      ],
+      "text_characters": 878,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 5,
+      "title": "03 用户角色与端到端场景",
+      "figures": [
+        5
+      ],
+      "text_characters": 800,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 6,
+      "title": "03 图解 从登录入口到学生工作台",
+      "figures": [
+        6,
+        7
+      ],
+      "text_characters": 481,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 7,
+      "title": "04 总体技术架构与职责划分",
+      "figures": [
+        8
+      ],
+      "text_characters": 820,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 8,
+      "title": "05 主智能体与专业智能体协同",
+      "figures": [
+        9
+      ],
+      "text_characters": 970,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 9,
+      "title": "06 工具授权与人工确认机制",
+      "figures": [
+        10
+      ],
+      "text_characters": 811,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 10,
+      "title": "06 图解 展开一次真实工具调用",
+      "figures": [
+        11,
+        12
+      ],
+      "text_characters": 499,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 11,
+      "title": "07 会话持久化与异步运行状态",
+      "figures": [
+        13
+      ],
+      "text_characters": 1083,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 12,
+      "title": "07 图解 动作状态与任务状态",
+      "figures": [
+        14,
+        15
+      ],
+      "text_characters": 421,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 13,
+      "title": "08 数据模型与证据链",
+      "figures": [
+        16
+      ],
+      "text_characters": 862,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 14,
+      "title": "08 图解 数据使用与保留策略",
+      "figures": [
+        17,
+        18
+      ],
+      "text_characters": 464,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 15,
+      "title": "09 画像确认与四周行动计划",
+      "figures": [
+        19
+      ],
+      "text_characters": 776,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 16,
+      "title": "09 图解 画像证据与分周任务",
+      "figures": [
+        20,
+        21
+      ],
+      "text_characters": 441,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 17,
+      "title": "10 岗位分析与简历版本",
+      "figures": [
+        22
+      ],
+      "text_characters": 745,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 18,
+      "title": "10 图解 岗位来源与有效性核验",
+      "figures": [
+        23,
+        24
+      ],
+      "text_characters": 474,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 19,
+      "title": "10 图解 上传记录与解析失败边界",
+      "figures": [
+        25,
+        26
+      ],
+      "text_characters": 618,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 20,
+      "title": "11 模拟面试与可选多模态训练",
+      "figures": [
+        27
+      ],
+      "text_characters": 784,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 21,
+      "title": "11 图解 面试交互与场次报告",
+      "figures": [
+        28,
+        29
+      ],
+      "text_characters": 475,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 22,
+      "title": "11 图解 两类评分的证据与口径",
+      "figures": [
+        30,
+        31
+      ],
+      "text_characters": 472,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 23,
+      "title": "12 学习任务与入职后工作交付",
+      "figures": [
+        32
+      ],
+      "text_characters": 691,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 24,
+      "title": "12 图解 从学习任务到工作交付",
+      "figures": [
+        33,
+        34,
+        35
+      ],
+      "text_characters": 451,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 25,
+      "title": "13 申请状态与每周复盘",
+      "figures": [
+        36
+      ],
+      "text_characters": 690,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 26,
+      "title": "13 图解 从申请看板到本周行动",
+      "figures": [
+        37,
+        38,
+        39
+      ],
+      "text_characters": 468,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 27,
+      "title": "14 班级风险与帮扶验收",
+      "figures": [
+        40
+      ],
+      "text_characters": 810,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 28,
+      "title": "14 图解 查看风险、提交反馈与验收",
+      "figures": [
+        41,
+        42,
+        43
+      ],
+      "text_characters": 462,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 29,
+      "title": "15 入职回访与就业质量反馈",
+      "figures": [
+        44
+      ],
+      "text_characters": 757,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 30,
+      "title": "15 图解 入职记录与反馈发布条件",
+      "figures": [
+        45
+      ],
+      "text_characters": 521,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 31,
+      "title": "16 部署模式与复现路径",
+      "figures": [
+        46
+      ],
+      "text_characters": 1166,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 32,
+      "title": "16 图解 服务器拓扑与性能证据范围",
+      "figures": [
+        47,
+        48
+      ],
+      "text_characters": 506,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 33,
+      "title": "17 验证结果与证据范围",
+      "figures": [
+        49
+      ],
+      "text_characters": 912,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 34,
+      "title": "17 图解 风险样本与规则边界",
+      "figures": [
+        50,
+        51
+      ],
+      "text_characters": 442,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 35,
+      "title": "17 图解 两个阶段图为何不能混用",
+      "figures": [
+        52,
+        53
+      ],
+      "text_characters": 434,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 36,
+      "title": "18 已知问题与风险处置",
+      "figures": [
+        54
+      ],
+      "text_characters": 982,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 37,
+      "title": "19 开源现状与依赖许可",
+      "figures": [
+        55
+      ],
+      "text_characters": 1042,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 38,
+      "title": "20 贡献流程与版本发布方案",
+      "figures": [
+        56
+      ],
+      "text_characters": 941,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 39,
+      "title": "21 长期发展路线与交付责任",
+      "figures": [
+        57
+      ],
+      "text_characters": 880,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 40,
+      "title": "22 试点评估与验收设计",
+      "figures": [
+        58
+      ],
+      "text_characters": 831,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 41,
+      "title": "23 现场演示脚本与异常预案",
+      "figures": [
+        59
+      ],
+      "text_characters": 982,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    },
+    {
+      "page": 42,
+      "title": "24 提交清单与证据索引",
+      "figures": [
+        60
+      ],
+      "text_characters": 956,
+      "all_figures_inside_margins": true,
+      "text_inside_bounds": true
+    }
+  ]
+}

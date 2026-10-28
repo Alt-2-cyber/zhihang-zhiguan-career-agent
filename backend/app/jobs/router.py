@@ -55,7 +55,9 @@ def match_job(
     if job is None:
         raise AppError(404, "job_not_found", "岗位不存在")
     profile = get_student_profile(db, current_user.id)
-    result = build_agent_gateway(get_settings()).match_job(profile.summary, job.description)
+    result = build_agent_gateway(get_settings(), db=db, owner_id=current_user.id).match_job(
+        profile.summary, job.description
+    )
     record = JobMatchRecord(
         student_id=current_user.id,
         job_id=job.id,

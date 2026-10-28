@@ -1,0 +1,28 @@
+
+> career-agent-frontend@0.1.0 test
+> vitest --run
+
+
+ RUN  v3.2.7 D:/table/ai_jiuye/frontend
+
+ ✓ src/features/chat/chat-api.test.ts (3 tests) 19ms
+ ✓ src/features/chat/useAgentRun.test.ts (5 tests) 4ms
+ ✓ src/features/counselor/counselor-flow.test.tsx (1 test) 56ms
+ ✓ src/features/chat/ContextLaunch.test.tsx (2 tests) 252ms
+ ✓ src/features/chat/ExecutionPanel.test.tsx (2 tests) 350ms
+ ✓ src/features/student/StudentInterventions.test.tsx (1 test) 500ms
+   ✓ StudentInterventions > submits student feedback for an assigned intervention  498ms
+ ✓ src/features/chat/VoiceComposer.test.tsx (4 tests) 524ms
+ ✓ src/features/student/student-flow.test.tsx (1 test) 724ms
+   ✓ student profile flow > shows evidence before the student confirms an AI profile  722ms
+ ✓ src/features/auth/LoginPage.test.tsx (1 test) 647ms
+   ✓ LoginPage > submits credentials and reports invalid login without persisting a session  646ms
+ ✓ src/features/chat/ChatPage.test.tsx (5 tests) 1514ms
+   ✓ ChatPage > shows sessions, switches permission mode, and streams an Agent run  838ms
+   ✓ ChatPage > reconciles optimistic and streamed messages after the session refreshes  330ms
+
+ Test Files  10 passed (10)
+      Tests  25 passed (25)
+   Start at  10:21:43
+   Duration  25.76s (transform 1.64s, setup 32.34s, collect 33.60s, tests 4.59s, environment 150.33s, prepare 6.99s)
+

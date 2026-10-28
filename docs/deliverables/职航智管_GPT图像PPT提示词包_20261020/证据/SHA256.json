@@ -1,0 +1,417 @@
+[
+  {
+    "file": "00_使用说明.md",
+    "bytes": 2672,
+    "sha256": "a41bf0fd4af5a3d2d37f1cdc65423942297c70285b65fe0da25c7000d84fe359"
+  },
+  {
+    "file": "01_逐页提示词.md",
+    "bytes": 84466,
+    "sha256": "8b2ca5cb82b194b5e5e65a3927d52ee3d70302fb2c274f5fdb9c75aa7abaadef"
+  },
+  {
+    "file": "02_实测数据与截图说明.md",
+    "bytes": 9252,
+    "sha256": "1b8ee21167b7e86b33f0496833c5c8026d0afb0435ed19c11584df60fa681f66"
+  },
+  {
+    "file": "图表/C01-cumulative-funnel.png",
+    "bytes": 107634,
+    "sha256": "d55425ad536735786d3a278d09482d8b946d149e70dafc99ead90a4f0a979e48"
+  },
+  {
+    "file": "图表/C01-cumulative-funnel.svg",
+    "bytes": 90574,
+    "sha256": "00edbd6dcd7966bf6cd616038861cb13b0676927217f80e5c99cfdaa12e3f6ba"
+  },
+  {
+    "file": "图表/C02-current-stages.png",
+    "bytes": 83701,
+    "sha256": "89784761bcf5864e1da837c71996c9919499d1a7aaeb87be2b368c5bba06be79"
+  },
+  {
+    "file": "图表/C02-current-stages.svg",
+    "bytes": 71432,
+    "sha256": "21dc79298349c2c7121594f780d743b43cbe53352f8aefce7fd2030ce12f9e57"
+  },
+  {
+    "file": "图表/C03-job-match.png",
+    "bytes": 192759,
+    "sha256": "c2cb2e276eb03a6a7fd8670dd6520cca1dc3e8394bae8d1c3dfb375804bcb56c"
+  },
+  {
+    "file": "图表/C03-job-match.svg",
+    "bytes": 97353,
+    "sha256": "2f88ab3467070ca64944ba11c6c2c70edb44d3c35e87df5862b109c1bffb8e3c"
+  },
+  {
+    "file": "图表/C04-interview-scores.png",
+    "bytes": 181757,
+    "sha256": "da4e896bcd70fd6fbf9a01ebe78a1bbda129f2405880b54e5098413ab23add3d"
+  },
+  {
+    "file": "图表/C04-interview-scores.svg",
+    "bytes": 98354,
+    "sha256": "fe367084ea546bcd28ab8c5a202a255aec63fdab2c7322e5c4a59bd92cdbc4e3"
+  },
+  {
+    "file": "图表/C05-risk-and-tasks.png",
+    "bytes": 134488,
+    "sha256": "778b51a392ffeaa16bd8af3e8fad7095a17655407a8f43635a532761b8d10f25"
+  },
+  {
+    "file": "图表/C05-risk-and-tasks.svg",
+    "bytes": 71837,
+    "sha256": "f8bd8988d615cfc357e1f2bd192a052aeccc3187ff3c56ae7a9e6349a408ea1f"
+  },
+  {
+    "file": "图表/C06-test-results.png",
+    "bytes": 126246,
+    "sha256": "483feb6e71914286dfc34dd3235868d81197d449ac619aee67adcbe175fce682"
+  },
+  {
+    "file": "图表/C06-test-results.svg",
+    "bytes": 109216,
+    "sha256": "73ff645a67d6632319f1fbce77af691c446c679ded64d57e364a39a240cb156b"
+  },
+  {
+    "file": "图表/C07-local-api-latency.png",
+    "bytes": 125167,
+    "sha256": "fdf960a5e392cf906f24720f34e4475637f118767c88adf48a373837107cd467"
+  },
+  {
+    "file": "图表/C07-local-api-latency.svg",
+    "bytes": 106227,
+    "sha256": "9e1a7d3c7dfa94c8fe47cb69da20006da21105fb3b90688e53e3198ba4a79158"
+  },
+  {
+    "file": "图表/C08-tool-inventory.png",
+    "bytes": 92114,
+    "sha256": "13491ca38f877d3605b55406e9c9439643165266820b9f745ff1a7dfc76cdede"
+  },
+  {
+    "file": "图表/C08-tool-inventory.svg",
+    "bytes": 75582,
+    "sha256": "c211b0f863bb98e9d53e9054359fca25c1ca3657d7063735b475c708be567097"
+  },
+  {
+    "file": "图表/C09-risk-boundaries.png",
+    "bytes": 152551,
+    "sha256": "7d577f8c94526e04a85baa46708d6397531b3d9b584a2dc3006fadca5042ebe4"
+  },
+  {
+    "file": "图表/C09-risk-boundaries.svg",
+    "bytes": 100848,
+    "sha256": "0f8a74af2ddc80c9d935b76f14416a9d7565f04e7728ae1c39edf937b5a11366"
+  },
+  {
+    "file": "图表总览.jpg",
+    "bytes": 305211,
+    "sha256": "23202d62d5729785f33c0b8ed3437e55a14350f429c5d21007e44f03f2145778"
+  },
+  {
+    "file": "截图/01-student-dashboard.png",
+    "bytes": 136576,
+    "sha256": "4fcf68eb64b5926e6409fa5e501c272b286efe18b6cad3805f2c7f75144c50ae"
+  },
+  {
+    "file": "截图/02-profile.png",
+    "bytes": 138709,
+    "sha256": "d6f1d56c48ffdfe2a63cd37ef97b244d22f380a0e8a9e7dc634e33ddeda21b36"
+  },
+  {
+    "file": "截图/03-plan.png",
+    "bytes": 142599,
+    "sha256": "ea921f465930a52e3f10732307152ec60827d5f91a83f39fdcee8f7c5a147cf4"
+  },
+  {
+    "file": "截图/04-job-match.png",
+    "bytes": 167795,
+    "sha256": "9cdc0b4feaf48d92c583e9ea304787f6005299c8935e2ca24e859da2bd5e3f8c"
+  },
+  {
+    "file": "截图/05-job-intelligence.png",
+    "bytes": 143823,
+    "sha256": "4d0171969e54c24181d542242f21a68c9b05ca5cbba8f63145f0d3d5dea3f5a0"
+  },
+  {
+    "file": "截图/06-applications.png",
+    "bytes": 137049,
+    "sha256": "dbe9c53666ccaff8fdd313bbde851a010765d48377804998b2d97de742c732d2"
+  },
+  {
+    "file": "截图/07-interview-report.png",
+    "bytes": 308438,
+    "sha256": "c9f99c93b4aa2ac9142e50f3a65682614ae372e2dd6f1b824dbee13c75ee87e2"
+  },
+  {
+    "file": "截图/07A-interview-stage.png",
+    "bytes": 168943,
+    "sha256": "645ce6789d5f0d07caca808c9fa46d448182ef0abc04aa5e816c8076496117d2"
+  },
+  {
+    "file": "截图/07B-interview-summary.png",
+    "bytes": 22368,
+    "sha256": "55918111beb78508b14ef27614b03adaffab87d64bc9b98fa00f5f47928b280d"
+  },
+  {
+    "file": "截图/07C-digital-human.png",
+    "bytes": 108388,
+    "sha256": "bd031110697804873a819f257ed31d2544836746047aee25a8e47b71d387f2d8"
+  },
+  {
+    "file": "截图/08-workplace.png",
+    "bytes": 232534,
+    "sha256": "2cbafe82d81220ff33504bb46eabfe0806251954adb861e1cbd8eeac21b1474c"
+  },
+  {
+    "file": "截图/08A-workplace-focus.png",
+    "bytes": 144421,
+    "sha256": "48aa80fbbb740a31ca855e7b04667a0c209d2c17dc7d45b839cdf764c32d322b"
+  },
+  {
+    "file": "截图/09-agent-assistant.png",
+    "bytes": 141655,
+    "sha256": "4d327ae65dc274039f3941b60b4c960366e195ac8a61f8d5a115cd42507ac939"
+  },
+  {
+    "file": "截图/10-agent-tool-details.png",
+    "bytes": 31304,
+    "sha256": "ffca0ba00c08e074bdfa75bc3514d4bf5d6b228df103b4eeb00b87f688f0a452"
+  },
+  {
+    "file": "截图/11-student-feedback.png",
+    "bytes": 160343,
+    "sha256": "86a9ef8f5f12cd06c27da5df9ef1dffe4bd4584bdb400753b41d171d9e4bf3fd"
+  },
+  {
+    "file": "截图/12-counselor-dashboard.png",
+    "bytes": 152460,
+    "sha256": "865309218f5d74aa9dd37a66d4b80b1aeca9c39e3ccb770f51df505e87c25c05"
+  },
+  {
+    "file": "截图/12A-counselor-focus.png",
+    "bytes": 132192,
+    "sha256": "022c06381c85005f724d24a0789d601dde6e177b5877cff4fd3fbdfbdab33b06"
+  },
+  {
+    "file": "截图/13-counselor-intervention.png",
+    "bytes": 131077,
+    "sha256": "dfbd329c8f3063c925f142c9800acf0e94e8eb6ce09148a25a844637cf2bf42c"
+  },
+  {
+    "file": "截图/13A-confirmed-feedback.png",
+    "bytes": 24260,
+    "sha256": "5bfd8f756bd1bd733a6e33565c1ebcb7602a3618e5a170a6b06d39abd3c5c35b"
+  },
+  {
+    "file": "截图/14-counselor-mobile.png",
+    "bytes": 117424,
+    "sha256": "98b7cf3a283d93412eaa48aa8018d62345b33d300ab057020f52411e3bd3c852"
+  },
+  {
+    "file": "截图总览.jpg",
+    "bytes": 292989,
+    "sha256": "5ce11691795856255a3125fefb571f220af1ebd370cfa4d2e2f4b544062a77ac"
+  },
+  {
+    "file": "证据/api_performance.json",
+    "bytes": 4239,
+    "sha256": "1d4c5f13ea08c824ed0aac832f6fbb549c382504db7735a524d1b7463beefe9a"
+  },
+  {
+    "file": "证据/architecture_inventory.json",
+    "bytes": 6014,
+    "sha256": "b416b20e1a087e93c63003597b7d206e77cf3cabe1ef207da975807f3f556dff"
+  },
+  {
+    "file": "证据/backend-tests-current.log",
+    "bytes": 202,
+    "sha256": "db189b67787eaf2cd5b6da7184063f4903c9310766769891af49937e6172b5a6"
+  },
+  {
+    "file": "证据/backend-tests-current.xml",
+    "bytes": 8459,
+    "sha256": "a81b3c81f05fcf3bbb7fc4468df3966536399b7fdd813ed430fbcd579b476e06"
+  },
+  {
+    "file": "证据/browser_supplemental_checks.json",
+    "bytes": 2355,
+    "sha256": "f35a7d9d8f783d6a8de983f02b09e9120913071aa006f1651e8ec852be190e58"
+  },
+  {
+    "file": "证据/chart_data.csv",
+    "bytes": 3228,
+    "sha256": "d9b9331872e6e62c44a9c8694fc59c34d6ff14dd4548936bb34bc400802e1cb8"
+  },
+  {
+    "file": "证据/data_summary.json",
+    "bytes": 22320,
+    "sha256": "4ba06c828ea35b971739694be0ebc6ee1ef08ce25deb5f139117fe5a728fd60a"
+  },
+  {
+    "file": "证据/final_snapshot_checks.json",
+    "bytes": 1058,
+    "sha256": "41551162275b451f7a29cf84bbb2548d94689e75cf536fd44a9028387b820d45"
+  },
+  {
+    "file": "证据/fixture_consistency.json",
+    "bytes": 5454,
+    "sha256": "fc822c76ace05831290ad13e3f4ba04d99e4b2dd6bcafecc5b3205822a5dad6d"
+  },
+  {
+    "file": "证据/frontend-build.log",
+    "bytes": 4267,
+    "sha256": "31291a56decda602d5133836afc79dbed4e805874c2fcae1a887eb3ab60f00ec"
+  },
+  {
+    "file": "证据/frontend-tests.log",
+    "bytes": 1408,
+    "sha256": "18b95bab37153e71895ee43a7bf0306151265e2d1fad1082e75fed30d9bdf404"
+  },
+  {
+    "file": "证据/pages_manifest.json",
+    "bytes": 25693,
+    "sha256": "9a666c21ba1790953a4b65edaa2fd571e643d9350fd4a2a36f3d5a61d0d4d9e6"
+  },
+  {
+    "file": "证据/risk_boundary_cases.json",
+    "bytes": 2872,
+    "sha256": "500d42d9c2eca5c49b5fad416020d9c39f5b90d54565fe4e49340adbfcbb5f88"
+  },
+  {
+    "file": "证据/source_snapshot.json",
+    "bytes": 1558,
+    "sha256": "ca5fa10637b716c79f9aeecff50f886f7d731f1af042bbd7bffaf885a0c47241"
+  },
+  {
+    "file": "逐页提示词/P01_作品介绍.txt",
+    "bytes": 3930,
+    "sha256": "cbf4e3d293927d21ea1585b1369027e958486b71f905013d59c6435ea2727bec"
+  },
+  {
+    "file": "逐页提示词/P02_项目背景.txt",
+    "bytes": 4005,
+    "sha256": "247ba4c585fd088b4530426f23dd382bd59bc385440a53579c7bcc64bcf4f307"
+  },
+  {
+    "file": "逐页提示词/P03_数据来源.txt",
+    "bytes": 3759,
+    "sha256": "ab1437a31ac4b6572b1889fce47ca635d62b045b9093e6e7293622b4a40a9f68"
+  },
+  {
+    "file": "逐页提示词/P04_知识设计.txt",
+    "bytes": 3960,
+    "sha256": "5d1e6c7218839d90f4a288d7332af1a87a052d062eff140a5de7d8a1e6c739c9"
+  },
+  {
+    "file": "逐页提示词/P05_数据预处理.txt",
+    "bytes": 3961,
+    "sha256": "d7cc196c0e326fdfd94f999ada6bfba93b24ed39b9d50936b6202aea2e0c6ceb"
+  },
+  {
+    "file": "逐页提示词/P06_分析方法.txt",
+    "bytes": 3727,
+    "sha256": "565899fbc4af89081abc545e428f7fe18ea865f6f53c1dd58ad0ffd273ee8908"
+  },
+  {
+    "file": "逐页提示词/P07_Agent 逻辑.txt",
+    "bytes": 3991,
+    "sha256": "3ef4bb401ab2a97374742db2b4cdfad8b9163202b91816ba366747e0a5854ac8"
+  },
+  {
+    "file": "逐页提示词/P08_数据实例.txt",
+    "bytes": 3831,
+    "sha256": "7772b5292c2fc67dd6a2dfe5df37fd10d36761623e7b5909517586d5ad34c3af"
+  },
+  {
+    "file": "逐页提示词/P09_闭环分析.txt",
+    "bytes": 3839,
+    "sha256": "e96c9856a4c09a851ea0207ea7db288bd15364302b039fbb4b2b67697ae498e6"
+  },
+  {
+    "file": "逐页提示词/P10_项目创新.txt",
+    "bytes": 3874,
+    "sha256": "fe42a316d7af92b8c5e26e5a037424cf8b604b0bf78f00328802a1c6d9febde8"
+  },
+  {
+    "file": "逐页提示词/P11_学科融合.txt",
+    "bytes": 3853,
+    "sha256": "457b31e06a5539c30ff0cc949cb9ef413a7f1724720310760f05f974a1fd95d3"
+  },
+  {
+    "file": "逐页提示词/P12_学生端结果.txt",
+    "bytes": 3979,
+    "sha256": "a78be8c52678343974e46c60c1c8e2836c4b1c7c14bc127b0609fb6025397a12"
+  },
+  {
+    "file": "逐页提示词/P13_辅导员端结果.txt",
+    "bytes": 3907,
+    "sha256": "8b02b0e91e286782a0e182dea1b7171e93c7ab7bf53051af4803e4427bd9f1ca"
+  },
+  {
+    "file": "逐页提示词/P14_面试训练.txt",
+    "bytes": 3948,
+    "sha256": "0a57d8f33e16f5aa4c3b4d3fe680f166fffb53109a5bfb2ef992a7ec4a9e81bf"
+  },
+  {
+    "file": "逐页提示词/P15_实测与优化.txt",
+    "bytes": 3908,
+    "sha256": "d726643b854ee0625f072e4a6ad451ccafab94b6a7c72272faad3e3a6ed37889"
+  },
+  {
+    "file": "逐页提示词/P16_风险控制.txt",
+    "bytes": 3933,
+    "sha256": "d5a6b06f39475293fee1a3a55fe5e6d6428d77f67aa5f7e7fa0e1aacb96608a9"
+  },
+  {
+    "file": "逐页提示词/P17_应用对话.txt",
+    "bytes": 3995,
+    "sha256": "1c90df4b9c097a1428c50e4e45a899cbd29cdf897557bcf1492b4c356bd2c586"
+  },
+  {
+    "file": "逐页提示词/P18_提示词示例.txt",
+    "bytes": 4275,
+    "sha256": "a078c5dedfa559168c873ee31ee857027222f2ca8c63e4d471a4aae784d8ce29"
+  },
+  {
+    "file": "逐页提示词/P19_作品价值.txt",
+    "bytes": 3929,
+    "sha256": "facedfcbd06523f4a42d475aeedbdd865a21dec0cd9b07226b453509f7ed953f"
+  },
+  {
+    "file": "风格参考/R01-cover.png",
+    "bytes": 2576275,
+    "sha256": "756fe4ce5108b66ecda234470403f7103b07f16c5fde9c20e49c6dbba6a97e1a"
+  },
+  {
+    "file": "风格参考/R02-technology.png",
+    "bytes": 2456478,
+    "sha256": "06426d891177fcb2492631ddbc5a5dbd46ceb5c67b53f50d55fc96236558cd6d"
+  },
+  {
+    "file": "风格参考/R03-validation.png",
+    "bytes": 2392998,
+    "sha256": "6328a1567dc733310d57b7d3a63c7bba9718f1b907a2b91cc093869e1e2c9296"
+  },
+  {
+    "file": "风格参考/R04-evidence.png",
+    "bytes": 2619065,
+    "sha256": "34d167e6e6f70cd913bf8041bee210efb6e2da702d1647b416fcae2fedaaf6a6"
+  },
+  {
+    "file": "风格参考/R05-dashboard.png",
+    "bytes": 2227029,
+    "sha256": "6aaba12dfc3c577b345fad0cd29bcdc464ab75557c873fc4b59bb1a7701ff153"
+  },
+  {
+    "file": "风格参考/R06-closing.png",
+    "bytes": 2325764,
+    "sha256": "6ec6964428ffe3232aff8dfedebb4c4df2c6cc2311d2aa322ddf801cb0189e58"
+  },
+  {
+    "file": "风格参考总览.jpg",
+    "bytes": 635542,
+    "sha256": "af1562dd99021476243453c6ea67759d4d413831013445b7074da7c3d64d4157"
+  }
+]

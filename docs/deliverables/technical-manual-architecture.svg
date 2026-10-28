@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f5f8f3"/>
+  <text x="60" y="58" font-family="Arial,Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#102015">职航智管技术架构</text>
+  <text x="60" y="88" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" fill="#526051">前端展示、Agent 编排、业务工具和本地 AI 服务分层部署</text>
+  <g font-family="Arial,Microsoft YaHei,sans-serif">
+    <rect x="60" y="135" width="1080" height="120" rx="12" fill="#102015"/>
+    <text x="85" y="165" font-size="15" font-weight="700" fill="#c7ff4c">访问层</text>
+    <rect x="90" y="182" width="300" height="48" rx="7" fill="#ecf7e0"/>
+    <text x="112" y="212" font-size="16" font-weight="700" fill="#102015">浏览器 / React + TypeScript</text>
+    <rect x="450" y="182" width="300" height="48" rx="7" fill="#ecf7e0"/>
+    <text x="484" y="212" font-size="16" font-weight="700" fill="#102015">Nginx 静态资源与反向代理</text>
+    <rect x="810" y="182" width="290" height="48" rx="7" fill="#ecf7e0"/>
+    <text x="852" y="212" font-size="16" font-weight="700" fill="#102015">SSE / REST / 文件上传</text>
+
+    <rect x="60" y="295" width="500" height="190" rx="12" fill="#e3f6ce" stroke="#0f766e" stroke-width="2"/>
+    <text x="85" y="330" font-size="15" font-weight="700" fill="#0f766e">业务编排层</text>
+    <text x="90" y="367" font-size="18" font-weight="700" fill="#102015">FastAPI 应用服务</text>
+    <text x="90" y="397" font-size="14" fill="#526051">身份认证与角色权限 · 业务 API · 状态机</text>
+    <text x="90" y="425" font-size="14" fill="#526051">Agent Gateway · 工具目录 · 风险审批</text>
+    <text x="90" y="453" font-size="14" fill="#526051">审计日志 · 任务队列 · 故障转移</text>
+
+    <rect x="640" y="295" width="500" height="190" rx="12" fill="#dce9d1" stroke="#0f766e" stroke-width="2"/>
+    <text x="665" y="330" font-size="15" font-weight="700" fill="#0f766e">Agent 与业务工具层</text>
+    <text x="670" y="367" font-size="18" font-weight="700" fill="#102015">主 Agent + 专业 Agent</text>
+    <text x="670" y="397" font-size="14" fill="#526051">职业规划 · 岗位匹配 · 简历 · 面试 · 辅导</text>
+    <text x="670" y="425" font-size="14" fill="#526051">只提出工具候选，后端执行最终授权</text>
+    <text x="670" y="453" font-size="14" fill="#526051">读工具、写工具、确认动作、执行详情</text>
+
+    <rect x="60" y="530" width="330" height="130" rx="12" fill="#ffffff" stroke="#b9c9b7"/>
+    <text x="85" y="565" font-size="16" font-weight="700" fill="#102015">数据持久化</text>
+    <text x="85" y="594" font-size="14" fill="#526051">PostgreSQL + pgvector</text>
+    <text x="85" y="620" font-size="14" fill="#526051">Redis · MinIO · 审计记录</text>
+
+    <rect x="435" y="530" width="330" height="130" rx="12" fill="#ffffff" stroke="#b9c9b7"/>
+    <text x="460" y="565" font-size="16" font-weight="700" fill="#102015">异步运行</text>
+    <text x="460" y="594" font-size="14" fill="#526051">Worker · 任务状态 · 重试策略</text>
+    <text x="460" y="620" font-size="14" fill="#526051">PDF OCR · 语音 · 考试与抓取</text>
+
+    <rect x="810" y="530" width="330" height="130" rx="12" fill="#102015"/>
+    <text x="835" y="565" font-size="16" font-weight="700" fill="#c7ff4c">本地 AI 服务</text>
+    <text x="835" y="594" font-size="14" fill="#e3f6ce">BGE-M3 · PaddleOCR</text>
+    <text x="835" y="620" font-size="14" fill="#e3f6ce">FunASR · MeloTTS · YOLO 表情分析</text>
+
+    <g stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <path d="M390 206 H450"/><path d="M750 206 H810"/>
+      <path d="M600 255 V295"/><path d="M870 255 V295"/>
+      <path d="M310 485 V530"/><path d="M600 485 V530"/><path d="M895 485 V530"/>
+    </g>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/></marker>
+  </defs>
+</svg>

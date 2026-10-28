@@ -1,0 +1,124 @@
+{
+  "student": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\student.png",
+    "crop": [
+      45,
+      75,
+      1290,
+      750
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "plan": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\plan.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      755
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "match": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\match.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      990
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "agent": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\09-agent-assistant.png",
+    "crop": [
+      50,
+      60,
+      1630,
+      1010
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "interview_report": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\07B-interview-summary.png",
+    "crop": null,
+    "numbers_or_statuses_changed": false
+  },
+  "workplace": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\08-workplace.png",
+    "crop": [
+      60,
+      170,
+      1580,
+      825
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "intervention": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\13A-confirmed-feedback.png",
+    "crop": null,
+    "numbers_or_statuses_changed": false
+  },
+  "employment": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\employment.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      855
+    ],
+    "numbers_or_statuses_changed": false
+  },
+  "tests": {
+    "type": "chart",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\图表\\C06-test-results.png",
+    "data_scope": "2026-10-20 historical local checks"
+  },
+  "tools": {
+    "type": "chart",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\图表\\C08-tool-inventory.png",
+    "data_scope": "2026-10-20 historical local checks"
+  },
+  "journey": {
+    "type": "diagram",
+    "basis": "每次行动回到原始记录和授权范围；演示样本不代表实际就业成效",
+    "nodes": [
+      "材料与事实",
+      "差距与目标",
+      "计划与训练",
+      "人工确认",
+      "结果与复盘"
+    ]
+  },
+  "evidence_chain": {
+    "type": "diagram",
+    "basis": "材料、引用、建议和执行结果分别存储，不把生成文本自动当作事实",
+    "nodes": [
+      "原始材料",
+      "来源片段",
+      "结构化分析",
+      "动作提案",
+      "确认与记录"
+    ]
+  },
+  "architecture": {
+    "type": "diagram",
+    "basis": [
+      "backend/app/main.py",
+      "backend/app/tools/registry.py",
+      "docker-compose.server-demo.yml"
+    ]
+  },
+  "application_states": {
+    "type": "diagram",
+    "basis": "backend/app/applications/service.py ALLOWED_TRANSITIONS"
+  }
+}

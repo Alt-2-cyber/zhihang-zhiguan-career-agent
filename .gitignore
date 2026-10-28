@@ -1,5 +1,18 @@
 .worktrees/
 .env
+.env.server-demo
+.chrome-docx/
+.chrome-docx2/
+artifacts/
+output/
+# Local presentation/video exports and participant working materials.
+/*.mp4
+/*.pptx
+/*.doc
+/*.docx
+/*.xlsx
+*.zip
+第4组_*/
 .venv/
 __pycache__/
 *.py[cod]

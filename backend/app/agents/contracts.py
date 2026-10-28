@@ -1,8 +1,9 @@
+import re
 from datetime import date
 from enum import StrEnum
 from typing import Literal
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 class Evidence(BaseModel):
@@ -83,6 +84,7 @@ class ResumeOptimization(BaseModel):
 
 
 class InterviewQuestion(BaseModel):
+    provider: str = "unknown"
     question_id: str
     question: str = Field(min_length=1)
     competency: str = Field(min_length=1)
@@ -94,6 +96,7 @@ class InterviewEvaluation(BaseModel):
     job_relevance: int = Field(ge=0, le=100)
     answer_structure: int = Field(ge=0, le=100)
     evidence_quality: int = Field(ge=0, le=100)
+    emotion_stability: int | None = Field(default=None, ge=0, le=100)
     feedback: list[str]
     follow_up: InterviewQuestion | None = None
 
@@ -111,3 +114,110 @@ class WeeklyReview(BaseModel):
     metrics: WeeklyMetrics
     insights: list[str]
     actions: list[str] = Field(max_length=3)
+
+    @field_validator("insights", "actions")
+    @classmethod
+    def require_chinese_content(cls, values: list[str]) -> list[str]:
+        if any(not any("\u3400" <= char <= "\u9fff" for char in item) for item in values):
+            raise ValueError("周复盘洞察和行动必须使用中文")
+        employer_terms = ("候选人", "面试官", "离职率", "招聘营销", "吸引申请")
+        if any(term in item for item in values for term in employer_terms):
+            raise ValueError("周复盘必须使用求职学生视角")
+        return values
+
+
+class ExamOption(BaseModel):
+    key: Literal["A", "B", "C", "D"]
+    text: str = Field(min_length=1, max_length=300)
+
+
+class GeneratedExamQuestion(BaseModel):
+    question_type: Literal["single_choice"] = "single_choice"
+    prompt: str = Field(min_length=1, max_length=1_000)
+    options: list[ExamOption] = Field(min_length=4, max_length=4)
+    correct_answer: Literal["A", "B", "C", "D"]
+    explanation: str = Field(min_length=1, max_length=1_000)
+    competency: str = Field(min_length=1, max_length=120)
+
+    @model_validator(mode="after")
+    def validate_options(self) -> "GeneratedExamQuestion":
+        keys = [item.key for item in self.options]
+        if set(keys) != {"A", "B", "C", "D"}:
+            raise ValueError("exam options must contain exactly A, B, C and D")
+        if not _has_cjk(self.prompt) or not _has_cjk(self.explanation):
+            raise ValueError("exam prompt and explanation must use Simplified Chinese")
+        if not _has_cjk(self.competency) and not _is_technical_term(self.competency):
+            raise ValueError("exam competency must use Simplified Chinese")
+        if any(
+            not _has_cjk(item.text) and not _is_technical_term(item.text)
+            for item in self.options
+        ):
+            raise ValueError("exam options must use Simplified Chinese or technical terms")
+        return self
+
+
+def _has_cjk(value: str) -> bool:
+    return any("\u3400" <= char <= "\u9fff" for char in value)
+
+
+def _is_technical_term(value: str) -> bool:
+    value = value.strip()
+    if re.fullmatch(r"[A-Za-z_][A-Za-z0-9_./+#:-]{0,63}", value):
+        return True
+    return bool(
+        re.fullmatch(
+            r"[A-Z][A-Za-z0-9.+#/-]*(?:\s+[A-Z][A-Za-z0-9.+#/-]*){1,2}",
+            value,
+        )
+    )
+
+
+class LearningExamGeneration(BaseModel):
+    provider: str = Field(min_length=1, max_length=80)
+    prompt_version: str = Field(min_length=1, max_length=40)
+    questions: list[GeneratedExamQuestion] = Field(min_length=1, max_length=20)
+
+
+class TrainingRoleMessage(BaseModel):
+    speaker: Literal[
+        "interviewer",
+        "reviewer",
+        "career_coach",
+        "candidate_logic",
+        "candidate_collaboration",
+        "candidate_challenger",
+    ]
+    display_name: str = Field(min_length=1, max_length=80)
+    content: str = Field(min_length=1, max_length=1_000)
+    reply_to_speaker: str | None = Field(default=None, max_length=60)
+
+
+class TrainingExchange(BaseModel):
+    provider: str = Field(min_length=1, max_length=80)
+    messages: list[TrainingRoleMessage] = Field(min_length=1, max_length=4)
+    next_stage: str = Field(min_length=1, max_length=60)
+    feedback: list[str] = Field(min_length=1, max_length=4)
+
+    @model_validator(mode="after")
+    def reject_duplicate_roles(self) -> "TrainingExchange":
+        speakers = [item.speaker for item in self.messages]
+        if len(speakers) != len(set(speakers)):
+            raise ValueError("training exchange roles must be unique")
+        return self
+
+
+class WorkplaceDeliverableGeneration(BaseModel):
+    """Structured output for an AI-assisted post-hire work artifact."""
+
+    provider: str = Field(min_length=1, max_length=80)
+    action_type: Literal[
+        "clarify_questions",
+        "action_plan",
+        "risk_register",
+        "meeting_minutes",
+        "weekly_report",
+        "delivery_draft",
+    ]
+    title: str = Field(min_length=1, max_length=200)
+    content: str = Field(min_length=20, max_length=20_000)
+    rationale: list[str] = Field(min_length=1, max_length=5)

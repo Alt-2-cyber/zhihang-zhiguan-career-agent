@@ -1,0 +1,332 @@
+{
+  "revision": "2026-10-26",
+  "content_source": "scripts/competition_illustrated_content.py",
+  "chapter_count": 24,
+  "detail_spreads": 16,
+  "planned_body_spreads": 40,
+  "figures": 60,
+  "unique_figures": 60,
+  "diagrams": 32,
+  "screenshots": 19,
+  "data_charts": 9,
+  "nonwhitespace_characters": 24820,
+  "chinese_characters": 16267,
+  "historical_test_date": "2026-10-20",
+  "historical_upload_date": "2026-10-22",
+  "new_test_suite_run": false,
+  "new_screenshots_captured": false,
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "3d63c84755777921428fcd84402b2a79daff57e5329e068d5d1d3b4defaac810"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ccbae5e08ad0c130dfad269a21c5b9012134d5fe272b2de2c3d51ad21e1f0586"
+    },
+    {
+      "path": "backend/app/agents/conversation_contracts.py",
+      "sha256": "33788b8d4d3788461ab8391b6ba5e33826eec86d6e3a90e56df9e640f5b102b9"
+    },
+    {
+      "path": "backend/app/agents/local.py",
+      "sha256": "59e692c095f7bd13e7c8cc400f03847652f69eaa9b5e4c16dc3f8692e4ec4bd1"
+    },
+    {
+      "path": "backend/app/agents/service.py",
+      "sha256": "9cdd1ac605636d97b5352339bf730a1823c96803256ee5557e12a668524299ae"
+    },
+    {
+      "path": "backend/app/agents/usage.py",
+      "sha256": "19635b75028ce1971ee2264c0f5500e8851df2b733d5a1274d72ab1252a005b4"
+    },
+    {
+      "path": "backend/app/ai/models.py",
+      "sha256": "f2fa7c3df48468d1b77e9517e733b7b9ba9aa646f5aa1367a0e5ba28e5c233f3"
+    },
+    {
+      "path": "backend/app/ai/service.py",
+      "sha256": "d9dcddc7c4c4ceafd81992cd13db1f322d603514586ba217f17f6418f9a55f29"
+    },
+    {
+      "path": "backend/app/ai/worker.py",
+      "sha256": "3317286fb286607418fd7ed4201c6b3e4e74bf36044da73dea4fa6234350409c"
+    },
+    {
+      "path": "backend/app/applications/models.py",
+      "sha256": "8d713cb3ba35d9d7f565bde906bd042747fb718dca8da23ca9dab85e1853625a"
+    },
+    {
+      "path": "backend/app/applications/service.py",
+      "sha256": "487f5c5fa5b446cec79dace6a90c96f1f3f3484880494881b4b848ec98d1cf29"
+    },
+    {
+      "path": "backend/app/auth/models.py",
+      "sha256": "bf55f0a093210303e1f41cb8169aa6f50e5643cf12613c861e09d18f60daf0f7"
+    },
+    {
+      "path": "backend/app/chat/actions.py",
+      "sha256": "03e79611368687028e1c43c8d9a4fb23ec253432785aeaa263e91ffe003b68f9"
+    },
+    {
+      "path": "backend/app/chat/events.py",
+      "sha256": "5ec66c0040e8a60f41d33ef0a953562305335095b75498d1a77d95d6f0bd4ee0"
+    },
+    {
+      "path": "backend/app/chat/models.py",
+      "sha256": "e17155ba1f4caa591acc83421daae0481a42caa92e949f8f3fb3a48aa001aeb3"
+    },
+    {
+      "path": "backend/app/chat/orchestrator.py",
+      "sha256": "66705629debb4555a3585a6ca639fe30c8495077ad8c085efa25b0fb8a03fc6f"
+    },
+    {
+      "path": "backend/app/chat/router.py",
+      "sha256": "9e0402c9ad549cbdc6287159d014d7ff734897e0635a528f18829f4ce1af33f7"
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "sha256": "25e90ddb331c647072c1b49fe79cbe96f801f5e04315acc0814a5f7fdff34ac4"
+    },
+    {
+      "path": "backend/app/core/models.py",
+      "sha256": "b3648563cfadfadf871bdd760bcf0d6a43f2b28f147356a3d65585d59362559c"
+    },
+    {
+      "path": "backend/app/core/retention.py",
+      "sha256": "fd818903695258450d894498281d9c2ff44aab8ffb88cc9fc6d1ab8c3ee2c090"
+    },
+    {
+      "path": "backend/app/core/scheduler.py",
+      "sha256": "32952060053b711118cf9b7f9870b8306efd814b797aff78e3631cce79b70118"
+    },
+    {
+      "path": "backend/app/dashboard/router.py",
+      "sha256": "7aa05b6f9d0beaafcbb0184dc52433c4af13d91795e926837869d975b2febb1c"
+    },
+    {
+      "path": "backend/app/employment/router.py",
+      "sha256": "7a8a44bd6ac940d0eea33b547990a52d869674b37c97ec1522b3b91a73e506cd"
+    },
+    {
+      "path": "backend/app/employment/service.py",
+      "sha256": "24fc653d4ed89efbcdcec67c29e51bf2ba5447ebab22ec23d36b59e917d1970f"
+    },
+    {
+      "path": "backend/app/growth/service.py",
+      "sha256": "1603eedd8c95c26f7a4b8b2bf1d6d4d3ac1c2d15d621626bb231d99d10955a15"
+    },
+    {
+      "path": "backend/app/intelligence/service.py",
+      "sha256": "5e82e3a41c36509daf91d3b5c6986d4cf56fc9e1427d3b93e0be76bc88b5120d"
+    },
+    {
+      "path": "backend/app/interventions/router.py",
+      "sha256": "ae3c495f634888927855d782ffbcaba9381f8fec4f8969d1658b306f3cd600dd"
+    },
+    {
+      "path": "backend/app/interviews/router.py",
+      "sha256": "a3bc6b64a7590c8514622449ca03d7c14e5bb99b7b9180507404f572a2eae3b8"
+    },
+    {
+      "path": "backend/app/interviews/service.py",
+      "sha256": "8463b3821f9ffc607d3cb659cf5c696f9121cd2dc9dbb91ce01d0b473ebd9613"
+    },
+    {
+      "path": "backend/app/jobs/router.py",
+      "sha256": "fb5a401d88804f02c777b85cac67fbcb3a401a401f9535710ee4baac7e09c928"
+    },
+    {
+      "path": "backend/app/main.py",
+      "sha256": "432024f02af39ee77ad5bf41a19c7fa2d94d83c99303b84a0d5a69bda2da6295"
+    },
+    {
+      "path": "backend/app/plans/router.py",
+      "sha256": "60b0c4e864770b9fb96b5048c270b30eeb102d11ee9cbe15daf306ec814706b5"
+    },
+    {
+      "path": "backend/app/resumes/parser.py",
+      "sha256": "63941ec1bdb1d3d690d3c122784cd0a6be6c255f787a08895f2913a29d1c18a1"
+    },
+    {
+      "path": "backend/app/resumes/router.py",
+      "sha256": "78f1f4400566577c8f33decf183522242349a398c813fbb80459497988f6f197"
+    },
+    {
+      "path": "backend/app/resumes/storage.py",
+      "sha256": "6db1d292ada732604924247dd3f50458fa959f6c80254e36604b1f89685a28e7"
+    },
+    {
+      "path": "backend/app/reviews/router.py",
+      "sha256": "87d4bc1c5473face2996d6927a4bc1110449af588af67ac74c3cadf35a8b4d2f"
+    },
+    {
+      "path": "backend/app/risks/rules.py",
+      "sha256": "29e9fdc9765953f56672214eaed71a049f6d64f03e8eb00fd4eb2ae021beeb9e"
+    },
+    {
+      "path": "backend/app/students/router.py",
+      "sha256": "2c38fa29d6491f659c4b72d4195b3552ce802c1ac3b341405007b198a5d3d415"
+    },
+    {
+      "path": "backend/app/students/service.py",
+      "sha256": "75ae5e7b55e2c974279cefef99b944c20942e8aaf467e50c9c0c911762bc5bcb"
+    },
+    {
+      "path": "backend/app/tools/authorization.py",
+      "sha256": "b4e5c3073fc5588daf63b76693bb77d65d97a05b879fd5b964280f8b2d76d4d2"
+    },
+    {
+      "path": "backend/app/tools/registry.py",
+      "sha256": "b2d0657ed2c54d4b700802ffadf051b3b77c910530151927fdbb6cde470b26bd"
+    },
+    {
+      "path": "backend/app/workplace/service.py",
+      "sha256": "9b9c49cff13fa9be5a5ab3a6bcdbc3ca1bbb8295a85faf9c11e94e1396e96390"
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "sha256": "2f119cb50b575469ae1c5a6adc181adc6c2490b9c7ec4872dc540c6c8f11876e"
+    },
+    {
+      "path": "docker-compose.server-demo.yml",
+      "sha256": "c2c3902794a22ddae0dc561a299effff01e5d87efb7d204b28d92e7c13faffc1"
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "3a3012e62625006871e9ca0da26e7fb0c856be9efb02643c04f53b5e3cf8cd24"
+    },
+    {
+      "path": "docs/competition-governance-proposal.md",
+      "sha256": "06e16b56a0b459fe1f94ef817f0fd847c2cb2b8fc529db96a90bad00e6ebfb91"
+    },
+    {
+      "path": "docs/deliverables/website-presentation-script.md",
+      "sha256": "96ff6d08313c308b905fe3728afab876ea8e731641b5e5f71f77ece0b342e4ea"
+    },
+    {
+      "path": "docs/server-demo-deployment.md",
+      "sha256": "912639a70a8f4f7b6f7fc03a06a3edacce592f609f7fb6f127316158a4366625"
+    },
+    {
+      "path": "docs/workplace-workbench.md",
+      "sha256": "56b2181eab1963fae60c919926731fe7bdcb3d91048952404797eebade1a9a20"
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "e2d7a61f8b31730d7fd02db4ad0f7a235a5d82d3431263dd73a822cf0c044e04"
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "sha256": "252a075e92d22e3f650c6320f8b5afbdf2ae3da67cc90722ac645cd335f421b0"
+    },
+    {
+      "path": "frontend/public/ai-interviewer.source.txt",
+      "sha256": "942ad9c451c15c196176074ba6b9866e342a10be6767148b96f21d1f0aa33528"
+    },
+    {
+      "path": "frontend/src/app/router.tsx",
+      "sha256": "03c7109720060bc4ab616bdfe79e3f9e59a7cd0a9e14efb2d63c7ac403318e2c"
+    },
+    {
+      "path": "frontend/src/features/auth/LoginPage.tsx",
+      "sha256": "acf1f142d9bf39c853a2a3129820acd86af65bdda9ebae2dc459412a523b9aae"
+    },
+    {
+      "path": "frontend/src/features/counselor/CounselorDashboard.tsx",
+      "sha256": "27255afac4e143bebf026e2fdde54aa42b65e744cd14f3c93feaf825f6b1a169"
+    },
+    {
+      "path": "frontend/src/features/public/EmployerReviewPage.tsx",
+      "sha256": "63ddb73d3d4679d3b880edb95bc87ed602ae688fe81e2269e781a90f10bfe7b9"
+    },
+    {
+      "path": "frontend/src/features/student/DigitalHumanStage.tsx",
+      "sha256": "8b1eb14dde1efb0104b995a0af60d5ca0e9ab87fc9e3317aab44cad40c51b7ca"
+    },
+    {
+      "path": "frontend/src/features/student/EmploymentFollowupPage.tsx",
+      "sha256": "218935056d04056a95726f3211b6256695346761ca300f58c2ad4a3e4261c933"
+    },
+    {
+      "path": "frontend/src/features/student/JobIntelligencePage.tsx",
+      "sha256": "c132037ab68c6dc939b65396eb52fb936da4114cd2bc886653a86087141bb9af"
+    },
+    {
+      "path": "frontend/src/features/student/PlanPage.tsx",
+      "sha256": "f326fbba99f11ca314ff4b08e6c27aefc910adf051946d50817ad8fc6e807c1b"
+    },
+    {
+      "path": "frontend/src/features/student/StudentDashboard.tsx",
+      "sha256": "0a4f18e22f8f799c177c19dde711a7129902c115dac691d650597aa4af104441"
+    },
+    {
+      "path": "frontend/src/features/student/interview-api.ts",
+      "sha256": "b0c97d0254ca58bea576c83d906bc77281832c9086bd58cd4586023bf2b05eac"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "d90da321f37354f327df69747b975ed3031fcd160445724512cd6228f670d2f0"
+    },
+    {
+      "path": "output/copyright-20261022/capture.log",
+      "sha256": "0a7c161c92c5e59cf1d097e6bf99b22d46b3a84b874077b53871ad30694cdc8a"
+    },
+    {
+      "path": "output/copyright-20261022/screenshots/resume-uploaded.png",
+      "sha256": "c01cf424093cfc15354b42d6b6a9629a7788c299f5176d26867943353ae4ce80"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/api_performance.json",
+      "sha256": "1d4c5f13ea08c824ed0aac832f6fbb549c382504db7735a524d1b7463beefe9a"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/api_snapshot.json",
+      "sha256": "af4d532c02ba2a8247e6731ff958bfa59de66bf75e992ec6341a69756466813c"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/architecture_inventory.json",
+      "sha256": "b416b20e1a087e93c63003597b7d206e77cf3cabe1ef207da975807f3f556dff"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/backend-tests-current.xml",
+      "sha256": "a81b3c81f05fcf3bbb7fc4468df3966536399b7fdd813ed430fbcd579b476e06"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/browser-capture-agent-counselor.log",
+      "sha256": "28e56b34d882271182d41ef144d72670935cf6753203839c66772cd1fecd16f3"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/chat_run.json",
+      "sha256": "75e2e34c069704f1a4db3f81071f1b457b7970693a736b9bc00221dd29d263bc"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/data_summary.json",
+      "sha256": "4ba06c828ea35b971739694be0ebc6ee1ef08ce25deb5f139117fe5a728fd60a"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/interview.json",
+      "sha256": "d41f3faa8cbf8555e46af95287bdc9496dbb03ec0007f57fd11a37f4d23437a9"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/job_match.json",
+      "sha256": "744b310d8f57052640eab259ce2a909d53711cbaec862dddad518c867f358375"
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/risk_boundary_cases.json",
+      "sha256": "500d42d9c2eca5c49b5fad416020d9c39f5b90d54565fe4e49340adbfcbb5f88"
+    },
+    {
+      "path": "scripts/verify.ps1",
+      "sha256": "d8dc52bbac3990db9a9a90749b2835cd70e4ef6fb7cfcbeed64644081a0dca67"
+    },
+    {
+      "path": "services/emotion/app.py",
+      "sha256": "b7a8ac547f9c4903d0d0fc47644d7e9ff37219a8779e75e3abdb0290ac21b57d"
+    },
+    {
+      "path": "services/emotion/requirements.txt",
+      "sha256": "78936df06ac0df2eb0b2ee7b3191a762812e6f56dc2113d8a05b19943ce13b09"
+    }
+  ]
+}

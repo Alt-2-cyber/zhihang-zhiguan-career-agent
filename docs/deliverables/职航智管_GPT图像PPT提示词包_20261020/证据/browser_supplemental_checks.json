@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-20",
+  "type": "supplemental browser inspection, not replacement for existing E2E suite",
+  "checks": [
+    {
+      "name": "01-student-dashboard",
+      "path": "/student",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "02-profile",
+      "path": "/student/profile",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "03-plan",
+      "path": "/student/plan",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "04-job-match",
+      "result": "passed",
+      "checks": "five dimensions visible after real POST; overall 80"
+    },
+    {
+      "name": "05-job-intelligence",
+      "path": "/student/intelligence",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "06-applications",
+      "path": "/student/applications",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "07-interview-report",
+      "result": "passed",
+      "checks": "completed interview and score report loaded from API"
+    },
+    {
+      "name": "08-workplace",
+      "path": "/student/workplace",
+      "width": 1920,
+      "client": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "agent-live-tools",
+      "result": "passed",
+      "runId": "b689cb5a-c40a-4a4b-a230-1ab370190517"
+    },
+    {
+      "name": "message-persistence",
+      "before": 2,
+      "after": 2,
+      "result": "passed",
+      "note": "Only message persistence is asserted; historical execution panel restoration is not asserted."
+    },
+    {
+      "name": "student-intervention-feedback",
+      "result": "passed"
+    },
+    {
+      "name": "counselor-dashboard",
+      "result": "passed",
+      "checks": "24 students, 85 records, 9 risk events; identifiers masked"
+    },
+    {
+      "name": "counselor-resolve-feedback",
+      "result": "passed"
+    },
+    {
+      "name": "counselor-mobile",
+      "result": "passed",
+      "width": 390,
+      "client": 390
+    }
+  ],
+  "page_errors_during_first_stage": [],
+  "scope_note": "8 个页面/匹配检查，加 6 个运行、持久化、反馈、验收与移动端检查。保留现有 E2E 未通过项。"
+}

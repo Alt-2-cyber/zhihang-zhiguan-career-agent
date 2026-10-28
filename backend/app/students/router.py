@@ -34,7 +34,7 @@ def analyze_my_profile(
     current_user: User = Depends(require_roles(UserRole.student)),
     db: Session = Depends(get_db),
 ) -> dict[str, object]:
-    gateway = build_agent_gateway(get_settings())
+    gateway = build_agent_gateway(get_settings(), db=db, owner_id=current_user.id)
     draft = create_profile_analysis(
         db,
         student=current_user,

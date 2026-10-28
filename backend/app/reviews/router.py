@@ -40,7 +40,7 @@ def create_weekly_review(
         interviews=stage_counts["interview"],
         offers=stage_counts["offered"],
     )
-    result = build_agent_gateway(get_settings()).build_weekly_review(metrics)
+    result = build_agent_gateway(get_settings(), db=db, owner_id=current_user.id).build_weekly_review(metrics)
     record = WeeklyReviewRecord(
         student_id=current_user.id,
         provider=result.provider,

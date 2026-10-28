@@ -1,0 +1,159 @@
+{
+  "pages": 25,
+  "chapters": 24,
+  "all_headings_on_expected_pages": true,
+  "replacement_characters": 0,
+  "no_blank_pages": true,
+  "records": [
+    {
+      "page": 1,
+      "heading": "cover",
+      "extracted_characters": 322,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 2,
+      "heading": "01 项目概览与评审导读",
+      "extracted_characters": 816,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 3,
+      "heading": "02 项目背景与需求分析",
+      "extracted_characters": 807,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 4,
+      "heading": "03 用户角色与端到端场景",
+      "extracted_characters": 746,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 5,
+      "heading": "04 总体技术架构与职责划分",
+      "extracted_characters": 758,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 6,
+      "heading": "05 主智能体与专业智能体协同",
+      "extracted_characters": 894,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 7,
+      "heading": "06 工具授权与人工确认机制",
+      "extracted_characters": 767,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 8,
+      "heading": "07 会话持久化与异步运行状态",
+      "extracted_characters": 992,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 9,
+      "heading": "08 数据模型与证据链",
+      "extracted_characters": 805,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 10,
+      "heading": "09 画像确认与四周行动计划",
+      "extracted_characters": 738,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 11,
+      "heading": "10 岗位分析与简历版本",
+      "extracted_characters": 705,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 12,
+      "heading": "11 模拟面试与可选多模态训练",
+      "extracted_characters": 735,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 13,
+      "heading": "12 学习任务与入职后工作交付",
+      "extracted_characters": 646,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 14,
+      "heading": "13 申请状态与每周复盘",
+      "extracted_characters": 622,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 15,
+      "heading": "14 班级风险与帮扶验收",
+      "extracted_characters": 759,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 16,
+      "heading": "15 入职回访与就业质量反馈",
+      "extracted_characters": 714,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 17,
+      "heading": "16 部署模式与复现路径",
+      "extracted_characters": 1082,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 18,
+      "heading": "17 验证结果与证据范围",
+      "extracted_characters": 860,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 19,
+      "heading": "18 已知问题与风险处置",
+      "extracted_characters": 907,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 20,
+      "heading": "19 开源现状与依赖许可",
+      "extracted_characters": 973,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 21,
+      "heading": "20 贡献流程与版本发布方案",
+      "extracted_characters": 859,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 22,
+      "heading": "21 长期发展路线与交付责任",
+      "extracted_characters": 812,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 23,
+      "heading": "22 试点评估与验收设计",
+      "extracted_characters": 761,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 24,
+      "heading": "23 现场演示脚本与异常预案",
+      "extracted_characters": 908,
+      "horizontal_text_bounds_pass": true
+    },
+    {
+      "page": 25,
+      "heading": "24 提交清单与证据索引",
+      "extracted_characters": 881,
+      "horizontal_text_bounds_pass": true
+    }
+  ]
+}

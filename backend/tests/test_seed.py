@@ -19,6 +19,16 @@ def test_demo_seed_is_idempotent(db_session: Session) -> None:
     assert db_session.scalar(select(func.count()).select_from(Job)) == first_jobs == 6
 
 
+def test_demo_seed_uses_role_labels_instead_of_personal_names(db_session: Session) -> None:
+    seed_demo_data(db_session, student_password="Student123!", counselor_password="Counselor123!")
+
+    student = db_session.scalar(select(User).where(User.username == "student_demo"))
+    counselor = db_session.scalar(select(User).where(User.username == "counselor_demo"))
+
+    assert student is not None and student.display_name == "学生演示账号"
+    assert counselor is not None and counselor.display_name == "辅导员演示账号"
+
+
 def test_model_registry_loads_every_foreign_key_target() -> None:
     load_all_models()
 

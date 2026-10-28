@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-20",
+  "stats": {
+    "startTime": "2026-10-20T02:33:26.934Z",
+    "duration": 87663.61099999999,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "counselor sees explainable risk facts",
+      "project": "desktop-chromium",
+      "status": "unexpected",
+      "error_summary": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('连续 14 天无投递记录')\nExpected: visible\nError: strict mode violation: getByText('连续 14 天无投递记录') resolved to 5 elements:\n    1) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').first()\n    2) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(1)\n    3) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(2)\n    4) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(3)\n    5) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(4)\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for getByText('连续 14 天无投递记录')\n"
+    },
+    {
+      "title": "counselor sees explainable risk facts",
+      "project": "mobile-chromium",
+      "status": "unexpected",
+      "error_summary": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('连续 14 天无投递记录')\nExpected: visible\nError: strict mode violation: getByText('连续 14 天无投递记录') resolved to 5 elements:\n    1) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').first()\n    2) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(1)\n    3) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(2)\n    4) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(3)\n    5) <p class=\"text-sm text-slate-800\">连续 14 天无投递记录</p> aka getByText('连续 14 天无投递记录').nth(4)\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for getByText('连续 14 天无投递记录')\n"
+    },
+    {
+      "title": "student can inspect evidence-based job matching",
+      "project": "desktop-chromium",
+      "status": "unexpected",
+      "error_summary": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('技能匹配', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for getByText('技能匹配', { exact: true })\n"
+    },
+    {
+      "title": "student can inspect evidence-based job matching",
+      "project": "mobile-chromium",
+      "status": "unexpected",
+      "error_summary": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByText('技能匹配', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for getByText('技能匹配', { exact: true })\n"
+    },
+    {
+      "title": "student completes a post-hire work deliverable workflow",
+      "project": "desktop-chromium",
+      "status": "expected",
+      "error_summary": ""
+    },
+    {
+      "title": "student completes a post-hire work deliverable workflow",
+      "project": "mobile-chromium",
+      "status": "unexpected",
+      "error_summary": "Test timeout of 60000ms exceeded."
+    }
+  ],
+  "note": "Source snippets and trace payloads omitted; original evidence remains in the workspace."
+}

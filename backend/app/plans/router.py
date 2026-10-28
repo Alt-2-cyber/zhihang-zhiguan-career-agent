@@ -41,7 +41,7 @@ def create_generated_plan(
         db,
         student=current_user,
         target_role=payload.target_role,
-        gateway=build_agent_gateway(get_settings()),
+        gateway=build_agent_gateway(get_settings(), db=db, owner_id=current_user.id),
     )
     return serialize_plan(db, plan)
 

@@ -1,0 +1,61 @@
+
+> career-agent-frontend@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 2435 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   0.60 kB │ gzip:   0.38 kB
+dist/assets/index-CHM1ztIX.css                   90.90 kB │ gzip:  18.29 kB
+dist/assets/chevron-down-BZTxQCyZ.js              0.13 kB │ gzip:   0.14 kB
+dist/assets/chevron-right-anJhoOVQ.js             0.13 kB │ gzip:   0.14 kB
+dist/assets/plus-DBtHDm9s.js                      0.15 kB │ gzip:   0.15 kB
+dist/assets/arrow-left-B8A1bu9D.js                0.17 kB │ gzip:   0.16 kB
+dist/assets/clock-3-C6x0M9jL.js                   0.17 kB │ gzip:   0.17 kB
+dist/assets/search-DSpFjGzY.js                    0.18 kB │ gzip:   0.17 kB
+dist/assets/rotate-ccw-5dM8u8_-.js                0.20 kB │ gzip:   0.18 kB
+dist/assets/target-2cE558Dx.js                    0.23 kB │ gzip:   0.16 kB
+dist/assets/presentation-CaPvlpPU.js              0.24 kB │ gzip:   0.19 kB
+dist/assets/external-link-CYttKy5K.js             0.25 kB │ gzip:   0.20 kB
+dist/assets/map-pin-_4QkBj09.js                   0.26 kB │ gzip:   0.22 kB
+dist/assets/triangle-alert-BRZSeNSx.js            0.27 kB │ gzip:   0.21 kB
+dist/assets/list-checks-BMBE-P3k.js               0.28 kB │ gzip:   0.19 kB
+dist/assets/send-BRoUIa98.js                      0.29 kB │ gzip:   0.23 kB
+dist/assets/shield-alert-BpThhHA_.js              0.35 kB │ gzip:   0.26 kB
+dist/assets/training-phases-CQ0z3Pz7.js           0.53 kB │ gzip:   0.40 kB
+dist/assets/AskAgentButton-PWhSuubb.js            0.55 kB │ gzip:   0.31 kB
+dist/assets/circle-dashed-CE6C1SDE.js             0.58 kB │ gzip:   0.29 kB
+dist/assets/brain-circuit-BAAD1bE-.js             0.80 kB │ gzip:   0.40 kB
+dist/assets/ReviewPage-YUVUisKr.js                1.76 kB │ gzip:   0.98 kB
+dist/assets/useAudioRecorder-C8-QpEsG.js          2.12 kB │ gzip:   1.24 kB
+dist/assets/useMutation-Bo3X4gFB.js               2.20 kB │ gzip:   0.91 kB
+dist/assets/StudentListPage-DOhzWuxp.js           2.34 kB │ gzip:   1.13 kB
+dist/assets/ResumePage-osgEcjpS.js                2.64 kB │ gzip:   1.46 kB
+dist/assets/PlanPage-DX7JqJE7.js                  2.78 kB │ gzip:   1.40 kB
+dist/assets/JobsPage-Cr9uuWWg.js                  3.11 kB │ gzip:   1.51 kB
+dist/assets/CounselorDashboard-C77Nbhyi.js        3.26 kB │ gzip:   1.65 kB
+dist/assets/InterventionsPage-C1MxRuj6.js         3.30 kB │ gzip:   1.49 kB
+dist/assets/EmployerReviewPage-C6bTWIk9.js        4.05 kB │ gzip:   2.01 kB
+dist/assets/ProfilePage-DpsjPqV8.js               4.16 kB │ gzip:   1.70 kB
+dist/assets/ApplicationBoard-BkaNkFlT.js          4.31 kB │ gzip:   2.07 kB
+dist/assets/QualityPage-ChyoCaAg.js               4.76 kB │ gzip:   2.12 kB
+dist/assets/StudentDashboard-DmDKFE0Z.js          5.07 kB │ gzip:   2.27 kB
+dist/assets/AgentUsagePage-Biy_reUw.js            5.16 kB │ gzip:   1.86 kB
+dist/assets/AuditLogsPage-BlhHVwoP.js             5.28 kB │ gzip:   2.25 kB
+dist/assets/DigitalHumanStage-C2TSrhqe.js         5.64 kB │ gzip:   2.77 kB
+dist/assets/TrainingCenterPage-YR0DECCe.js        6.51 kB │ gzip:   2.80 kB
+dist/assets/JobIntelligencePage-BqtTFIKA.js       7.45 kB │ gzip:   3.21 kB
+dist/assets/EmploymentFollowupPage-Dv0AZNCM.js    8.28 kB │ gzip:   3.22 kB
+dist/assets/useQuery-DJvb_gJG.js                  8.83 kB │ gzip:   3.22 kB
+dist/assets/LearningPage-BIc89F8o.js             11.53 kB │ gzip:   4.46 kB
+dist/assets/ExamPage-YvPtwH1Y.js                 14.01 kB │ gzip:   5.13 kB
+dist/assets/chartRuntime-DfIkXviB.js             15.72 kB │ gzip:   6.77 kB
+dist/assets/InterviewPage-C6sEPQTx.js            32.18 kB │ gzip:  10.64 kB
+dist/assets/ChatPage-Bc5vlAtF.js                 43.83 kB │ gzip:  14.40 kB
+dist/assets/WorkplacePage-BPNtqDw0.js            45.99 kB │ gzip:  12.49 kB
+dist/assets/analyticsChartRuntime-F3IV9H39.js    92.10 kB │ gzip:  32.44 kB
+dist/assets/index-B4Vgmc6K.js                   375.80 kB │ gzip: 118.71 kB
+dist/assets/installCanvasRenderer-B3IeAOXo.js   440.43 kB │ gzip: 150.50 kB
+✓ built in 24.47s

@@ -1,0 +1,319 @@
+{
+  "specialists": [
+    "career",
+    "job",
+    "resume",
+    "application",
+    "interview",
+    "counselor",
+    "learning",
+    "workplace",
+    "intelligence",
+    "employment"
+  ],
+  "specialist_count": 10,
+  "tool_count": 32,
+  "by_risk": {
+    "read": 20,
+    "normal_write": 9,
+    "high_risk": 3
+  },
+  "tools": [
+    {
+      "name": "profile.get",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "plan.get",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "counselor"
+      ]
+    },
+    {
+      "name": "tasks.list",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "counselor"
+      ]
+    },
+    {
+      "name": "jobs.get",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "interview",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "jobs.search_internal",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "resumes.list",
+      "risk": "read",
+      "specialists": [
+        "counselor",
+        "interview",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "resumes.get",
+      "risk": "read",
+      "specialists": [
+        "counselor",
+        "interview",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "applications.list",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "counselor"
+      ]
+    },
+    {
+      "name": "risks.list",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor"
+      ]
+    },
+    {
+      "name": "interventions.list",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor"
+      ]
+    },
+    {
+      "name": "ai_task.get",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "employment",
+        "learning",
+        "resume",
+        "workplace"
+      ]
+    },
+    {
+      "name": "dashboard.class_summary",
+      "risk": "read",
+      "specialists": [
+        "counselor"
+      ]
+    },
+    {
+      "name": "students.list_progress",
+      "risk": "read",
+      "specialists": [
+        "counselor"
+      ]
+    },
+    {
+      "name": "jobs.search_public",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "job",
+        "resume"
+      ]
+    },
+    {
+      "name": "knowledge.search",
+      "risk": "read",
+      "specialists": [
+        "application",
+        "career",
+        "counselor",
+        "employment",
+        "intelligence",
+        "interview",
+        "job",
+        "learning",
+        "resume",
+        "workplace"
+      ]
+    },
+    {
+      "name": "jobs.import_candidate",
+      "risk": "normal_write",
+      "specialists": [
+        "application",
+        "career",
+        "job"
+      ]
+    },
+    {
+      "name": "plan.create_draft",
+      "risk": "normal_write",
+      "specialists": [
+        "career"
+      ]
+    },
+    {
+      "name": "task.update_status",
+      "risk": "normal_write",
+      "specialists": [
+        "application",
+        "career"
+      ]
+    },
+    {
+      "name": "application.update_stage",
+      "risk": "normal_write",
+      "specialists": [
+        "application"
+      ]
+    },
+    {
+      "name": "resume.create_version_draft",
+      "risk": "normal_write",
+      "specialists": [
+        "resume"
+      ]
+    },
+    {
+      "name": "intervention.create",
+      "risk": "normal_write",
+      "specialists": [
+        "counselor"
+      ]
+    },
+    {
+      "name": "record.delete",
+      "risk": "high_risk",
+      "specialists": [
+        "application",
+        "career",
+        "counselor",
+        "employment",
+        "intelligence",
+        "interview",
+        "job",
+        "learning",
+        "resume",
+        "workplace"
+      ]
+    },
+    {
+      "name": "records.bulk_update",
+      "risk": "high_risk",
+      "specialists": [
+        "application",
+        "career",
+        "counselor",
+        "employment",
+        "intelligence",
+        "interview",
+        "job",
+        "learning",
+        "resume",
+        "workplace"
+      ]
+    },
+    {
+      "name": "application.external_submit",
+      "risk": "high_risk",
+      "specialists": [
+        "application"
+      ]
+    },
+    {
+      "name": "growth.overview",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "learning"
+      ]
+    },
+    {
+      "name": "workplace.sessions",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "workplace"
+      ]
+    },
+    {
+      "name": "workplace.deliverables",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "workplace"
+      ]
+    },
+    {
+      "name": "intelligence.overview",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "intelligence",
+        "job"
+      ]
+    },
+    {
+      "name": "employment.records",
+      "risk": "read",
+      "specialists": [
+        "career",
+        "counselor",
+        "employment"
+      ]
+    },
+    {
+      "name": "growth.update_task",
+      "risk": "normal_write",
+      "specialists": [
+        "learning"
+      ]
+    },
+    {
+      "name": "workplace.start_session",
+      "risk": "normal_write",
+      "specialists": [
+        "workplace"
+      ]
+    },
+    {
+      "name": "employment.create_record",
+      "risk": "normal_write",
+      "specialists": [
+        "employment"
+      ]
+    }
+  ]
+}

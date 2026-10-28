@@ -5,9 +5,12 @@
 ## 已实现能力
 
 - 学生端：就业画像、四周计划、岗位匹配、简历上传、模拟面试、投递看板和每周复盘。
+- 模拟面试：可选开启浏览器摄像头，每 1 秒发送一帧 JPEG 到本地情绪服务；YOLO 负责正脸检测并返回归一化标注框，本地 ViT 表情模型负责表情分类，按人脸出现率、表情一致性和置信度波动生成“表达稳定度（摄像头分析）”训练维度。
 - 辅导员端：班级驾驶舱、风险事实、学生列表和帮扶任务闭环。
 - Agent：本地确定性演示实现与 SF-FastGPT OpenAI 兼容接口适配。
 - 工程能力：JWT/RBAC、审计、Alembic、PostgreSQL、Docker Compose 和自动化测试。
+
+摄像头能力只保存最多 20 条统计结果，不保存原始视频或图片；关闭摄像头、拒绝权限或未检测到清晰人脸时不会生成情绪分数。该维度仅用于表达训练参考，不用于心理诊断或录用判断。
 
 ## 环境要求
 
@@ -28,6 +31,13 @@ docker compose up --build -d
 ```
 
 打开 `http://localhost:8080`。
+
+首次启动情绪服务会在 `emotion_models` 卷中下载 YOLO 人脸模型和 `trpakov/vit-face-expression` 表情模型，模型下载完成后 `emotion` 容器才会变为 healthy。可用以下命令检查：
+
+```powershell
+docker compose ps emotion
+Invoke-RestMethod http://127.0.0.1:8104/health/ready
+```
 
 演示账号：
 

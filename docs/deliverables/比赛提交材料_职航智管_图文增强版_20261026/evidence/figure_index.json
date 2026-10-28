@@ -1,0 +1,542 @@
+[
+  {
+    "number": 1,
+    "asset": "s13_agent",
+    "caption": "就业助手真实回放：回答、引用与工具执行同屏，local-rules及不可用服务状态保留",
+    "page_id": "cover",
+    "width_cm": 15.54,
+    "height_cm": 9.0,
+    "pdf_page": 1
+  },
+  {
+    "number": 2,
+    "asset": "d01_journey",
+    "caption": "本项目的证据和反馈闭环：图示设计不等于真实就业成效",
+    "page_id": "navigation",
+    "width_cm": 14.0,
+    "height_cm": 4.2,
+    "pdf_page": 2
+  },
+  {
+    "number": 3,
+    "asset": "d31_assurance",
+    "caption": "四类证据及其可支持的判断",
+    "page_id": "overview",
+    "width_cm": 17.1,
+    "height_cm": 5.77,
+    "pdf_page": 3
+  },
+  {
+    "number": 4,
+    "asset": "d02_problem",
+    "caption": "信息分散、泛化建议与执行中断的关系",
+    "page_id": "background",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 4
+  },
+  {
+    "number": 5,
+    "asset": "d03_roles",
+    "caption": "角色入口与服务端资源归属",
+    "page_id": "roles",
+    "width_cm": 17.1,
+    "height_cm": 6.91,
+    "pdf_page": 5
+  },
+  {
+    "number": 6,
+    "asset": "s18_login",
+    "caption": "统一登录入口，填写账号密码后按角色进入工作区",
+    "page_id": "roles_detail",
+    "width_cm": 13.59,
+    "height_cm": 6.6,
+    "pdf_page": 6
+  },
+  {
+    "number": 7,
+    "asset": "s01_student",
+    "caption": "学生工作台局部：当前目标、近期任务与阶段记录",
+    "page_id": "roles_detail",
+    "width_cm": 11.45,
+    "height_cm": 6.3,
+    "pdf_page": 6
+  },
+  {
+    "number": 8,
+    "asset": "d04_arch",
+    "caption": "前端、后端、Agent和数据的分层连接",
+    "page_id": "architecture",
+    "width_cm": 16.91,
+    "height_cm": 7.4,
+    "pdf_page": 7
+  },
+  {
+    "number": 9,
+    "asset": "d05_sequence",
+    "caption": "综合问题回放中的专业步骤与只读工具",
+    "page_id": "agent",
+    "width_cm": 15.18,
+    "height_cm": 7.4,
+    "pdf_page": 8
+  },
+  {
+    "number": 10,
+    "asset": "d06_gates",
+    "caption": "工具候选从身份到契约的检查路径",
+    "page_id": "tools",
+    "width_cm": 16.6,
+    "height_cm": 7.4,
+    "pdf_page": 9
+  },
+  {
+    "number": 11,
+    "asset": "s19_tool_detail",
+    "caption": "profile.get原始详情与字段读法；右侧是说明文字，不是重绘界面",
+    "page_id": "tools_detail",
+    "width_cm": 14.74,
+    "height_cm": 8.6,
+    "pdf_page": 10
+  },
+  {
+    "number": 12,
+    "asset": "c08_tools",
+    "caption": "历史运行时目录分层：20只读、9普通写、3高风险拒绝入口",
+    "page_id": "tools_detail",
+    "width_cm": 10.84,
+    "height_cm": 6.1,
+    "pdf_page": 10
+  },
+  {
+    "number": 13,
+    "asset": "d08_async",
+    "caption": "消息接受、异步执行与SSE回传",
+    "page_id": "conversation",
+    "width_cm": 16.91,
+    "height_cm": 7.4,
+    "pdf_page": 11
+  },
+  {
+    "number": 14,
+    "asset": "d07_actions",
+    "caption": "动作提案：待确认、执行、成功、拒绝、过期和可逆撤销",
+    "page_id": "async_detail",
+    "width_cm": 16.23,
+    "height_cm": 7.1,
+    "pdf_page": 12
+  },
+  {
+    "number": 15,
+    "asset": "d09_tasks",
+    "caption": "异步任务：入队、领取、结果保存、延迟重试和死信",
+    "page_id": "async_detail",
+    "width_cm": 16.23,
+    "height_cm": 7.1,
+    "pdf_page": 12
+  },
+  {
+    "number": 16,
+    "asset": "d10_data",
+    "caption": "业务实体和证据关系",
+    "page_id": "data",
+    "width_cm": 17.1,
+    "height_cm": 7.2,
+    "pdf_page": 13
+  },
+  {
+    "number": 17,
+    "asset": "d23_privacy",
+    "caption": "采集、限定读取、授权模型、脱敏记录与保留清理",
+    "page_id": "privacy_detail",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 14
+  },
+  {
+    "number": 18,
+    "asset": "d32_retention",
+    "caption": "源码默认保留期：音频7天、模型用量90天、完成任务30天、审计730天",
+    "page_id": "privacy_detail",
+    "width_cm": 17.1,
+    "height_cm": 6.27,
+    "pdf_page": 14
+  },
+  {
+    "number": 19,
+    "asset": "d11_confirm",
+    "caption": "画像和计划的两次确认",
+    "page_id": "profile",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 15
+  },
+  {
+    "number": 20,
+    "asset": "s02_profile",
+    "caption": "材料输入与已确认画像：能力证据、差距和求职约束",
+    "page_id": "profile_detail",
+    "width_cm": 13.58,
+    "height_cm": 7.2,
+    "pdf_page": 16
+  },
+  {
+    "number": 21,
+    "asset": "s03_plan",
+    "caption": "四周计划：周次、任务名、截止日期和验收要求",
+    "page_id": "profile_detail",
+    "width_cm": 13.19,
+    "height_cm": 7.1,
+    "pdf_page": 16
+  },
+  {
+    "number": 22,
+    "asset": "s04_match",
+    "caption": "岗位匹配界面与引用证据",
+    "page_id": "jobs",
+    "width_cm": 10.07,
+    "height_cm": 7.4,
+    "pdf_page": 17
+  },
+  {
+    "number": 23,
+    "asset": "d13_sources",
+    "caption": "公开来源到岗位展示的采集与核验链",
+    "page_id": "source_detail",
+    "width_cm": 16.33,
+    "height_cm": 4.9,
+    "pdf_page": 18
+  },
+  {
+    "number": 24,
+    "asset": "s05_sources",
+    "caption": "岗位情报页面：历史样本中演示岗位6，公共岗位和启用来源均为0",
+    "page_id": "source_detail",
+    "width_cm": 13.08,
+    "height_cm": 7.6,
+    "pdf_page": 18
+  },
+  {
+    "number": 25,
+    "asset": "d12_resume",
+    "caption": "上传、解析、修改草稿与确认版本的关系",
+    "page_id": "resume_detail",
+    "width_cm": 17.0,
+    "height_cm": 5.1,
+    "pdf_page": 19
+  },
+  {
+    "number": 26,
+    "asset": "s06_resume",
+    "caption": "实际上传37KB演示DOCX后的列表状态：“需要手工录入”",
+    "page_id": "resume_detail",
+    "width_cm": 17.1,
+    "height_cm": 3.58,
+    "pdf_page": 19
+  },
+  {
+    "number": 27,
+    "asset": "d14_interview",
+    "caption": "默认面试结构及报告生成",
+    "page_id": "interview",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 20
+  },
+  {
+    "number": 28,
+    "asset": "s07_interview",
+    "caption": "真实数字人面试台局部，保留文字问题和未部署摄像头的提示",
+    "page_id": "interview_detail",
+    "width_cm": 12.32,
+    "height_cm": 8.3,
+    "pdf_page": 21
+  },
+  {
+    "number": 29,
+    "asset": "s08_report",
+    "caption": "已完成8轮的场次报告：四维均分和后续练习方向",
+    "page_id": "interview_detail",
+    "width_cm": 12.24,
+    "height_cm": 5.8,
+    "pdf_page": 21
+  },
+  {
+    "number": 30,
+    "asset": "c03_match",
+    "caption": "五维匹配预设演示分数：82、86、72、78、80；综合80/100",
+    "page_id": "scores_detail",
+    "width_cm": 12.27,
+    "height_cm": 6.9,
+    "pdf_page": 22
+  },
+  {
+    "number": 31,
+    "asset": "c04_interview",
+    "caption": "单场8轮回答平均分：76、78、75、76",
+    "page_id": "scores_detail",
+    "width_cm": 12.27,
+    "height_cm": 6.9,
+    "pdf_page": 22
+  },
+  {
+    "number": 32,
+    "asset": "d16_delivery",
+    "caption": "从工作简报到有版本的交付物",
+    "page_id": "growth",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 23
+  },
+  {
+    "number": 33,
+    "asset": "d15_learning",
+    "caption": "学习任务记录形成后续练习依据",
+    "page_id": "growth_detail",
+    "width_cm": 10.67,
+    "height_cm": 3.2,
+    "pdf_page": 24
+  },
+  {
+    "number": 34,
+    "asset": "s09_learning",
+    "caption": "学习页面局部，数据不足时保留提示而不是生成虚构曲线",
+    "page_id": "growth_detail",
+    "width_cm": 7.07,
+    "height_cm": 5.0,
+    "pdf_page": 24
+  },
+  {
+    "number": 35,
+    "asset": "s10_workplace",
+    "caption": "工作任务简报局部：目标、交付物、约束和验收标准",
+    "page_id": "growth_detail",
+    "width_cm": 8.75,
+    "height_cm": 5.2,
+    "pdf_page": 24
+  },
+  {
+    "number": 36,
+    "asset": "d17_application",
+    "caption": "申请阶段的允许转换",
+    "page_id": "applications",
+    "width_cm": 17.1,
+    "height_cm": 4.06,
+    "pdf_page": 25
+  },
+  {
+    "number": 37,
+    "asset": "s11_board",
+    "caption": "申请看板局部：收藏、已投递及后续阶段",
+    "page_id": "weekly_detail",
+    "width_cm": 7.72,
+    "height_cm": 4.9,
+    "pdf_page": 26
+  },
+  {
+    "number": 38,
+    "asset": "d18_weekly",
+    "caption": "复盘先选时间窗口，再计算事件和建议",
+    "page_id": "weekly_detail",
+    "width_cm": 10.33,
+    "height_cm": 3.1,
+    "pdf_page": 26
+  },
+  {
+    "number": 39,
+    "asset": "s12_weekly",
+    "caption": "真实复盘结果：近7天无事件，仍保留建议的性质",
+    "page_id": "weekly_detail",
+    "width_cm": 11.34,
+    "height_cm": 4.6,
+    "pdf_page": 26
+  },
+  {
+    "number": 40,
+    "asset": "d19_intervention",
+    "caption": "学生反馈与辅导员验收的状态链",
+    "page_id": "counselor",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 27
+  },
+  {
+    "number": 41,
+    "asset": "s14_counselor",
+    "caption": "班级概览局部：24人、85条申请、9条风险事件（演示数据）",
+    "page_id": "help_detail",
+    "width_cm": 7.86,
+    "height_cm": 5.5,
+    "pdf_page": 28
+  },
+  {
+    "number": 42,
+    "asset": "s15_feedback",
+    "caption": "学生提交后的真实反馈区域局部",
+    "page_id": "help_detail",
+    "width_cm": 15.29,
+    "height_cm": 2.9,
+    "pdf_page": 28
+  },
+  {
+    "number": 43,
+    "asset": "s16_resolved",
+    "caption": "辅导员核验后的完成记录局部",
+    "page_id": "help_detail",
+    "width_cm": 8.19,
+    "height_cm": 3.4,
+    "pdf_page": 28
+  },
+  {
+    "number": 44,
+    "asset": "d20_followup",
+    "caption": "录用、入职与阶段回访",
+    "page_id": "employment",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 29
+  },
+  {
+    "number": 45,
+    "asset": "s17_employment",
+    "caption": "入职跟踪页面：无可用录用记录时不生成虚构就业结果",
+    "page_id": "quality_detail",
+    "width_cm": 11.58,
+    "height_cm": 7.3,
+    "pdf_page": 30
+  },
+  {
+    "number": 46,
+    "asset": "d21_modes",
+    "caption": "全量本地配置与低资源服务器演示版",
+    "page_id": "deployment",
+    "width_cm": 16.29,
+    "height_cm": 7.4,
+    "pdf_page": 31
+  },
+  {
+    "number": 47,
+    "asset": "d22_topology",
+    "caption": "server-demo配置拓扑：浏览器、Nginx、API、数据库、Redis与外部模型",
+    "page_id": "deploy_detail",
+    "width_cm": 15.61,
+    "height_cm": 6.7,
+    "pdf_page": 32
+  },
+  {
+    "number": 48,
+    "asset": "c07_latency",
+    "caption": "历史本机5个接口各20次顺序GET的中位数与P95",
+    "page_id": "deploy_detail",
+    "width_cm": 11.38,
+    "height_cm": 6.4,
+    "pdf_page": 32
+  },
+  {
+    "number": 49,
+    "asset": "c06_tests",
+    "caption": "历史验证通过数与未通过项",
+    "page_id": "testing",
+    "width_cm": 13.16,
+    "height_cm": 7.4,
+    "pdf_page": 33
+  },
+  {
+    "number": 50,
+    "asset": "c05_risk_tasks",
+    "caption": "演示库：正常15、关注4、需干预5；任务已完成36、待完成60",
+    "page_id": "risk_detail",
+    "width_cm": 12.27,
+    "height_cm": 6.9,
+    "pdf_page": 34
+  },
+  {
+    "number": 51,
+    "asset": "c09_boundaries",
+    "caption": "5条规则的阈值前、阈值及阈值后，共15个用例",
+    "page_id": "risk_detail",
+    "width_cm": 11.02,
+    "height_cm": 6.2,
+    "pdf_page": 34
+  },
+  {
+    "number": 52,
+    "asset": "c01_funnel",
+    "caption": "按申请ID去重的累计到达：85、68、50、33、16",
+    "page_id": "counts_detail",
+    "width_cm": 11.73,
+    "height_cm": 6.6,
+    "pdf_page": 35
+  },
+  {
+    "number": 53,
+    "asset": "c02_current",
+    "caption": "互斥的当前状态：17、18、17、17、16，合计85",
+    "page_id": "counts_detail",
+    "width_cm": 11.73,
+    "height_cm": 6.6,
+    "pdf_page": 35
+  },
+  {
+    "number": 54,
+    "asset": "d24_bug",
+    "caption": "文件已保存但解析失败的排查路径",
+    "page_id": "limitations",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 36
+  },
+  {
+    "number": 55,
+    "asset": "d25_license",
+    "caption": "发布前许可与来源核对方案",
+    "page_id": "license",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 37
+  },
+  {
+    "number": 56,
+    "asset": "d26_contribute",
+    "caption": "从Issue到发布的建议协作路径",
+    "page_id": "contribution",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 38
+  },
+  {
+    "number": 57,
+    "asset": "d27_roadmap",
+    "caption": "按验收条件推进的长期路线",
+    "page_id": "roadmap",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 39
+  },
+  {
+    "number": 58,
+    "asset": "d28_evaluate",
+    "caption": "试点评估的样本、任务与复核流程",
+    "page_id": "evaluation",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 40
+  },
+  {
+    "number": 59,
+    "asset": "d29_demo",
+    "caption": "现场演示的五个关键结果",
+    "page_id": "demo",
+    "width_cm": 17.1,
+    "height_cm": 5.13,
+    "pdf_page": 41
+  },
+  {
+    "number": 60,
+    "asset": "d30_submission",
+    "caption": "代码仓库、PDF与视频的提交对应",
+    "page_id": "submission",
+    "width_cm": 17.1,
+    "height_cm": 6.48,
+    "pdf_page": 42
+  }
+]

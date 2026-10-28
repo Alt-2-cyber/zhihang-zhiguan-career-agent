@@ -1,0 +1,1043 @@
+{
+  "scope": "人工构造演示数据库；非真实用户、真实招生/就业统计或因果成效",
+  "client_date": "2026-10-20",
+  "students": 24,
+  "jobs": 6,
+  "applications": 85,
+  "current_stage_counts": {
+    "applied": 18,
+    "assessment": 17,
+    "interview": 17,
+    "offered": 16,
+    "saved": 17
+  },
+  "cumulative_milestones_distinct_applications": {
+    "applied": 68,
+    "assessment": 50,
+    "interview": 33,
+    "offered": 16,
+    "saved": 85
+  },
+  "tasks": {
+    "completed": 36,
+    "pending": 60
+  },
+  "task_total": 96,
+  "risks": {
+    "attention": 4,
+    "intervention": 5
+  },
+  "risk_rules": {
+    "no_recent_application": 5,
+    "tasks_overdue": 4
+  },
+  "risk_total": 9,
+  "normal_students": 15,
+  "risk_student_note": "本演示样本每名风险学生仅有一条风险事件；真实数据需按学生去重。",
+  "scenario_count": 5,
+  "architecture": {
+    "specialists": [
+      "career",
+      "job",
+      "resume",
+      "application",
+      "interview",
+      "counselor",
+      "learning",
+      "workplace",
+      "intelligence",
+      "employment"
+    ],
+    "specialist_count": 10,
+    "tool_count": 32,
+    "by_risk": {
+      "read": 20,
+      "normal_write": 9,
+      "high_risk": 3
+    },
+    "tools": [
+      {
+        "name": "profile.get",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "plan.get",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "counselor"
+        ]
+      },
+      {
+        "name": "tasks.list",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "counselor"
+        ]
+      },
+      {
+        "name": "jobs.get",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "interview",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "jobs.search_internal",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "resumes.list",
+        "risk": "read",
+        "specialists": [
+          "counselor",
+          "interview",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "resumes.get",
+        "risk": "read",
+        "specialists": [
+          "counselor",
+          "interview",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "applications.list",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "counselor"
+        ]
+      },
+      {
+        "name": "risks.list",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor"
+        ]
+      },
+      {
+        "name": "interventions.list",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor"
+        ]
+      },
+      {
+        "name": "ai_task.get",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "employment",
+          "learning",
+          "resume",
+          "workplace"
+        ]
+      },
+      {
+        "name": "dashboard.class_summary",
+        "risk": "read",
+        "specialists": [
+          "counselor"
+        ]
+      },
+      {
+        "name": "students.list_progress",
+        "risk": "read",
+        "specialists": [
+          "counselor"
+        ]
+      },
+      {
+        "name": "jobs.search_public",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "job",
+          "resume"
+        ]
+      },
+      {
+        "name": "knowledge.search",
+        "risk": "read",
+        "specialists": [
+          "application",
+          "career",
+          "counselor",
+          "employment",
+          "intelligence",
+          "interview",
+          "job",
+          "learning",
+          "resume",
+          "workplace"
+        ]
+      },
+      {
+        "name": "jobs.import_candidate",
+        "risk": "normal_write",
+        "specialists": [
+          "application",
+          "career",
+          "job"
+        ]
+      },
+      {
+        "name": "plan.create_draft",
+        "risk": "normal_write",
+        "specialists": [
+          "career"
+        ]
+      },
+      {
+        "name": "task.update_status",
+        "risk": "normal_write",
+        "specialists": [
+          "application",
+          "career"
+        ]
+      },
+      {
+        "name": "application.update_stage",
+        "risk": "normal_write",
+        "specialists": [
+          "application"
+        ]
+      },
+      {
+        "name": "resume.create_version_draft",
+        "risk": "normal_write",
+        "specialists": [
+          "resume"
+        ]
+      },
+      {
+        "name": "intervention.create",
+        "risk": "normal_write",
+        "specialists": [
+          "counselor"
+        ]
+      },
+      {
+        "name": "record.delete",
+        "risk": "high_risk",
+        "specialists": [
+          "application",
+          "career",
+          "counselor",
+          "employment",
+          "intelligence",
+          "interview",
+          "job",
+          "learning",
+          "resume",
+          "workplace"
+        ]
+      },
+      {
+        "name": "records.bulk_update",
+        "risk": "high_risk",
+        "specialists": [
+          "application",
+          "career",
+          "counselor",
+          "employment",
+          "intelligence",
+          "interview",
+          "job",
+          "learning",
+          "resume",
+          "workplace"
+        ]
+      },
+      {
+        "name": "application.external_submit",
+        "risk": "high_risk",
+        "specialists": [
+          "application"
+        ]
+      },
+      {
+        "name": "growth.overview",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "learning"
+        ]
+      },
+      {
+        "name": "workplace.sessions",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "workplace"
+        ]
+      },
+      {
+        "name": "workplace.deliverables",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "workplace"
+        ]
+      },
+      {
+        "name": "intelligence.overview",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "intelligence",
+          "job"
+        ]
+      },
+      {
+        "name": "employment.records",
+        "risk": "read",
+        "specialists": [
+          "career",
+          "counselor",
+          "employment"
+        ]
+      },
+      {
+        "name": "growth.update_task",
+        "risk": "normal_write",
+        "specialists": [
+          "learning"
+        ]
+      },
+      {
+        "name": "workplace.start_session",
+        "risk": "normal_write",
+        "specialists": [
+          "workplace"
+        ]
+      },
+      {
+        "name": "employment.create_record",
+        "risk": "normal_write",
+        "specialists": [
+          "employment"
+        ]
+      }
+    ]
+  },
+  "match": {
+    "id": "b5dafb7c-d90d-48a5-be3e-88e7b9f227bf",
+    "job_id": "c8b5582a-6953-4671-b845-35aa36696b60",
+    "provider": "local-demo",
+    "recommendation": "apply",
+    "overall_score": 80,
+    "dimensions": [
+      {
+        "dimension": "requirements",
+        "score": 82,
+        "evidence": [
+          {
+            "source": "job",
+            "quote": "要求 Python、SQL、数据可视化和业务分析能力。"
+          }
+        ]
+      },
+      {
+        "dimension": "skills",
+        "score": 86,
+        "evidence": [
+          {
+            "source": "resume",
+            "quote": "掌握 Python 和 SQL，完成销售数据分析与可视化项目。"
+          }
+        ]
+      },
+      {
+        "dimension": "experience",
+        "score": 72,
+        "evidence": [
+          {
+            "source": "resume",
+            "quote": "掌握 Python 和 SQL，完成销售数据分析与可视化项目。"
+          }
+        ]
+      },
+      {
+        "dimension": "preferences",
+        "score": 78,
+        "evidence": [
+          {
+            "source": "job",
+            "quote": "要求 Python、SQL、数据可视化和业务分析能力。"
+          }
+        ]
+      },
+      {
+        "dimension": "growth",
+        "score": 80,
+        "evidence": [
+          {
+            "source": "job",
+            "quote": "要求 Python、SQL、数据可视化和业务分析能力。"
+          }
+        ]
+      }
+    ],
+    "gaps": [
+      "建议补充数据可视化工具的成果证据"
+    ],
+    "actions": [
+      "针对岗位关键词调整项目描述",
+      "投递前核对硬性条件"
+    ]
+  },
+  "interview": {
+    "status": "completed",
+    "progress": {
+      "core_current": 6,
+      "core_total": 6,
+      "follow_ups_used": 2,
+      "follow_ups_max": 2,
+      "turns_answered": 8,
+      "max_turns": 8,
+      "current_kind": null
+    },
+    "final_report": {
+      "rubric_version": "unified-v1",
+      "turns_answered": 8,
+      "average_scores": {
+        "content_completeness": 76,
+        "job_relevance": 78,
+        "answer_structure": 75,
+        "evidence_quality": 76
+      },
+      "strengths": [],
+      "improvements": [
+        "内容完整度",
+        "岗位相关性",
+        "表达结构",
+        "证据质量"
+      ],
+      "feedback": [
+        "回答已覆盖主要行动",
+        "建议补充可核实的量化结果"
+      ]
+    },
+    "provider": "local-demo"
+  },
+  "api_performance": {
+    "scope": "localhost single client, sequential GET; one warmup per route excluded; Python httpx wall time; local-demo; no external LLM/OCR/speech/vision/network or concurrency claims",
+    "routes": [
+      {
+        "path": "/api/health",
+        "n": 20,
+        "median_ms": 16.97,
+        "p95_ms": 31.48,
+        "ok": 20,
+        "samples_ms": [
+          31.482,
+          3.474,
+          4.616,
+          20.083,
+          15.7,
+          23.763,
+          36.633,
+          20.727,
+          26.535,
+          3.346,
+          3.25,
+          27.839,
+          27.237,
+          18.24,
+          3.695,
+          3.527,
+          12.846,
+          29.158,
+          5.465,
+          5.945
+        ],
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      },
+      {
+        "path": "/api/dashboard/student",
+        "n": 20,
+        "median_ms": 11.86,
+        "p95_ms": 35.87,
+        "ok": 20,
+        "samples_ms": [
+          12.246,
+          19.747,
+          12.009,
+          13.411,
+          17.742,
+          15.618,
+          46.202,
+          11.717,
+          12.518,
+          10.106,
+          10.365,
+          13.638,
+          11.181,
+          35.866,
+          9.067,
+          8.863,
+          9.103,
+          9.722,
+          8.559,
+          4.396
+        ],
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      },
+      {
+        "path": "/api/jobs",
+        "n": 20,
+        "median_ms": 8.25,
+        "p95_ms": 28.34,
+        "ok": 20,
+        "samples_ms": [
+          6.099,
+          7.142,
+          14.05,
+          7.19,
+          6.458,
+          7.643,
+          9.747,
+          6.509,
+          7.787,
+          9.204,
+          25.161,
+          8.765,
+          7.772,
+          31.911,
+          8.367,
+          21.807,
+          14.692,
+          8.133,
+          7.374,
+          28.34
+        ],
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      },
+      {
+        "path": "/api/dashboard/counselor",
+        "n": 20,
+        "median_ms": 15.01,
+        "p95_ms": 31.91,
+        "ok": 20,
+        "samples_ms": [
+          15.296,
+          9.474,
+          29.457,
+          13.844,
+          42.281,
+          11.038,
+          28.618,
+          14.723,
+          11.767,
+          31.905,
+          10.924,
+          22.77,
+          10.972,
+          13.752,
+          8.668,
+          26.395,
+          11.49,
+          17.047,
+          23.85,
+          17.891
+        ],
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      },
+      {
+        "path": "/api/workplace/scenarios",
+        "n": 20,
+        "median_ms": 9.55,
+        "p95_ms": 35.12,
+        "ok": 20,
+        "samples_ms": [
+          9.693,
+          8.807,
+          33.977,
+          8.718,
+          7.075,
+          9.412,
+          7.352,
+          8.581,
+          6.854,
+          35.118,
+          9.767,
+          30.247,
+          12.788,
+          9.989,
+          7.26,
+          27.595,
+          10.278,
+          7.882,
+          75.305,
+          7.959
+        ],
+        "statuses": [
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200,
+          200
+        ]
+      }
+    ]
+  },
+  "api_smoke": {
+    "cases": [
+      {
+        "method": "GET",
+        "path": "/api/jobs",
+        "status": 200,
+        "elapsed_ms": 6.922,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/jobs/c8b5582a-6953-4671-b845-35aa36696b60/match",
+        "status": 201,
+        "elapsed_ms": 49.364,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews",
+        "status": 201,
+        "elapsed_ms": 54.053,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 25.012,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 34.008,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 33.015,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 43.817,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 57.475,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 40.224,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 44.258,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4/answers",
+        "status": 200,
+        "elapsed_ms": 51.214,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/interviews/9f8f0499-1e9b-4591-a678-b28e3dd798b4",
+        "status": 200,
+        "elapsed_ms": 32.428,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/reviews/weekly",
+        "status": 201,
+        "elapsed_ms": 41.775,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/dashboard/counselor",
+        "status": 403,
+        "elapsed_ms": 32.055,
+        "expected": [
+          403
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/students/me/profile",
+        "status": 403,
+        "elapsed_ms": 22.13,
+        "expected": [
+          403
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/jobs",
+        "status": 401,
+        "elapsed_ms": 15.444,
+        "expected": [
+          401
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/chat/sessions",
+        "status": 201,
+        "elapsed_ms": 18.573,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "POST",
+        "path": "/api/chat/sessions/990e743c-463e-4e79-bb21-0156a38013ce/messages",
+        "status": 202,
+        "elapsed_ms": 51.203,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/dashboard/student",
+        "status": 200,
+        "elapsed_ms": 22.018,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/dashboard/counselor",
+        "status": 200,
+        "elapsed_ms": 10.027,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/intelligence/overview",
+        "status": 200,
+        "elapsed_ms": 31.943,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      },
+      {
+        "method": "GET",
+        "path": "/api/workplace/scenarios",
+        "status": 200,
+        "elapsed_ms": 14.891,
+        "expected": [
+          200,
+          201,
+          202
+        ],
+        "pass": true
+      }
+    ],
+    "failures": [],
+    "passed": 22,
+    "total": 22
+  },
+  "risk_boundary": {
+    "total": 15,
+    "passed": 15
+  },
+  "backend_tests": {
+    "tests": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 55.501
+  },
+  "frontend_tests": {
+    "tests": 25,
+    "passed": 25,
+    "files": 10,
+    "evidence": "frontend-tests.log"
+  },
+  "build": {
+    "status": "passed",
+    "evidence": "frontend-build.log"
+  },
+  "existing_e2e": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "scope": "现有回归脚本在24人扩展演示库上串行运行；保留失败，不作为产品全流程通过。",
+    "issues": [
+      "辅导员风险文本匹配到多条记录，严格选择器不唯一（2项）",
+      "岗位匹配UI显示“技能”，旧断言仍使用“技能匹配”（2项）",
+      "移动端职场训练流程超时，尚未完成定位（1项）"
+    ]
+  },
+  "chat": {
+    "provider": "local-rules",
+    "status": "completed",
+    "step_count": 2,
+    "tools": [
+      {
+        "name": "profile.get",
+        "status": "succeeded",
+        "duration_ms": 4
+      },
+      {
+        "name": "plan.get",
+        "status": "succeeded",
+        "duration_ms": 8
+      },
+      {
+        "name": "tasks.list",
+        "status": "succeeded",
+        "duration_ms": 3
+      },
+      {
+        "name": "applications.list",
+        "status": "succeeded",
+        "duration_ms": 4
+      }
+    ],
+    "duration_ms": 157,
+    "note": "单次本地规则回放，不是在线大模型响应速度或正确率测评。"
+  }
+}

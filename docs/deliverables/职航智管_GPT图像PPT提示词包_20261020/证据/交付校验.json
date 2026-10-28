@@ -1,0 +1,14 @@
+{
+  "prompts": 19,
+  "page_captures": 14,
+  "detail_crops": 6,
+  "data_charts": 9,
+  "style_references": 6,
+  "all_referenced_assets_present": true,
+  "all_markdown_links_resolve": true,
+  "text_credentials_scan": "passed",
+  "synthetic_risk_history_consistency": "24/24",
+  "aggregate_counts_consistent": true,
+  "image_generation_performed": false,
+  "existing_browser_e2e_unresolved": 5
+}

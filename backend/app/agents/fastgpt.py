@@ -9,10 +9,13 @@ from app.agents.contracts import (
     InterviewEvaluation,
     InterviewQuestion,
     JobMatch,
+    LearningExamGeneration,
     ProfileAnalysis,
     ResumeOptimization,
+    TrainingExchange,
     WeeklyMetrics,
     WeeklyReview,
+    WorkplaceDeliverableGeneration,
 )
 
 
@@ -69,15 +72,29 @@ class FastGPTAgentGateway:
             contract=ResumeOptimization,
         )
 
-    def start_interview(self, resume_text: str, job_description: str) -> InterviewQuestion:
+    def start_interview(
+        self,
+        resume_text: str,
+        job_description: str,
+        interview_type: str = "standard",
+    ) -> InterviewQuestion:
         return self._invoke(
             operation="start_interview",
-            inputs={"resume_text": resume_text, "job_description": job_description},
+            inputs={
+                "resume_text": resume_text,
+                "job_description": job_description,
+                "interview_type": interview_type,
+            },
             contract=InterviewQuestion,
         )
 
     def evaluate_answer(
-        self, question: str, answer: str, job_description: str
+        self,
+        question: str,
+        answer: str,
+        job_description: str,
+        interview_type: str = "standard",
+        question_id: str | None = None,
     ) -> InterviewEvaluation:
         return self._invoke(
             operation="evaluate_answer",
@@ -85,6 +102,8 @@ class FastGPTAgentGateway:
                 "question": question,
                 "answer": answer,
                 "job_description": job_description,
+                "interview_type": interview_type,
+                "question_id": question_id,
             },
             contract=InterviewEvaluation,
         )
@@ -94,6 +113,69 @@ class FastGPTAgentGateway:
             operation="build_weekly_review",
             inputs={"metrics": metrics.model_dump(mode="json")},
             contract=WeeklyReview,
+        )
+
+    def generate_learning_exam(
+        self,
+        *,
+        skill_name: str,
+        context: dict[str, object],
+        question_count: int,
+    ) -> LearningExamGeneration:
+        return self._invoke(
+            operation="generate_learning_exam",
+            inputs={
+                "skill_name": skill_name,
+                "context": context,
+                "question_count": question_count,
+                "prompt_version": "exam-v1",
+            },
+            contract=LearningExamGeneration,
+        )
+
+    def generate_training_exchange(
+        self,
+        *,
+        mode: str,
+        stage: str,
+        prompt: str,
+        student_response: str,
+        stress_level: str,
+        material_context: list[str],
+        expected_stage: str = "scoring",
+    ) -> TrainingExchange:
+        return self._invoke(
+            operation="generate_training_exchange",
+            inputs={
+                "mode": mode,
+                "stage": stage,
+                "prompt": prompt,
+                "student_response": student_response,
+                "stress_level": stress_level,
+                "material_context": material_context,
+                "expected_stage": expected_stage,
+                "prompt_version": "training-v1",
+            },
+            contract=TrainingExchange,
+        )
+
+    def generate_workplace_deliverable(
+        self,
+        *,
+        action_type: str,
+        work_context: dict[str, object],
+        session_history: list[dict[str, object]],
+        current_draft: str | None = None,
+    ) -> WorkplaceDeliverableGeneration:
+        return self._invoke(
+            operation="generate_workplace_deliverable",
+            inputs={
+                "action_type": action_type,
+                "work_context": work_context,
+                "session_history": session_history[-8:],
+                "current_draft": current_draft,
+            },
+            contract=WorkplaceDeliverableGeneration,
         )
 
     def _invoke(

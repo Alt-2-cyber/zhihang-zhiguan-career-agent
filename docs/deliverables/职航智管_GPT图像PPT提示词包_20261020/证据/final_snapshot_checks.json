@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-20",
+  "checks": [
+    {
+      "check": "counselor_counts_after_fixture_alignment",
+      "pass": true,
+      "students": 24,
+      "application_records": 85,
+      "risk_events": 9
+    },
+    {
+      "check": "student_counts",
+      "pass": true,
+      "application_records": 3,
+      "applied": 2,
+      "saved": 1
+    },
+    {
+      "check": "completed_interview_scores",
+      "pass": true,
+      "turns": 8,
+      "scores": {
+        "content_completeness": 76,
+        "job_relevance": 78,
+        "answer_structure": 75,
+        "evidence_quality": 76
+      }
+    },
+    {
+      "check": "agent_replay",
+      "pass": true,
+      "specialist_steps": 2,
+      "read_tool_calls": 4,
+      "provider": "local-rules"
+    },
+    {
+      "check": "student_feedback_counselor_resolution",
+      "pass": true
+    },
+    {
+      "check": "job_source_scope",
+      "pass": true,
+      "demo_jobs": 6,
+      "public_jobs": 0,
+      "active_sources": 0
+    }
+  ],
+  "passed": 6,
+  "total": 6
+}

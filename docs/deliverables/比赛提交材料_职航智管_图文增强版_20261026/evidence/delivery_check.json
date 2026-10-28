@@ -1,0 +1,38 @@
+{
+  "edition": "图文增强版",
+  "revision": "2026-10-26",
+  "pages": 42,
+  "main_chapters": 24,
+  "extra_visual_explanations": 16,
+  "figures": 60,
+  "diagrams": 32,
+  "screenshots_and_annotated_details": 19,
+  "data_charts": 9,
+  "all_42_pages_include_figures": true,
+  "continuous_figure_numbers": true,
+  "chinese_characters": 16267,
+  "nonwhitespace_characters": 24820,
+  "previous_detailed_prose_preserved": true,
+  "previous_detailed_edition_preserved": true,
+  "pdf_docx_markdown_verified": true,
+  "historical_data_and_known_failures_retained": true,
+  "repository_and_video_urls_still_pending": true,
+  "new_test_suite_run": false,
+  "files": [
+    {
+      "name": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.pdf",
+      "bytes": 3917198,
+      "sha256": "112aafe30c3e4f7d8b1c7cdee2749bbce7720e57ea81205909792e6199c2781f"
+    },
+    {
+      "name": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.docx",
+      "bytes": 6113525,
+      "sha256": "b8f5ebe3f8d439c68810d37c197f98ee16534b6dafa9e4f5ebaf1c4fdcfd8e5b"
+    },
+    {
+      "name": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.md",
+      "bytes": 64345,
+      "sha256": "a6486603542b6f1ba46a958a9ab04740b3f5f87ad11994fdc66930d4651f102e"
+    }
+  ]
+}

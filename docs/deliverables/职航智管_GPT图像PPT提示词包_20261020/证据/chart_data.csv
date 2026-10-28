@@ -1,0 +1,35 @@
+﻿metric,value,unit,scope,source
+students,24,人,人工构造演示数据,evidence.db
+jobs,6,个,人工构造演示数据,evidence.db
+applications,85,条,人工构造演示数据,evidence.db
+task_total,96,项,人工构造演示数据,evidence.db
+risk_total,9,条,人工构造演示数据,evidence.db
+scenario_count,5,个,人工构造演示数据,evidence.db
+当前阶段_applied,18,条,互斥当前状态，不是累计漏斗或转化率,evidence.db/applications
+当前阶段_assessment,17,条,互斥当前状态，不是累计漏斗或转化率,evidence.db/applications
+当前阶段_interview,17,条,互斥当前状态，不是累计漏斗或转化率,evidence.db/applications
+当前阶段_offered,16,条,互斥当前状态，不是累计漏斗或转化率,evidence.db/applications
+当前阶段_saved,17,条,互斥当前状态，不是累计漏斗或转化率,evidence.db/applications
+累计到达_applied,68,条,按申请ID去重的阶段到达记录；人工构造,evidence.db/application_events
+累计到达_assessment,50,条,按申请ID去重的阶段到达记录；人工构造,evidence.db/application_events
+累计到达_interview,33,条,按申请ID去重的阶段到达记录；人工构造,evidence.db/application_events
+累计到达_offered,16,条,按申请ID去重的阶段到达记录；人工构造,evidence.db/application_events
+累计到达_saved,85,条,按申请ID去重的阶段到达记录；人工构造,evidence.db/application_events
+计划任务_completed,36,项,人工构造演示数据,evidence.db/plan_tasks
+计划任务_pending,60,项,人工构造演示数据,evidence.db/plan_tasks
+风险事件_attention,4,条,人工构造演示数据,evidence.db/risk_events
+风险事件_intervention,5,条,人工构造演示数据,evidence.db/risk_events
+backend_passed,63,项,当前工作区自动化测试，不是业务准确率,backend-tests-current.xml
+frontend_passed,25,项,组件测试,frontend-tests.log
+api_smoke_passed,22,项,本地规则演示模式；含预期拒绝的权限用例,api_smoke.json
+risk_boundary_passed,15,项,5条规则，每条测阈值前/阈值/阈值后,risk_boundary_cases.json
+/api/health_median,16.97,ms,本机单客户端顺序20次GET；剔除1次预热,api_performance.json
+/api/health_p95,31.48,ms,nearest-rank P95；非并发压力、非模型生成,api_performance.json
+/api/dashboard/student_median,11.86,ms,本机单客户端顺序20次GET；剔除1次预热,api_performance.json
+/api/dashboard/student_p95,35.87,ms,nearest-rank P95；非并发压力、非模型生成,api_performance.json
+/api/jobs_median,8.25,ms,本机单客户端顺序20次GET；剔除1次预热,api_performance.json
+/api/jobs_p95,28.34,ms,nearest-rank P95；非并发压力、非模型生成,api_performance.json
+/api/dashboard/counselor_median,15.01,ms,本机单客户端顺序20次GET；剔除1次预热,api_performance.json
+/api/dashboard/counselor_p95,31.91,ms,nearest-rank P95；非并发压力、非模型生成,api_performance.json
+/api/workplace/scenarios_median,9.55,ms,本机单客户端顺序20次GET；剔除1次预热,api_performance.json
+/api/workplace/scenarios_p95,35.12,ms,nearest-rank P95；非并发压力、非模型生成,api_performance.json

@@ -1,0 +1,346 @@
+{
+  "prepared_on": "2026-10-25",
+  "revision_completed_on": "2026-10-26",
+  "software": "职航智管求职训练与职业成长服务系统",
+  "content_source": "scripts/competition_detailed_content.py",
+  "chapters": 24,
+  "historical_test_date": "2026-10-20",
+  "historical_upload_date": "2026-10-22",
+  "full_test_suite_rerun_during_document_revision": false,
+  "site_check": {
+    "date": "2026-10-25",
+    "requests": [
+      {
+        "url": "http://111.228.30.194/",
+        "status": 200
+      },
+      {
+        "url": "http://111.228.30.194/api/health",
+        "status": 200,
+        "body": {
+          "status": "ok"
+        }
+      }
+    ],
+    "scope": "Unauthenticated read-only home/health requests; no login or online model check"
+  },
+  "source_files": [
+    {
+      "path": ".gitignore",
+      "sha256": "3d63c84755777921428fcd84402b2a79daff57e5329e068d5d1d3b4defaac810",
+      "bytes": 328
+    },
+    {
+      "path": "README.md",
+      "sha256": "ccbae5e08ad0c130dfad269a21c5b9012134d5fe272b2de2c3d51ad21e1f0586",
+      "bytes": 3802
+    },
+    {
+      "path": "backend/app/agents/conversation_contracts.py",
+      "sha256": "33788b8d4d3788461ab8391b6ba5e33826eec86d6e3a90e56df9e640f5b102b9",
+      "bytes": 5638
+    },
+    {
+      "path": "backend/app/agents/local.py",
+      "sha256": "59e692c095f7bd13e7c8cc400f03847652f69eaa9b5e4c16dc3f8692e4ec4bd1",
+      "bytes": 19920
+    },
+    {
+      "path": "backend/app/agents/service.py",
+      "sha256": "9cdd1ac605636d97b5352339bf730a1823c96803256ee5557e12a668524299ae",
+      "bytes": 7311
+    },
+    {
+      "path": "backend/app/agents/usage.py",
+      "sha256": "19635b75028ce1971ee2264c0f5500e8851df2b733d5a1274d72ab1252a005b4",
+      "bytes": 7138
+    },
+    {
+      "path": "backend/app/ai/models.py",
+      "sha256": "f2fa7c3df48468d1b77e9517e733b7b9ba9aa646f5aa1367a0e5ba28e5c233f3",
+      "bytes": 4105
+    },
+    {
+      "path": "backend/app/ai/service.py",
+      "sha256": "d9dcddc7c4c4ceafd81992cd13db1f322d603514586ba217f17f6418f9a55f29",
+      "bytes": 4854
+    },
+    {
+      "path": "backend/app/applications/models.py",
+      "sha256": "8d713cb3ba35d9d7f565bde906bd042747fb718dca8da23ca9dab85e1853625a",
+      "bytes": 1169
+    },
+    {
+      "path": "backend/app/applications/service.py",
+      "sha256": "487f5c5fa5b446cec79dace6a90c96f1f3f3484880494881b4b848ec98d1cf29",
+      "bytes": 1206
+    },
+    {
+      "path": "backend/app/auth/models.py",
+      "sha256": "bf55f0a093210303e1f41cb8169aa6f50e5643cf12613c861e09d18f60daf0f7",
+      "bytes": 774
+    },
+    {
+      "path": "backend/app/chat/actions.py",
+      "sha256": "03e79611368687028e1c43c8d9a4fb23ec253432785aeaa263e91ffe003b68f9",
+      "bytes": 10275
+    },
+    {
+      "path": "backend/app/chat/events.py",
+      "sha256": "5ec66c0040e8a60f41d33ef0a953562305335095b75498d1a77d95d6f0bd4ee0",
+      "bytes": 1126
+    },
+    {
+      "path": "backend/app/chat/models.py",
+      "sha256": "e17155ba1f4caa591acc83421daae0481a42caa92e949f8f3fb3a48aa001aeb3",
+      "bytes": 8218
+    },
+    {
+      "path": "backend/app/chat/orchestrator.py",
+      "sha256": "66705629debb4555a3585a6ca639fe30c8495077ad8c085efa25b0fb8a03fc6f",
+      "bytes": 28137
+    },
+    {
+      "path": "backend/app/chat/router.py",
+      "sha256": "9e0402c9ad549cbdc6287159d014d7ff734897e0635a528f18829f4ce1af33f7",
+      "bytes": 17940
+    },
+    {
+      "path": "backend/app/core/models.py",
+      "sha256": "b3648563cfadfadf871bdd760bcf0d6a43f2b28f147356a3d65585d59362559c",
+      "bytes": 629
+    },
+    {
+      "path": "backend/app/core/retention.py",
+      "sha256": "fd818903695258450d894498281d9c2ff44aab8ffb88cc9fc6d1ab8c3ee2c090",
+      "bytes": 1744
+    },
+    {
+      "path": "backend/app/core/scheduler.py",
+      "sha256": "32952060053b711118cf9b7f9870b8306efd814b797aff78e3631cce79b70118",
+      "bytes": 5500
+    },
+    {
+      "path": "backend/app/dashboard/router.py",
+      "sha256": "7aa05b6f9d0beaafcbb0184dc52433c4af13d91795e926837869d975b2febb1c",
+      "bytes": 4116
+    },
+    {
+      "path": "backend/app/employment/router.py",
+      "sha256": "7a8a44bd6ac940d0eea33b547990a52d869674b37c97ec1522b3b91a73e506cd",
+      "bytes": 6590
+    },
+    {
+      "path": "backend/app/employment/service.py",
+      "sha256": "24fc653d4ed89efbcdcec67c29e51bf2ba5447ebab22ec23d36b59e917d1970f",
+      "bytes": 20355
+    },
+    {
+      "path": "backend/app/growth/service.py",
+      "sha256": "1603eedd8c95c26f7a4b8b2bf1d6d4d3ac1c2d15d621626bb231d99d10955a15",
+      "bytes": 38053
+    },
+    {
+      "path": "backend/app/intelligence/service.py",
+      "sha256": "5e82e3a41c36509daf91d3b5c6986d4cf56fc9e1427d3b93e0be76bc88b5120d",
+      "bytes": 11185
+    },
+    {
+      "path": "backend/app/interventions/router.py",
+      "sha256": "ae3c495f634888927855d782ffbcaba9381f8fec4f8969d1658b306f3cd600dd",
+      "bytes": 3793
+    },
+    {
+      "path": "backend/app/interviews/router.py",
+      "sha256": "a3bc6b64a7590c8514622449ca03d7c14e5bb99b7b9180507404f572a2eae3b8",
+      "bytes": 34557
+    },
+    {
+      "path": "backend/app/interviews/service.py",
+      "sha256": "8463b3821f9ffc607d3cb659cf5c696f9121cd2dc9dbb91ce01d0b473ebd9613",
+      "bytes": 8927
+    },
+    {
+      "path": "backend/app/jobs/router.py",
+      "sha256": "fb5a401d88804f02c777b85cac67fbcb3a401a401f9535710ee4baac7e09c928",
+      "bytes": 2781
+    },
+    {
+      "path": "backend/app/main.py",
+      "sha256": "432024f02af39ee77ad5bf41a19c7fa2d94d83c99303b84a0d5a69bda2da6295",
+      "bytes": 3281
+    },
+    {
+      "path": "backend/app/plans/router.py",
+      "sha256": "60b0c4e864770b9fb96b5048c270b30eeb102d11ee9cbe15daf306ec814706b5",
+      "bytes": 2026
+    },
+    {
+      "path": "backend/app/resumes/parser.py",
+      "sha256": "63941ec1bdb1d3d690d3c122784cd0a6be6c255f787a08895f2913a29d1c18a1",
+      "bytes": 499
+    },
+    {
+      "path": "backend/app/resumes/router.py",
+      "sha256": "78f1f4400566577c8f33decf183522242349a398c813fbb80459497988f6f197",
+      "bytes": 5540
+    },
+    {
+      "path": "backend/app/reviews/router.py",
+      "sha256": "87d4bc1c5473face2996d6927a4bc1110449af588af67ac74c3cadf35a8b4d2f",
+      "bytes": 2371
+    },
+    {
+      "path": "backend/app/risks/rules.py",
+      "sha256": "29e9fdc9765953f56672214eaed71a049f6d64f03e8eb00fd4eb2ae021beeb9e",
+      "bytes": 2590
+    },
+    {
+      "path": "backend/app/students/router.py",
+      "sha256": "2c38fa29d6491f659c4b72d4195b3552ce802c1ac3b341405007b198a5d3d415",
+      "bytes": 2574
+    },
+    {
+      "path": "backend/app/students/service.py",
+      "sha256": "75ae5e7b55e2c974279cefef99b944c20942e8aaf467e50c9c0c911762bc5bcb",
+      "bytes": 3425
+    },
+    {
+      "path": "backend/app/tools/authorization.py",
+      "sha256": "b4e5c3073fc5588daf63b76693bb77d65d97a05b879fd5b964280f8b2d76d4d2",
+      "bytes": 847
+    },
+    {
+      "path": "backend/app/tools/registry.py",
+      "sha256": "b2d0657ed2c54d4b700802ffadf051b3b77c910530151927fdbb6cde470b26bd",
+      "bytes": 4278
+    },
+    {
+      "path": "backend/app/workplace/service.py",
+      "sha256": "9b9c49cff13fa9be5a5ab3a6bcdbc3ca1bbb8295a85faf9c11e94e1396e96390",
+      "bytes": 37275
+    },
+    {
+      "path": "backend/pyproject.toml",
+      "sha256": "2f119cb50b575469ae1c5a6adc181adc6c2490b9c7ec4872dc540c6c8f11876e",
+      "bytes": 1115
+    },
+    {
+      "path": "docker-compose.server-demo.yml",
+      "sha256": "c2c3902794a22ddae0dc561a299effff01e5d87efb7d204b28d92e7c13faffc1",
+      "bytes": 4615
+    },
+    {
+      "path": "docker-compose.yml",
+      "sha256": "3a3012e62625006871e9ca0da26e7fb0c856be9efb02643c04f53b5e3cf8cd24",
+      "bytes": 12171
+    },
+    {
+      "path": "docs/competition-governance-proposal.md",
+      "sha256": "06e16b56a0b459fe1f94ef817f0fd847c2cb2b8fc529db96a90bad00e6ebfb91",
+      "bytes": 1769
+    },
+    {
+      "path": "docs/deliverables/website-presentation-script.md",
+      "sha256": "96ff6d08313c308b905fe3728afab876ea8e731641b5e5f71f77ece0b342e4ea",
+      "bytes": 11576
+    },
+    {
+      "path": "docs/server-demo-deployment.md",
+      "sha256": "912639a70a8f4f7b6f7fc03a06a3edacce592f609f7fb6f127316158a4366625",
+      "bytes": 5661
+    },
+    {
+      "path": "docs/workplace-workbench.md",
+      "sha256": "56b2181eab1963fae60c919926731fe7bdcb3d91048952404797eebade1a9a20",
+      "bytes": 2470
+    },
+    {
+      "path": "frontend/package.json",
+      "sha256": "e2d7a61f8b31730d7fd02db4ad0f7a235a5d82d3431263dd73a822cf0c044e04",
+      "bytes": 1303
+    },
+    {
+      "path": "frontend/playwright.config.ts",
+      "sha256": "252a075e92d22e3f650c6320f8b5afbdf2ae3da67cc90722ac645cd335f421b0",
+      "bytes": 582
+    },
+    {
+      "path": "frontend/public/ai-interviewer.source.txt",
+      "sha256": "942ad9c451c15c196176074ba6b9866e342a10be6767148b96f21d1f0aa33528",
+      "bytes": 183
+    },
+    {
+      "path": "frontend/src/app/router.tsx",
+      "sha256": "03c7109720060bc4ab616bdfe79e3f9e59a7cd0a9e14efb2d63c7ac403318e2c",
+      "bytes": 7054
+    },
+    {
+      "path": "frontend/src/features/counselor/CounselorDashboard.tsx",
+      "sha256": "27255afac4e143bebf026e2fdde54aa42b65e744cd14f3c93feaf825f6b1a169",
+      "bytes": 3854
+    },
+    {
+      "path": "frontend/src/features/public/EmployerReviewPage.tsx",
+      "sha256": "63ddb73d3d4679d3b880edb95bc87ed602ae688fe81e2269e781a90f10bfe7b9",
+      "bytes": 5235
+    },
+    {
+      "path": "frontend/src/features/student/PlanPage.tsx",
+      "sha256": "f326fbba99f11ca314ff4b08e6c27aefc910adf051946d50817ad8fc6e807c1b",
+      "bytes": 3446
+    },
+    {
+      "path": "frontend/src/features/student/interview-api.ts",
+      "sha256": "b0c97d0254ca58bea576c83d906bc77281832c9086bd58cd4586023bf2b05eac",
+      "bytes": 5638
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "d90da321f37354f327df69747b975ed3031fcd160445724512cd6228f670d2f0",
+      "bytes": 529
+    },
+    {
+      "path": "output/copyright-20261022/capture.log",
+      "sha256": "0a7c161c92c5e59cf1d097e6bf99b22d46b3a84b874077b53871ad30694cdc8a",
+      "bytes": 10982
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/api_performance.json",
+      "sha256": "1d4c5f13ea08c824ed0aac832f6fbb549c382504db7735a524d1b7463beefe9a",
+      "bytes": 4239
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/backend-tests-current.xml",
+      "sha256": "a81b3c81f05fcf3bbb7fc4468df3966536399b7fdd813ed430fbcd579b476e06",
+      "bytes": 8459
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/browser-capture-agent-counselor.log",
+      "sha256": "28e56b34d882271182d41ef144d72670935cf6753203839c66772cd1fecd16f3",
+      "bytes": 6308
+    },
+    {
+      "path": "output/ppt-evidence-2026-10-20/data_summary.json",
+      "sha256": "4ba06c828ea35b971739694be0ebc6ee1ef08ce25deb5f139117fe5a728fd60a",
+      "bytes": 22320
+    },
+    {
+      "path": "scripts/verify.ps1",
+      "sha256": "d8dc52bbac3990db9a9a90749b2835cd70e4ef6fb7cfcbeed64644081a0dca67",
+      "bytes": 2257
+    },
+    {
+      "path": "services/emotion/app.py",
+      "sha256": "b7a8ac547f9c4903d0d0fc47644d7e9ff37219a8779e75e3abdb0290ac21b57d",
+      "bytes": 15010
+    },
+    {
+      "path": "services/emotion/requirements.txt",
+      "sha256": "78936df06ac0df2eb0b2ee7b3191a762812e6f56dc2113d8a05b19943ce13b09",
+      "bytes": 197
+    }
+  ],
+  "body_nonwhitespace_characters": 8971,
+  "all_content_nonwhitespace_characters": 19816
+}

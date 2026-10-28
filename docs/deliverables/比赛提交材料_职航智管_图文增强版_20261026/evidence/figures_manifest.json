@@ -1,0 +1,660 @@
+{
+  "d01_journey": {
+    "type": "source_diagram",
+    "title": "d01_journey",
+    "source": [
+      "frontend/src/app/router.tsx",
+      "backend/app/reviews/router.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d02_problem": {
+    "type": "source_diagram",
+    "title": "d02_problem",
+    "source": [
+      "README.md",
+      "docs/workplace-workbench.md"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d03_roles": {
+    "type": "source_diagram",
+    "title": "d03_roles",
+    "source": [
+      "frontend/src/app/router.tsx",
+      "backend/app/tools/authorization.py"
+    ],
+    "pixel_size": [
+      2400,
+      970
+    ]
+  },
+  "d04_arch": {
+    "type": "source_diagram",
+    "title": "d04_arch",
+    "source": [
+      "backend/app/main.py",
+      "backend/app/tools/registry.py",
+      "docker-compose.server-demo.yml"
+    ],
+    "pixel_size": [
+      2400,
+      1050
+    ]
+  },
+  "d05_sequence": {
+    "type": "source_diagram",
+    "title": "d05_sequence",
+    "source": [
+      "output/ppt-evidence-2026-10-20/chat_run.json"
+    ],
+    "pixel_size": [
+      2400,
+      1170
+    ]
+  },
+  "d06_gates": {
+    "type": "source_diagram",
+    "title": "d06_gates",
+    "source": [
+      "backend/app/tools/registry.py",
+      "backend/app/tools/authorization.py"
+    ],
+    "pixel_size": [
+      2400,
+      1070
+    ]
+  },
+  "d07_actions": {
+    "type": "source_diagram",
+    "title": "d07_actions",
+    "source": [
+      "backend/app/chat/actions.py",
+      "backend/app/chat/schemas.py"
+    ],
+    "pixel_size": [
+      2400,
+      1050
+    ]
+  },
+  "d08_async": {
+    "type": "source_diagram",
+    "title": "d08_async",
+    "source": [
+      "backend/app/chat/router.py",
+      "backend/app/ai/service.py"
+    ],
+    "pixel_size": [
+      2400,
+      1050
+    ]
+  },
+  "d09_tasks": {
+    "type": "source_diagram",
+    "title": "d09_tasks",
+    "source": [
+      "backend/app/ai/service.py",
+      "backend/app/ai/worker.py"
+    ],
+    "pixel_size": [
+      2400,
+      1050
+    ]
+  },
+  "d10_data": {
+    "type": "source_diagram",
+    "title": "d10_data",
+    "source": [
+      "backend/app/chat/models.py",
+      "backend/app/applications/models.py",
+      "backend/app/students/models.py"
+    ],
+    "pixel_size": [
+      2400,
+      1010
+    ]
+  },
+  "d11_confirm": {
+    "type": "source_diagram",
+    "title": "d11_confirm",
+    "source": [
+      "backend/app/students/router.py",
+      "backend/app/plans/router.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d12_resume": {
+    "type": "source_diagram",
+    "title": "d12_resume",
+    "source": [
+      "backend/app/resumes/router.py",
+      "backend/app/resumes/parser.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d13_sources": {
+    "type": "source_diagram",
+    "title": "d13_sources",
+    "source": [
+      "backend/app/intelligence/service.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d14_interview": {
+    "type": "source_diagram",
+    "title": "d14_interview",
+    "source": [
+      "backend/app/interviews/service.py",
+      "backend/app/interviews/router.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d15_learning": {
+    "type": "source_diagram",
+    "title": "d15_learning",
+    "source": [
+      "backend/app/growth/service.py",
+      "frontend/src/features/student/LearningPage.tsx"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d16_delivery": {
+    "type": "source_diagram",
+    "title": "d16_delivery",
+    "source": [
+      "docs/workplace-workbench.md",
+      "backend/app/workplace/service.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d17_application": {
+    "type": "source_diagram",
+    "source": [
+      "backend/app/applications/service.py"
+    ],
+    "note": "saved/applied/assessment/interview/offered可到closed；applied可直达interview"
+  },
+  "d18_weekly": {
+    "type": "source_diagram",
+    "title": "d18_weekly",
+    "source": [
+      "backend/app/reviews/router.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d19_intervention": {
+    "type": "source_diagram",
+    "title": "d19_intervention",
+    "source": [
+      "backend/app/interventions/router.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d20_followup": {
+    "type": "source_diagram",
+    "title": "d20_followup",
+    "source": [
+      "backend/app/employment/service.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d21_modes": {
+    "type": "source_diagram",
+    "title": "d21_modes",
+    "source": [
+      "docker-compose.yml",
+      "docker-compose.server-demo.yml",
+      "docs/server-demo-deployment.md"
+    ],
+    "pixel_size": [
+      2400,
+      1090
+    ]
+  },
+  "d22_topology": {
+    "type": "source_diagram",
+    "title": "d22_topology",
+    "source": [
+      "docker-compose.server-demo.yml"
+    ],
+    "pixel_size": [
+      2400,
+      1030
+    ]
+  },
+  "d23_privacy": {
+    "type": "source_diagram",
+    "title": "d23_privacy",
+    "source": [
+      "backend/app/core/retention.py",
+      "backend/app/core/config.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d24_bug": {
+    "type": "source_diagram",
+    "title": "d24_bug",
+    "source": [
+      "backend/app/resumes/router.py",
+      "backend/app/resumes/parser.py",
+      "backend/app/resumes/storage.py"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d25_license": {
+    "type": "planned_diagram",
+    "title": "d25_license",
+    "source": [
+      "frontend/package.json",
+      "backend/pyproject.toml",
+      "frontend/public/ai-interviewer.source.txt"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d26_contribute": {
+    "type": "planned_diagram",
+    "title": "d26_contribute",
+    "source": [
+      "docs/competition-governance-proposal.md"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d27_roadmap": {
+    "type": "planned_diagram",
+    "title": "d27_roadmap",
+    "source": [
+      "docs/competition-governance-proposal.md"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d28_evaluate": {
+    "type": "planned_diagram",
+    "title": "d28_evaluate",
+    "source": [
+      "scripts/competition_detailed_content.py evaluation"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d29_demo": {
+    "type": "planned_diagram",
+    "title": "d29_demo",
+    "source": [
+      "scripts/competition_detailed_content.py demo"
+    ],
+    "pixel_size": [
+      2400,
+      720
+    ]
+  },
+  "d30_submission": {
+    "type": "planned_diagram",
+    "title": "d30_submission",
+    "source": [
+      "比赛提交要求截图"
+    ],
+    "pixel_size": [
+      2400,
+      910
+    ]
+  },
+  "d31_assurance": {
+    "type": "source_diagram",
+    "title": "d31_assurance",
+    "source": [
+      "output/ppt-evidence-2026-10-20/data_summary.json",
+      "scripts/competition_detailed_content.py"
+    ],
+    "pixel_size": [
+      2400,
+      810
+    ]
+  },
+  "d32_retention": {
+    "type": "source_diagram",
+    "title": "d32_retention",
+    "source": [
+      "backend/app/core/config.py",
+      "backend/app/core/retention.py"
+    ],
+    "pixel_size": [
+      2400,
+      880
+    ]
+  },
+  "s01_student": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\student.png",
+    "crop": [
+      45,
+      75,
+      1290,
+      760
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s02_profile": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\profile.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      730
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s03_plan": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\plan.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      740
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s04_match": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\match.png",
+    "crop": [
+      45,
+      75,
+      1290,
+      990
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s05_sources": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\05-job-intelligence.png",
+    "crop": [
+      80,
+      70,
+      1560,
+      930
+    ],
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s06_resume": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\resume-uploaded.png",
+    "crop": [
+      528,
+      218,
+      1269,
+      373
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": "实际上传失败状态，保留“需要手工录入”"
+  },
+  "s07_interview": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\07C-digital-human.png",
+    "crop": null,
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s08_report": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\07B-interview-summary.png",
+    "crop": null,
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s09_learning": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\learning.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      950
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s10_workplace": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\08-workplace.png",
+    "crop": [
+      80,
+      155,
+      1560,
+      1035
+    ],
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s11_board": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\applications.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      860
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s12_weekly": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\review-result.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      575
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": "近7天事件为0，不能按全量累计漏斗解释"
+  },
+  "s13_agent": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\09-agent-assistant.png",
+    "crop": [
+      50,
+      95,
+      1630,
+      1010
+    ],
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s14_counselor": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\12-counselor-dashboard.png",
+    "crop": [
+      80,
+      75,
+      1560,
+      1110
+    ],
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s15_feedback": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\11-student-feedback.png",
+    "crop": [
+      90,
+      690,
+      1540,
+      965
+    ],
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s16_resolved": {
+    "type": "screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\13A-confirmed-feedback.png",
+    "crop": null,
+    "historical_capture": "2026-10-20",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s17_employment": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\employment.png",
+    "crop": [
+      45,
+      70,
+      1290,
+      855
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s18_login": {
+    "type": "screenshot",
+    "source": "output\\copyright-20261022\\screenshots\\login.png",
+    "crop": [
+      110,
+      175,
+      1490,
+      845
+    ],
+    "historical_capture": "2026-10-22",
+    "ui_values_changed": false,
+    "note": null
+  },
+  "s19_tool_detail": {
+    "type": "annotated_screenshot",
+    "source": "docs\\deliverables\\职航智管_GPT图像PPT提示词包_20261020\\截图\\10-agent-tool-details.png",
+    "crop": [
+      0,
+      200,
+      330,
+      665
+    ],
+    "ui_values_changed": false,
+    "note": "工具区域等比放大；右侧为图解文字，不是重绘产品界面"
+  },
+  "c01_funnel": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C01-cumulative-funnel.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c02_current": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C02-current-stages.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c03_match": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C03-job-match.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c04_interview": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C04-interview-scores.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c05_risk_tasks": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C05-risk-and-tasks.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c06_tests": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C06-test-results.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c07_latency": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C07-local-api-latency.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c08_tools": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C08-tool-inventory.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  },
+  "c09_boundaries": {
+    "type": "data_chart",
+    "source": "output\\ppt-evidence-2026-10-20\\charts\\C09-risk-boundaries.png",
+    "data_date": "2026-10-20",
+    "values_changed": false
+  }
+}

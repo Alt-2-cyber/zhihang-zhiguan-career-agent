@@ -1,6 +1,88 @@
+x-backend-environment: &backend-environment
+  APP_ENV: production
+  SECRET_KEY: ${SECRET_KEY:-local-demo-secret-change-before-deployment}
+  DATABASE_URL: postgresql+psycopg://career:${POSTGRES_PASSWORD:-career-local-password}@db:5432/career
+  CORS_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+  STORAGE_BACKEND: ${STORAGE_BACKEND:-local}
+  UPLOAD_DIR: /app/uploads
+  STORAGE_ENDPOINT_URL: ${STORAGE_ENDPOINT_URL:-}
+  STORAGE_BUCKET: ${STORAGE_BUCKET:-career}
+  STORAGE_ACCESS_KEY: ${STORAGE_ACCESS_KEY:-}
+  STORAGE_SECRET_KEY: ${STORAGE_SECRET_KEY:-}
+  STORAGE_REGION: ${STORAGE_REGION:-us-east-1}
+  STORAGE_PREFIX: ${STORAGE_PREFIX:-career}
+  STORAGE_PRESIGNED_URL_EXPIRY: ${STORAGE_PRESIGNED_URL_EXPIRY:-900}
+  DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:-}
+  DATA_ENCRYPTION_REQUIRED: ${DATA_ENCRYPTION_REQUIRED:-false}
+  AGENT_PROVIDER: ${AGENT_PROVIDER:-failover}
+  ZHIPU_BASE_URL: ${ZHIPU_BASE_URL:-https://open.bigmodel.cn/api/paas/v4}
+  ZHIPU_API_KEY: ${ZHIPU_API_KEY:-}
+  ZHIPU_MODEL: ${ZHIPU_MODEL:-glm-4-flash}
+  DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+  DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+  DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-flash}
+  AGENT_TIMEOUT_SECONDS: ${AGENT_TIMEOUT_SECONDS:-180}
+  AGENT_RETRY_ATTEMPTS: ${AGENT_RETRY_ATTEMPTS:-1}
+  AGENT_PROVIDER_ORDER: ${AGENT_PROVIDER_ORDER:-zhipu,deepseek}
+  AGENT_ALLOW_LOCAL_FALLBACK: ${AGENT_ALLOW_LOCAL_FALLBACK:-false}
+  AGENT_CIRCUIT_FAILURE_THRESHOLD: ${AGENT_CIRCUIT_FAILURE_THRESHOLD:-3}
+  AGENT_CIRCUIT_RESET_SECONDS: ${AGENT_CIRCUIT_RESET_SECONDS:-60}
+  AGENT_INPUT_COST_PER_MILLION_USD: ${AGENT_INPUT_COST_PER_MILLION_USD:-}
+  AGENT_OUTPUT_COST_PER_MILLION_USD: ${AGENT_OUTPUT_COST_PER_MILLION_USD:-}
+  METRICS_ENABLED: ${METRICS_ENABLED:-true}
+  RATE_LIMIT_ENABLED: ${RATE_LIMIT_ENABLED:-true}
+  RATE_LIMIT_BACKEND: ${RATE_LIMIT_BACKEND:-redis}
+  RATE_LIMIT_REQUESTS: ${RATE_LIMIT_REQUESTS:-120}
+  RATE_LIMIT_WINDOW_SECONDS: ${RATE_LIMIT_WINDOW_SECONDS:-60}
+  REDIS_URL: ${REDIS_URL:-redis://redis:6379/0}
+  OTEL_ENABLED: ${OTEL_ENABLED:-false}
+  OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME:-career-agent}
+  OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://otel-collector:4318/v1/traces}
+  AGENT_MAX_STEPS: ${AGENT_MAX_STEPS:-6}
+  AGENT_MAX_TOOL_CALLS: ${AGENT_MAX_TOOL_CALLS:-12}
+  AGENT_MAX_TOOL_ROUNDS: ${AGENT_MAX_TOOL_ROUNDS:-2}
+  AGENT_MAX_PARALLEL_READS: ${AGENT_MAX_PARALLEL_READS:-3}
+  AGENT_RUN_TIMEOUT_SECONDS: ${AGENT_RUN_TIMEOUT_SECONDS:-120}
+  CHAT_SUMMARY_MESSAGE_THRESHOLD: ${CHAT_SUMMARY_MESSAGE_THRESHOLD:-20}
+  CHAT_RECENT_MESSAGE_LIMIT: ${CHAT_RECENT_MESSAGE_LIMIT:-12}
+  ACTION_PROPOSAL_EXPIRY_MINUTES: ${ACTION_PROPOSAL_EXPIRY_MINUTES:-30}
+  PUBLIC_JOB_SEARCH_ENABLED: ${PUBLIC_JOB_SEARCH_ENABLED:-true}
+  PUBLIC_JOB_SEARCH_BASE_URL: ${PUBLIC_JOB_SEARCH_BASE_URL:-https://cn.bing.com/search}
+  PUBLIC_JOB_SEARCH_TIMEOUT_SECONDS: ${PUBLIC_JOB_SEARCH_TIMEOUT_SECONDS:-8}
+  PUBLIC_JOB_SEARCH_MAX_RESULTS: ${PUBLIC_JOB_SEARCH_MAX_RESULTS:-8}
+  PUBLIC_JOB_SEARCH_RETRY_ATTEMPTS: ${PUBLIC_JOB_SEARCH_RETRY_ATTEMPTS:-1}
+  JOB_SOURCE_REFRESH_RETRY_ATTEMPTS: ${JOB_SOURCE_REFRESH_RETRY_ATTEMPTS:-1}
+  EMBEDDING_SERVICE_URL: http://embedding:8101
+  OCR_SERVICE_URL: http://ocr:8102
+  SPEECH_SERVICE_URL: http://speech:8103
+  EMOTION_SERVICE_URL: http://emotion:8104
+  AI_TASK_LEASE_SECONDS: ${AI_TASK_LEASE_SECONDS:-300}
+  AI_TASK_POLL_SECONDS: ${AI_TASK_POLL_SECONDS:-1}
+  AUDIO_RETENTION_DAYS: ${AUDIO_RETENTION_DAYS:-7}
+  AUDIT_RETENTION_DAYS: ${AUDIT_RETENTION_DAYS:-730}
+  AGENT_USAGE_RETENTION_DAYS: ${AGENT_USAGE_RETENTION_DAYS:-90}
+  COMPLETED_TASK_RETENTION_DAYS: ${COMPLETED_TASK_RETENTION_DAYS:-30}
+  MAX_AUDIO_SIZE_MB: ${MAX_AUDIO_SIZE_MB:-20}
+  MAX_EMOTION_FRAME_SIZE_MB: ${MAX_EMOTION_FRAME_SIZE_MB:-4}
+  MAX_UPLOAD_SIZE_MB: ${MAX_UPLOAD_SIZE_MB:-10}
+  DEMO_STUDENT_PASSWORD: ${DEMO_STUDENT_PASSWORD:-Student123!}
+  DEMO_COUNSELOR_PASSWORD: ${DEMO_COUNSELOR_PASSWORD:-Counselor123!}
+
 services:
+  redis:
+    image: ${REDIS_IMAGE:-redis:7-alpine}
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
   db:
-    image: postgres:17-alpine
+    image: pgvector/pgvector:pg17
     environment:
       POSTGRES_DB: career
       POSTGRES_USER: career
@@ -18,29 +100,151 @@ services:
     build:
       context: ./backend
     environment:
-      APP_ENV: production
-      SECRET_KEY: ${SECRET_KEY:-local-demo-secret-change-before-deployment}
-      DATABASE_URL: postgresql+psycopg://career:${POSTGRES_PASSWORD:-career-local-password}@db:5432/career
-      CORS_ORIGINS: http://localhost:8080
-      STORAGE_BACKEND: local
-      UPLOAD_DIR: /app/uploads
-      AGENT_PROVIDER: ${AGENT_PROVIDER:-local}
-      FASTGPT_BASE_URL: ${FASTGPT_BASE_URL:-}
-      FASTGPT_API_KEY: ${FASTGPT_API_KEY:-}
-      FASTGPT_APP_ID: ${FASTGPT_APP_ID:-}
+      <<: *backend-environment
       ENABLE_SCHEDULER: "true"
-      DEMO_STUDENT_PASSWORD: ${DEMO_STUDENT_PASSWORD:-Student123!}
-      DEMO_COUNSELOR_PASSWORD: ${DEMO_COUNSELOR_PASSWORD:-Counselor123!}
     volumes:
       - uploads_data:/app/uploads
     depends_on:
       db:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
       interval: 5s
       timeout: 3s
-      retries: 20
+      retries: 30
+    restart: unless-stopped
+
+  embedding:
+    build:
+      context: .
+      dockerfile: services/embedding/Dockerfile
+    environment:
+      AI_FAKE_MODE: ${AI_FAKE_MODE:-0}
+      EMBEDDING_MODEL: BAAI/bge-m3
+      EMBEDDING_DEVICE: cpu
+      MODELSCOPE_CACHE: /models/modelscope
+    volumes:
+      - modelscope_cache:/models/modelscope
+    ports:
+      - "127.0.0.1:8101:8101"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8101/health/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 270
+      start_period: 30s
+    restart: unless-stopped
+
+  ocr:
+    build:
+      context: .
+      dockerfile: services/ocr/Dockerfile
+    environment:
+      AI_FAKE_MODE: ${AI_FAKE_MODE:-0}
+      OCR_LANG: ch
+      OCR_MODEL_VERSION: PP-OCRv5
+      OCR_DEVICE: cpu
+      PADDLE_PDX_MODEL_SOURCE: BOS
+      PADDLE_PDX_CACHE_HOME: /models/paddlex
+    volumes:
+      - paddle_cache:/models/paddlex
+    ports:
+      - "127.0.0.1:8102:8102"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8102/health/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 270
+      start_period: 30s
+    restart: unless-stopped
+
+  speech:
+    build:
+      context: .
+      dockerfile: services/speech/Dockerfile
+    environment:
+      AI_FAKE_MODE: ${AI_FAKE_MODE:-0}
+      ASR_MODEL: paraformer-zh
+      ASR_DEVICE: cuda
+      TTS_DEVICE: cpu
+      MODELSCOPE_CACHE: /models/modelscope
+      HF_HOME: /models/huggingface
+      MELOTTS_CACHE: /models/huggingface/melotts-zh
+    volumes:
+      - modelscope_cache:/models/modelscope
+      - huggingface_cache:/models/huggingface
+    ports:
+      - "127.0.0.1:8103:8103"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8103/health/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 270
+      start_period: 30s
+    restart: unless-stopped
+
+  emotion:
+    build:
+      context: .
+      dockerfile: services/emotion/Dockerfile
+    environment:
+      AI_FAKE_MODE: ${AI_FAKE_MODE:-0}
+      EMOTION_DEVICE: ${EMOTION_DEVICE:-cuda}
+      EMOTION_CLASSIFIER_ID: ${EMOTION_CLASSIFIER_ID:-trpakov/vit-face-expression}
+      EMOTION_CLASSIFIER_PATH: /models/huggingface/vit-face-expression
+      EMOTION_HF_VERIFY_SSL: ${EMOTION_HF_VERIFY_SSL:-0}
+      EMOTION_FACE_MODEL_PATH: /models/yolov8n-face.pt
+      HF_ENDPOINT: ${HF_ENDPOINT:-https://hf-mirror.com}
+      HF_HOME: /models/huggingface
+      YOLO_CONFIG_DIR: /models/ultralytics
+    volumes:
+      - emotion_models:/models
+    ports:
+      - "127.0.0.1:8104:8104"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8104/health/ready')"]
+      interval: 10s
+      timeout: 5s
+      retries: 270
+      start_period: 30s
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./backend
+    command: ["python", "-m", "app.ai.worker"]
+    environment:
+      <<: *backend-environment
+      ENABLE_SCHEDULER: "false"
+    volumes:
+      - uploads_data:/app/uploads
+    depends_on:
+      backend:
+        condition: service_healthy
+      embedding:
+        condition: service_healthy
+      ocr:
+        condition: service_healthy
+      speech:
+        condition: service_healthy
+      emotion:
+        condition: service_healthy
     restart: unless-stopped
 
   frontend:
@@ -56,10 +260,104 @@ services:
       test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
       interval: 5s
       timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  prometheus:
+    image: ${PROMETHEUS_IMAGE:-m.daocloud.io/docker.io/prom/prometheus:v2.53.1}
+    profiles: ["observability"]
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.enable-lifecycle
+    volumes:
+      - ./deploy/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "127.0.0.1:9090:9090"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:9090/-/ready"]
+      interval: 5s
+      timeout: 3s
       retries: 20
     restart: unless-stopped
 
+  otel-collector:
+    image: ${OTEL_COLLECTOR_IMAGE:-m.daocloud.io/docker.io/otel/opentelemetry-collector-contrib:0.104.0}
+    profiles: ["observability"]
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+    environment:
+      OTEL_FILE_PATH: ${OTEL_FILE_PATH:-/var/lib/otelcol/traces.json}
+    volumes:
+      - ./deploy/monitoring/otel-collector.yml:/etc/otelcol-contrib/config.yaml:ro
+      - otel_data:/var/lib/otelcol
+    depends_on:
+      otel-init:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:4318:4318"
+    healthcheck:
+      test: ["CMD", "/otelcol-contrib", "validate", "--config=/etc/otelcol-contrib/config.yaml"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  otel-init:
+    image: ${ALPINE_IMAGE:-alpine:3.22}
+    profiles: ["observability"]
+    command: ["sh", "-c", "mkdir -p /var/lib/otelcol && chown -R 10001:10001 /var/lib/otelcol"]
+    volumes:
+      - otel_data:/var/lib/otelcol
+    restart: "no"
+
+  minio:
+    image: ${MINIO_IMAGE:-m.daocloud.io/docker.io/minio/minio:RELEASE.2025-06-13T11-33-47Z}
+    profiles: ["storage"]
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${STORAGE_ACCESS_KEY:-career-minio}
+      MINIO_ROOT_PASSWORD: ${STORAGE_SECRET_KEY:-change-this-minio-password}
+    ports:
+      - "127.0.0.1:9000:9000"
+      - "127.0.0.1:9001:9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  minio-init:
+    build:
+      context: ./backend
+    image: ai_jiuye-minio-init
+    profiles: ["storage"]
+    depends_on:
+      minio:
+        condition: service_healthy
+    command: ["python", "-m", "app.core.minio_init"]
+    environment:
+      STORAGE_ENDPOINT_URL: http://minio:9000
+      STORAGE_ACCESS_KEY: ${STORAGE_ACCESS_KEY:-career-minio}
+      STORAGE_SECRET_KEY: ${STORAGE_SECRET_KEY:-change-this-minio-password}
+      STORAGE_BUCKET: ${STORAGE_BUCKET:-career}
+      STORAGE_REGION: ${STORAGE_REGION:-us-east-1}
+    restart: "no"
+
 volumes:
   postgres_data:
+  redis_data:
   uploads_data:
-
+  modelscope_cache:
+  paddle_cache:
+  huggingface_cache:
+  emotion_models:
+  minio_data:
+  prometheus_data:
+  otel_data:

@@ -13,6 +13,7 @@ import {
   secondaryButton,
 } from "../../components/Ui";
 import type { CounselorData } from "./CounselorDashboard";
+import { AskAgentButton } from "../chat/AskAgentButton";
 
 type Intervention = {
   id: string;
@@ -144,6 +145,7 @@ export function InterventionsPage({ token }: { token: string }) {
                       {statusLabels[item.status] ?? item.status}
                     </span>
                   </div>
+                  <AskAgentButton role="counselor" context={{ type: "student", id: item.student_id }} className="mt-3 h-8 px-2 text-xs" />
                   {item.feedback ? (
                     <div className="mt-3">
                       <Notice tone="info">学生反馈：{item.feedback}</Notice>

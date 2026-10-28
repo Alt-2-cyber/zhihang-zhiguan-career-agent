@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#f5f8f3"/>
+  <text x="60" y="58" font-family="Arial,Microsoft YaHei,sans-serif" font-size="28" font-weight="700" fill="#102015">Agent 请求与工具执行时序</text>
+  <text x="60" y="88" font-family="Arial,Microsoft YaHei,sans-serif" font-size="15" fill="#526051">模型负责规划，后端负责授权，所有动作可观测、可确认、可回滚</text>
+  <g font-family="Arial,Microsoft YaHei,sans-serif" font-size="14" fill="#102015">
+    <rect x="55" y="125" width="170" height="50" rx="8" fill="#102015"/><text x="95" y="156" fill="#ffffff" font-weight="700">用户 / 前端</text>
+    <rect x="285" y="125" width="170" height="50" rx="8" fill="#0f766e"/><text x="332" y="156" fill="#ffffff" font-weight="700">主 Agent</text>
+    <rect x="515" y="125" width="170" height="50" rx="8" fill="#c7ff4c"/><text x="543" y="156" font-weight="700">专业 Agent</text>
+    <rect x="745" y="125" width="170" height="50" rx="8" fill="#e3f6ce" stroke="#0f766e"/><text x="788" y="156" font-weight="700">授权网关</text>
+    <rect x="975" y="125" width="170" height="50" rx="8" fill="#ffffff" stroke="#0f766e"/><text x="1018" y="156" font-weight="700">业务工具</text>
+    <line x1="140" y1="175" x2="140" y2="660" stroke="#98aa99" stroke-width="2" stroke-dasharray="7 7"/>
+    <line x1="370" y1="175" x2="370" y2="660" stroke="#98aa99" stroke-width="2" stroke-dasharray="7 7"/>
+    <line x1="600" y1="175" x2="600" y2="660" stroke="#98aa99" stroke-width="2" stroke-dasharray="7 7"/>
+    <line x1="830" y1="175" x2="830" y2="660" stroke="#98aa99" stroke-width="2" stroke-dasharray="7 7"/>
+    <line x1="1060" y1="175" x2="1060" y2="660" stroke="#98aa99" stroke-width="2" stroke-dasharray="7 7"/>
+    <g stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <path d="M145 220 H365"/><path d="M375 285 H595"/><path d="M605 350 H825"/><path d="M835 420 H1055"/>
+    </g>
+    <g font-size="14">
+      <text x="180" y="210">发送问题、当前上下文</text>
+      <text x="410" y="275">识别意图、规划任务</text>
+      <text x="640" y="340">选择专业能力与工具候选</text>
+      <text x="870" y="410">角色、归属、参数、风险校验</text>
+    </g>
+    <path d="M1055 485 H835" stroke="#d6533e" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+    <text x="870" y="475" fill="#d6533e">确认后执行 / 自动执行</text>
+    <path d="M825 545 H375" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <text x="490" y="535">工具结果脱敏、写入审计、回传 Agent</text>
+    <path d="M365 610 H145" stroke="#0f766e" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <text x="180" y="600">SSE 按序推送步骤、结论和下一步</text>
+    <rect x="70" y="680" width="1060" height="42" rx="8" fill="#102015"/>
+    <text x="350" y="707" fill="#c7ff4c" font-weight="700">失败可重试 · 高风险可拒绝 · 写操作可撤销 · 全程留痕</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f766e"/></marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#d6533e"/></marker>
+  </defs>
+</svg>

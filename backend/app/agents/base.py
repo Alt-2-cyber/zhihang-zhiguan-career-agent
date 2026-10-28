@@ -5,10 +5,13 @@ from app.agents.contracts import (
     InterviewEvaluation,
     InterviewQuestion,
     JobMatch,
+    LearningExamGeneration,
     ProfileAnalysis,
     ResumeOptimization,
+    TrainingExchange,
     WeeklyMetrics,
     WeeklyReview,
+    WorkplaceDeliverableGeneration,
 )
 
 
@@ -28,3 +31,32 @@ class AgentGateway(Protocol):
     ) -> InterviewEvaluation: ...
 
     def build_weekly_review(self, metrics: WeeklyMetrics) -> WeeklyReview: ...
+
+    def generate_learning_exam(
+        self,
+        *,
+        skill_name: str,
+        context: dict[str, object],
+        question_count: int,
+    ) -> LearningExamGeneration: ...
+
+    def generate_training_exchange(
+        self,
+        *,
+        mode: str,
+        stage: str,
+        prompt: str,
+        student_response: str,
+        stress_level: str,
+        material_context: list[str],
+        expected_stage: str = "scoring",
+    ) -> TrainingExchange: ...
+
+    def generate_workplace_deliverable(
+        self,
+        *,
+        action_type: str,
+        work_context: dict[str, object],
+        session_history: list[dict[str, object]],
+        current_draft: str | None = None,
+    ) -> WorkplaceDeliverableGeneration: ...

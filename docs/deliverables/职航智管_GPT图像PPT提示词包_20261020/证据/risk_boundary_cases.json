@@ -1,0 +1,137 @@
+[
+  {
+    "rule": "target_not_set",
+    "field": "days_without_target",
+    "value": 6,
+    "threshold": 7,
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "rule": "target_not_set",
+    "field": "days_without_target",
+    "value": 7,
+    "threshold": 7,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "target_not_set",
+    "field": "days_without_target",
+    "value": 8,
+    "threshold": 7,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "no_recent_application",
+    "field": "days_without_application",
+    "value": 13,
+    "threshold": 14,
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "rule": "no_recent_application",
+    "field": "days_without_application",
+    "value": 14,
+    "threshold": 14,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "no_recent_application",
+    "field": "days_without_application",
+    "value": 15,
+    "threshold": 14,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "tasks_overdue",
+    "field": "overdue_tasks",
+    "value": 2,
+    "threshold": 3,
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "rule": "tasks_overdue",
+    "field": "overdue_tasks",
+    "value": 3,
+    "threshold": 3,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "tasks_overdue",
+    "field": "overdue_tasks",
+    "value": 4,
+    "threshold": 3,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "applications_without_interview",
+    "field": "applications_without_interview",
+    "value": 19,
+    "threshold": 20,
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "rule": "applications_without_interview",
+    "field": "applications_without_interview",
+    "value": 20,
+    "threshold": 20,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "applications_without_interview",
+    "field": "applications_without_interview",
+    "value": 21,
+    "threshold": 20,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "repeated_interview_failure",
+    "field": "consecutive_failed_interviews",
+    "value": 2,
+    "threshold": 3,
+    "expected": false,
+    "actual": false,
+    "pass": true
+  },
+  {
+    "rule": "repeated_interview_failure",
+    "field": "consecutive_failed_interviews",
+    "value": 3,
+    "threshold": 3,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  },
+  {
+    "rule": "repeated_interview_failure",
+    "field": "consecutive_failed_interviews",
+    "value": 4,
+    "threshold": 3,
+    "expected": true,
+    "actual": true,
+    "pass": true
+  }
+]

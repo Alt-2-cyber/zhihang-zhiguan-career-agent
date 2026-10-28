@@ -1,0 +1,442 @@
+[
+  {
+    "path": "assets/c01_funnel.png",
+    "bytes": 107634,
+    "sha256": "d55425ad536735786d3a278d09482d8b946d149e70dafc99ead90a4f0a979e48"
+  },
+  {
+    "path": "assets/c01_funnel.svg",
+    "bytes": 90574,
+    "sha256": "00edbd6dcd7966bf6cd616038861cb13b0676927217f80e5c99cfdaa12e3f6ba"
+  },
+  {
+    "path": "assets/c02_current.png",
+    "bytes": 83701,
+    "sha256": "89784761bcf5864e1da837c71996c9919499d1a7aaeb87be2b368c5bba06be79"
+  },
+  {
+    "path": "assets/c02_current.svg",
+    "bytes": 71432,
+    "sha256": "21dc79298349c2c7121594f780d743b43cbe53352f8aefce7fd2030ce12f9e57"
+  },
+  {
+    "path": "assets/c03_match.png",
+    "bytes": 192759,
+    "sha256": "c2cb2e276eb03a6a7fd8670dd6520cca1dc3e8394bae8d1c3dfb375804bcb56c"
+  },
+  {
+    "path": "assets/c03_match.svg",
+    "bytes": 97353,
+    "sha256": "2f88ab3467070ca64944ba11c6c2c70edb44d3c35e87df5862b109c1bffb8e3c"
+  },
+  {
+    "path": "assets/c04_interview.png",
+    "bytes": 181757,
+    "sha256": "da4e896bcd70fd6fbf9a01ebe78a1bbda129f2405880b54e5098413ab23add3d"
+  },
+  {
+    "path": "assets/c04_interview.svg",
+    "bytes": 98354,
+    "sha256": "fe367084ea546bcd28ab8c5a202a255aec63fdab2c7322e5c4a59bd92cdbc4e3"
+  },
+  {
+    "path": "assets/c05_risk_tasks.png",
+    "bytes": 134488,
+    "sha256": "778b51a392ffeaa16bd8af3e8fad7095a17655407a8f43635a532761b8d10f25"
+  },
+  {
+    "path": "assets/c05_risk_tasks.svg",
+    "bytes": 71837,
+    "sha256": "f8bd8988d615cfc357e1f2bd192a052aeccc3187ff3c56ae7a9e6349a408ea1f"
+  },
+  {
+    "path": "assets/c06_tests.png",
+    "bytes": 126246,
+    "sha256": "483feb6e71914286dfc34dd3235868d81197d449ac619aee67adcbe175fce682"
+  },
+  {
+    "path": "assets/c06_tests.svg",
+    "bytes": 109216,
+    "sha256": "73ff645a67d6632319f1fbce77af691c446c679ded64d57e364a39a240cb156b"
+  },
+  {
+    "path": "assets/c07_latency.png",
+    "bytes": 125167,
+    "sha256": "fdf960a5e392cf906f24720f34e4475637f118767c88adf48a373837107cd467"
+  },
+  {
+    "path": "assets/c07_latency.svg",
+    "bytes": 106227,
+    "sha256": "9e1a7d3c7dfa94c8fe47cb69da20006da21105fb3b90688e53e3198ba4a79158"
+  },
+  {
+    "path": "assets/c08_tools.png",
+    "bytes": 92114,
+    "sha256": "13491ca38f877d3605b55406e9c9439643165266820b9f745ff1a7dfc76cdede"
+  },
+  {
+    "path": "assets/c08_tools.svg",
+    "bytes": 75582,
+    "sha256": "c211b0f863bb98e9d53e9054359fca25c1ca3657d7063735b475c708be567097"
+  },
+  {
+    "path": "assets/c09_boundaries.png",
+    "bytes": 152551,
+    "sha256": "7d577f8c94526e04a85baa46708d6397531b3d9b584a2dc3006fadca5042ebe4"
+  },
+  {
+    "path": "assets/c09_boundaries.svg",
+    "bytes": 100848,
+    "sha256": "0f8a74af2ddc80c9d935b76f14416a9d7565f04e7728ae1c39edf937b5a11366"
+  },
+  {
+    "path": "assets/d01_journey.png",
+    "bytes": 99068,
+    "sha256": "9c4850f1b237cb080ed116a87c62133a42cef1cef5427bc40966d4ec063540b4"
+  },
+  {
+    "path": "assets/d02_problem.png",
+    "bytes": 84551,
+    "sha256": "a172539a645233d22cfef2165e79df6c259d83fbe256c64bb81294f8149a5868"
+  },
+  {
+    "path": "assets/d03_roles.png",
+    "bytes": 124936,
+    "sha256": "e2d41b23b46c3fb965cad3add271ed000dda82ca88ba4c44900409cec4b383e1"
+  },
+  {
+    "path": "assets/d04_arch.png",
+    "bytes": 149958,
+    "sha256": "1972a6d019373caefc64e1dbf67299a2dd5356ce9eaa3884efee5499d125d7d3"
+  },
+  {
+    "path": "assets/d05_sequence.png",
+    "bytes": 115796,
+    "sha256": "5b5aa3261aa40dc5dcef33cac86293378f3fba110f78a01e41bade2c4d796fbe"
+  },
+  {
+    "path": "assets/d06_gates.png",
+    "bytes": 154727,
+    "sha256": "a3cb83d67568844a4129a3f988a9dd6e2ecbffef3e44e9d6d635902caf03c92f"
+  },
+  {
+    "path": "assets/d07_actions.png",
+    "bytes": 111717,
+    "sha256": "9d2bf10932c952fc9d4c5e40da84d4d57a43e2bba2680e64fbaa8ad89f499dad"
+  },
+  {
+    "path": "assets/d08_async.png",
+    "bytes": 125619,
+    "sha256": "b5629bd05bae3b6ac5213fc71bcb5bb71b30645d9738dc901a1723cbdc886750"
+  },
+  {
+    "path": "assets/d09_tasks.png",
+    "bytes": 89544,
+    "sha256": "06a15b0c1954c038fd185f19cf73c804cd35c61c7924baaaa776c57fe173422b"
+  },
+  {
+    "path": "assets/d10_data.png",
+    "bytes": 118931,
+    "sha256": "5ca9d0894ba7710a5ea680d7a251575b1c5944f1d41db40710dff7a3344a4625"
+  },
+  {
+    "path": "assets/d11_confirm.png",
+    "bytes": 85372,
+    "sha256": "e44cd439a3e909aae308c435e94c634704107163028155581495805d55b1dfc0"
+  },
+  {
+    "path": "assets/d12_resume.png",
+    "bytes": 96090,
+    "sha256": "36ead2b8274c814f4d15a678627b1729697436c10da5b880fb61cc52c1456e85"
+  },
+  {
+    "path": "assets/d13_sources.png",
+    "bytes": 102812,
+    "sha256": "c46885063eacadce42e433f2fc5f0506a424261baccdaa11b88c7a06db740f93"
+  },
+  {
+    "path": "assets/d14_interview.png",
+    "bytes": 97199,
+    "sha256": "c4a3ce9f1ef496877d5ed4c4b953f583c06212b50a08391074d24841caef35df"
+  },
+  {
+    "path": "assets/d15_learning.png",
+    "bytes": 100036,
+    "sha256": "d2aefecfbf112df91d6fdda77b186a857aad0756766ccc7ecbf8a235bda34d57"
+  },
+  {
+    "path": "assets/d16_delivery.png",
+    "bytes": 93209,
+    "sha256": "84471f859aa0207a99c140d5eb0b0fcbaa765829154a9551b0974dbf566e8621"
+  },
+  {
+    "path": "assets/d17_application.png",
+    "bytes": 65090,
+    "sha256": "bef0434429b33f377012b7f0508ecff9b4f375563701bc83e38a60e62d8a0a66"
+  },
+  {
+    "path": "assets/d18_weekly.png",
+    "bytes": 93769,
+    "sha256": "ccc8226744f71791988fa52089ba9ebc52b7ff44275947b2b517e8e90e3acb1e"
+  },
+  {
+    "path": "assets/d19_intervention.png",
+    "bytes": 80485,
+    "sha256": "4d802e400baa623e11e398a422170e786a5ca921a4b6aa161527322269f68a1d"
+  },
+  {
+    "path": "assets/d20_followup.png",
+    "bytes": 88978,
+    "sha256": "638a76d6755a5b628ca8b1a621325dc148de6965edc0c5cd236164ab338d5a60"
+  },
+  {
+    "path": "assets/d21_modes.png",
+    "bytes": 175969,
+    "sha256": "c248988c1ababdce6750f915c930c7bfe6da385907f268f5b0b72ad83f54e3d7"
+  },
+  {
+    "path": "assets/d22_topology.png",
+    "bytes": 81001,
+    "sha256": "dd912a1f8c22d2755a6e6016e23ef78b7d4d53ec90084cc5a607e0cf3f7c5094"
+  },
+  {
+    "path": "assets/d23_privacy.png",
+    "bytes": 106701,
+    "sha256": "2dea6455545e1e15984cef7ec595f4b3584d293bdf1bb0fa9cfa498620be3bc8"
+  },
+  {
+    "path": "assets/d24_bug.png",
+    "bytes": 99527,
+    "sha256": "adc61c7093aa7f0440b3b31fe176be75761b82ad219dacf256672c96361cda57"
+  },
+  {
+    "path": "assets/d25_license.png",
+    "bytes": 102704,
+    "sha256": "649b8f07951f2c540b282d17cb15ab5a89cbcfca13e0599889bab67b6c2112f1"
+  },
+  {
+    "path": "assets/d26_contribute.png",
+    "bytes": 95624,
+    "sha256": "855c0829bf6a1d4d6142e0ca11bd732f396567201c2e18869d5806860994b091"
+  },
+  {
+    "path": "assets/d27_roadmap.png",
+    "bytes": 88183,
+    "sha256": "636612bd1035a36d06376874bc332bdb31bdec87f14eb0310a8a1c8fbb949d1b"
+  },
+  {
+    "path": "assets/d28_evaluate.png",
+    "bytes": 88389,
+    "sha256": "6016cfb560ed11311a06b3562df15228b6c2ba751c7586066b343d1c2276570c"
+  },
+  {
+    "path": "assets/d29_demo.png",
+    "bytes": 93669,
+    "sha256": "7e6fd4d28366b37228d87549ac4950fc4c692903ecf83920cec302d61b84424d"
+  },
+  {
+    "path": "assets/d30_submission.png",
+    "bytes": 147251,
+    "sha256": "98e579ab10998097bc7a5c0c281a67db3cb718884fc86e11b2457ebb542c7364"
+  },
+  {
+    "path": "assets/d31_assurance.png",
+    "bytes": 113015,
+    "sha256": "e0fedf0155ebbc0b2d7a765c592475361ca2628836688dd4698fb3b5689ac58b"
+  },
+  {
+    "path": "assets/d32_retention.png",
+    "bytes": 80338,
+    "sha256": "780168d3f760acec594d5a8ebbf9cddf6fdf9c7bde278b4f8e876704c3ce29df"
+  },
+  {
+    "path": "assets/s01_student.png",
+    "bytes": 100646,
+    "sha256": "277e5bbb4ea0ae803faa30a59f230d2e517f67ce1dc04d05171700c224b32b8f"
+  },
+  {
+    "path": "assets/s02_profile.png",
+    "bytes": 96285,
+    "sha256": "86495ea701dfd368a176b2ea835dcf5b9b1dc9723aa94e9b6988ceb0ed02e19f"
+  },
+  {
+    "path": "assets/s03_plan.png",
+    "bytes": 99611,
+    "sha256": "b713d8b858bee9530c8067cb3da840e45ddf6301fd8b51aee788b8faa1a3866d"
+  },
+  {
+    "path": "assets/s04_match.png",
+    "bytes": 124072,
+    "sha256": "92140660f32fe38bfd165ca58bea4db0b2ff4d89cd160b2560e32f6669356131"
+  },
+  {
+    "path": "assets/s05_sources.png",
+    "bytes": 111924,
+    "sha256": "6f9384b4cf01d327e6098b099d3871711df9dc96d639bd25d17c06ebaed74987"
+  },
+  {
+    "path": "assets/s06_resume.png",
+    "bytes": 10411,
+    "sha256": "732ba1446186402dde942bf0e5ea4dcd0d980667a68ddc00531d30fee8553825"
+  },
+  {
+    "path": "assets/s07_interview.png",
+    "bytes": 108388,
+    "sha256": "bd031110697804873a819f257ed31d2544836746047aee25a8e47b71d387f2d8"
+  },
+  {
+    "path": "assets/s08_report.png",
+    "bytes": 22368,
+    "sha256": "55918111beb78508b14ef27614b03adaffab87d64bc9b98fa00f5f47928b280d"
+  },
+  {
+    "path": "assets/s09_learning.png",
+    "bytes": 95292,
+    "sha256": "e27d3de4aaf31ba7732bb29e321219f88648f1b69fdaad664fb6c3f04f4263a4"
+  },
+  {
+    "path": "assets/s10_workplace.png",
+    "bytes": 100554,
+    "sha256": "9fed4d4870928e2db9862d13bf7f1dadce7f62e37d0204548b885ac3d9ee0eec"
+  },
+  {
+    "path": "assets/s11_board.png",
+    "bytes": 98018,
+    "sha256": "02a86d322dce104431c45503f95ca0c61c4fb1fef0557de8dddb1442a4c56c82"
+  },
+  {
+    "path": "assets/s12_weekly.png",
+    "bytes": 82571,
+    "sha256": "01ee30e834be5f74623cfd22fea7971c0aac8bcd11ca93c33b720c2731d2d079"
+  },
+  {
+    "path": "assets/s13_agent.png",
+    "bytes": 123634,
+    "sha256": "6379465a24cd66ea083df4a82ab9b43834d16027d6f8e6a226efd6a45b0729ea"
+  },
+  {
+    "path": "assets/s14_counselor.png",
+    "bytes": 129071,
+    "sha256": "f4561c8e70e67a15998e1f5892a7590611e1149cb0a47b9e4b949c291806ff9e"
+  },
+  {
+    "path": "assets/s15_feedback.png",
+    "bytes": 18841,
+    "sha256": "50b867de51d18079b291e77cab801de47e341584081e31c962a3f8995f436739"
+  },
+  {
+    "path": "assets/s16_resolved.png",
+    "bytes": 24260,
+    "sha256": "5bfd8f756bd1bd733a6e33565c1ebcb7602a3618e5a170a6b06d39abd3c5c35b"
+  },
+  {
+    "path": "assets/s17_employment.png",
+    "bytes": 94214,
+    "sha256": "ac2f1228883d4d8b57fa2af69f934fab464ebd8815c4eae6251cd442a2d42544"
+  },
+  {
+    "path": "assets/s18_login.png",
+    "bytes": 81457,
+    "sha256": "cb9612b1b510570b7da45da6019711ab106f1693975e1a26cb3e28fa1438132c"
+  },
+  {
+    "path": "assets/s19_tool_detail.png",
+    "bytes": 439548,
+    "sha256": "ae13e94c0d7666d742295f20767022941cd894366022a95b2dd5ae7d07db1f21"
+  },
+  {
+    "path": "evidence/api_performance.json",
+    "bytes": 4239,
+    "sha256": "1d4c5f13ea08c824ed0aac832f6fbb549c382504db7735a524d1b7463beefe9a"
+  },
+  {
+    "path": "evidence/architecture_inventory.json",
+    "bytes": 6014,
+    "sha256": "b416b20e1a087e93c63003597b7d206e77cf3cabe1ef207da975807f3f556dff"
+  },
+  {
+    "path": "evidence/backend-tests-current.log",
+    "bytes": 202,
+    "sha256": "db189b67787eaf2cd5b6da7184063f4903c9310766769891af49937e6172b5a6"
+  },
+  {
+    "path": "evidence/backend-tests-current.xml",
+    "bytes": 8459,
+    "sha256": "a81b3c81f05fcf3bbb7fc4468df3966536399b7fdd813ed430fbcd579b476e06"
+  },
+  {
+    "path": "evidence/browser-regression-summary.json",
+    "bytes": 3964,
+    "sha256": "ad474dac2a2fbc42910ec436a12a7fcb170ac00a109a686769d235a6ad07c8a0"
+  },
+  {
+    "path": "evidence/data_summary.json",
+    "bytes": 22320,
+    "sha256": "4ba06c828ea35b971739694be0ebc6ee1ef08ce25deb5f139117fe5a728fd60a"
+  },
+  {
+    "path": "evidence/delivery_check.json",
+    "bytes": 1381,
+    "sha256": "88796da7c61180731b18ce1a753e52d0825abf29799742f7f116e85dac87c926"
+  },
+  {
+    "path": "evidence/digital-human-photo-source.txt",
+    "bytes": 183,
+    "sha256": "942ad9c451c15c196176074ba6b9866e342a10be6767148b96f21d1f0aa33528"
+  },
+  {
+    "path": "evidence/document_basis.json",
+    "bytes": 12412,
+    "sha256": "21f0c4a11fb16fad609e4e80889d11cf70267959ad2347ffa8326f5a2921a6a3"
+  },
+  {
+    "path": "evidence/figure_index.json",
+    "bytes": 13913,
+    "sha256": "025510b09c489a6c6db39e1ad571f881c652b7b8d4feefdb6892507d41821e29"
+  },
+  {
+    "path": "evidence/figures_manifest.json",
+    "bytes": 15211,
+    "sha256": "f0b094580bacb587c5f5f20252389f5bf41490eb97d4f4a4018a00cc8e72fcc3"
+  },
+  {
+    "path": "evidence/frontend-tests.log",
+    "bytes": 1408,
+    "sha256": "18b95bab37153e71895ee43a7bf0306151265e2d1fad1082e75fed30d9bdf404"
+  },
+  {
+    "path": "evidence/render_check.json",
+    "bytes": 10650,
+    "sha256": "b52292f4004fcde0deba857173fe8acba8c150fcbbd83a091f3949d3d9b79bf3"
+  },
+  {
+    "path": "README.md",
+    "bytes": 1101,
+    "sha256": "81423643fd27fc2a7f793d3c08356f1d76b4787e2ad0f24268c65feda0791984"
+  },
+  {
+    "path": "图源与数据口径.md",
+    "bytes": 1698,
+    "sha256": "f76db792d24d195409471b5767bd555724a1a35efe5fc318bd546c033b32a372"
+  },
+  {
+    "path": "提交前核对.md",
+    "bytes": 597,
+    "sha256": "25bd8101177f76bbfd90e55ae6ca28655a10e1dd714b3484f5f2ec92ea682aab"
+  },
+  {
+    "path": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.docx",
+    "bytes": 6113525,
+    "sha256": "b8f5ebe3f8d439c68810d37c197f98ee16534b6dafa9e4f5ebaf1c4fdcfd8e5b"
+  },
+  {
+    "path": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.md",
+    "bytes": 64345,
+    "sha256": "a6486603542b6f1ba46a958a9ab04740b3f5f87ad11994fdc66930d4651f102e"
+  },
+  {
+    "path": "职航智管求职训练与职业成长服务系统_比赛项目文档_图文增强版.pdf",
+    "bytes": 3917198,
+    "sha256": "112aafe30c3e4f7d8b1c7cdee2749bbce7720e57ea81205909792e6199c2781f"
+  }
+]

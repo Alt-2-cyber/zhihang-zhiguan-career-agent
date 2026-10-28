@@ -117,7 +117,7 @@ def optimize_resume(
         raise AppError(404, "job_not_found", "岗位不存在")
     if not resume.parsed_text:
         raise AppError(409, "resume_not_parsed", "简历尚未成功解析")
-    result = build_agent_gateway(get_settings()).optimize_resume(
+    result = build_agent_gateway(get_settings(), db=db, owner_id=current_user.id).optimize_resume(
         resume.parsed_text, job.description
     )
     suggestions = [item.model_dump(mode="json") for item in result.suggestions]

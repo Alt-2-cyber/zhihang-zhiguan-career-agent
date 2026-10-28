@@ -29,7 +29,15 @@ export function StudentDashboard({ token }: { token: string }) {
 
   return (
     <>
-      <PageHeader title="学生工作台" description="围绕当前目标推进今天的求职任务，并持续记录投递和面试结果。" action={!data.profile_confirmed ? <Link to="/student/profile" className={primaryButton}>建立就业画像</Link> : undefined} />
+      <PageHeader
+        title="学生工作台"
+        description="围绕当前目标推进今天的求职任务，并持续记录投递和面试结果。"
+        action={
+          <Link to={data.profile_confirmed ? '/student/assistant' : '/student/profile'} className={primaryButton}>
+            {data.profile_confirmed ? '询问就业助手' : '建立就业画像'}
+          </Link>
+        }
+      />
       <section className="grid border border-slate-200 bg-white sm:grid-cols-2 xl:grid-cols-4">
         {metrics.map(({ label, value, icon: Icon, color }, index) => <div key={label} className={`p-5 ${index ? 'border-t border-slate-200 sm:border-l sm:border-t-0' : ''}`}><div className="flex items-center justify-between"><p className="text-xs text-slate-500">{label}</p><Icon className={color} size={18} /></div><p className="mt-3 truncate text-2xl font-semibold">{value}</p></div>)}
       </section>

@@ -8,6 +8,24 @@ set "ROOT=%CD%"
 set "BACKEND=%ROOT%\backend"
 set "FRONTEND=%ROOT%\frontend"
 set "VENV_PYTHON=%BACKEND%\.venv\Scripts\python.exe"
+set "BACKEND_ENV=%BACKEND%\.env"
+
+rem Keep local development independent from Docker-only hostnames in the root .env.
+if not exist "%BACKEND_ENV%" (
+    > "%BACKEND_ENV%" echo # Local launcher overrides. Shared provider keys remain in the project root .env.
+    >> "%BACKEND_ENV%" echo DATABASE_URL=sqlite:///./career.db
+    >> "%BACKEND_ENV%" echo STORAGE_BACKEND=local
+    >> "%BACKEND_ENV%" echo UPLOAD_DIR=./uploads
+    >> "%BACKEND_ENV%" echo CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:8080,http://127.0.0.1:8080
+    >> "%BACKEND_ENV%" echo EMBEDDING_SERVICE_URL=http://127.0.0.1:8101
+    >> "%BACKEND_ENV%" echo OCR_SERVICE_URL=http://127.0.0.1:8102
+    >> "%BACKEND_ENV%" echo SPEECH_SERVICE_URL=http://127.0.0.1:8103
+    >> "%BACKEND_ENV%" echo EMOTION_SERVICE_URL=http://127.0.0.1:8104
+    >> "%BACKEND_ENV%" echo ENABLE_SCHEDULER=false
+)
+
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$path='%BACKEND_ENV%'; $required=[ordered]@{ 'DATABASE_URL'='sqlite:///./career.db'; 'STORAGE_BACKEND'='local'; 'UPLOAD_DIR'='./uploads'; 'CORS_ORIGINS'='http://localhost:5173,http://127.0.0.1:5173,http://localhost:8080,http://127.0.0.1:8080'; 'EMBEDDING_SERVICE_URL'='http://127.0.0.1:8101'; 'OCR_SERVICE_URL'='http://127.0.0.1:8102'; 'SPEECH_SERVICE_URL'='http://127.0.0.1:8103'; 'EMOTION_SERVICE_URL'='http://127.0.0.1:8104'; 'ENABLE_SCHEDULER'='false' }; $lines=Get-Content -LiteralPath $path -ErrorAction SilentlyContinue; foreach ($key in $required.Keys) { $value=$required[$key]; $escaped=[regex]::Escape($key); $matched=$false; $next=@(); foreach ($line in $lines) { if ($line -match ('^[ ]*'+$escaped+'[ ]*=')) { $next += ($key+'='+$value); $matched=$true } else { $next += $line } }; if (-not $matched) { $next += ($key+'='+$value) }; $lines=$next }; Set-Content -LiteralPath $path -Value $lines -Encoding UTF8"
+if errorlevel 1 goto :command_failed
 
 echo [1/5] Checking local development tools...
 where npm >nul 2>&1

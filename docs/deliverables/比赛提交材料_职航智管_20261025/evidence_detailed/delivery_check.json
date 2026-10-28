@@ -1,0 +1,33 @@
+{
+  "prepared_on": "2026-10-25",
+  "revision_completed_on": "2026-10-26",
+  "pages": 25,
+  "chapters": 24,
+  "figures": 15,
+  "tables": 24,
+  "nonwhitespace_text_characters": 16873,
+  "chinese_characters": 11195,
+  "docx_markdown_share_source": true,
+  "all_referenced_figures_present": true,
+  "historical_test_dates_explicit": true,
+  "test_suite_rerun": false,
+  "repository_and_video_links_pending": true,
+  "known_limitations_retained": true,
+  "outputs": [
+    {
+      "file": "职航智管求职训练与职业成长服务系统_作品介绍_详细版.docx",
+      "bytes": 1145122,
+      "sha256": "323968f58eff81b838b60323052422fd3c8084ccc0f90d97a50051d615741589"
+    },
+    {
+      "file": "职航智管求职训练与职业成长服务系统_作品介绍_详细版.md",
+      "bytes": 45716,
+      "sha256": "898ef892a660d51397ed76c185d23fc29ab15bd3536c118b120b6234210216b8"
+    },
+    {
+      "file": "职航智管求职训练与职业成长服务系统_作品介绍_详细版.pdf",
+      "bytes": 1306343,
+      "sha256": "30ff50a64accd21e1e6516420c6b45456350dd5c09fcd31de61d385f413b46a0"
+    }
+  ]
+}
